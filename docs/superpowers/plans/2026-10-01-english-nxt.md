@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Web học từ vựng tiếng Anh (3011 từ A1–B2 trích từ PDF) kèm phiên âm IPA, luyện tập 5 chế độ, tiến độ lưu localStorage, deploy Vercel.
+**Goal:** Web học từ vựng tiếng Anh (3122 entry / 3011 từ duy nhất A1–B2 trích từ PDF) kèm phiên âm IPA, luyện tập 5 chế độ, tiến độ lưu localStorage, deploy Vercel.
 
 **Architecture:** Vite + React SPA tĩnh; dữ liệu trích xuất 1 lần từ PDF thành JSON commit vào repo (`data/index.json` + `data/words-{level}.json` + `data/examples.json`); logic thuần (lịch ôn, sinh bài tập, storage) tách `src/lib/*` test bằng Vitest; state tiến độ qua Zustand + localStorage; phát âm bằng Web Speech API.
 
@@ -12,7 +12,7 @@
 
 - UI tiếng Việt, mobile-first (học chính trên điện thoại).
 - Không backend, không tài khoản, không API key: build phải offline được (JSON commit sẵn trong repo).
-- Dữ liệu cố định: tổng 3011 từ; A1=699, A2=1075, B1=817, B2=420; 128 section (32 topic × 4 level); đúng 150 khung mẫu câu; word id liên tục 1→3011.
+- Dữ liệu cố định: tổng 3122 entry (= 3011 từ duy nhất — sách liệt kê 108 từ 2 lần vì khác từ loại hoặc thuộc 2 topic); A1=717, A2=1139, B1=841, B2=425 (đúng số header 128 section in trong body); 128 section (32 topic × 4 level); đúng 150 khung mẫu câu (1 template không có `___`: `What time is it?`); word id liên tục 1→3122 (renumber từ id theo cấp độ in trong sách).
 - localStorage key: `english_nxt_v1`; `dailyGoal` mặc định 20; streak tính theo ngày có phiên học.
 - Lịch ôn `[1, 3, 7, 14, 30]` ngày; quên → về 1; trễ > 7 ngày → bắt đầu lại từ 1.
 - Practice: 10 câu/phiên; với `?word=`: 5 câu trộn (mỗi chế độ 1 lần) cho đúng từ đó.
@@ -311,17 +311,17 @@ const WORDS: Word[] = (['A1', 'A2', 'B1', 'B2'] as const).flatMap((l) =>
 const POS_SET = ['n.', 'v.', 'adj.', 'adv.', 'prep.', 'conj.', 'pron.', 'det.'];
 
 describe('dữ liệu trích xuất từ PDF', () => {
-  it('tổng 3011 từ, id liên tục 1..3011, không trùng', () => {
-    expect(index.totalWords).toBe(3011);
-    expect(WORDS.length).toBe(3011);
+  it('tổng 3122 entry, id liên tục 1..3122, không trùng', () => {
+    expect(index.totalWords).toBe(3122);
+    expect(WORDS.length).toBe(3122);
     const ids = WORDS.map((w) => w.id).sort((a, b) => a - b);
     expect(ids[0]).toBe(1);
-    expect(ids[ids.length - 1]).toBe(3011);
-    expect(new Set(ids).size).toBe(3011);
+    expect(ids[ids.length - 1]).toBe(3122);
+    expect(new Set(ids).size).toBe(3122);
   });
 
   it('đếm đúng theo cấp độ và khoảng id', () => {
-    const expected: Record<string, number> = { A1: 699, A2: 1075, B1: 817, B2: 420 };
+    const expected: Record<string, number> = { A1: 717, A2: 1139, B1: 841, B2: 425 };
     expect(index.levels.length).toBe(4);
     for (const lv of index.levels) {
       expect(lv.wordCount, lv.id).toBe(expected[lv.id]);
@@ -332,7 +332,7 @@ describe('dữ liệu trích xuất từ PDF', () => {
     }
   });
 
-  it('đủ 128 section, mỗi section đúng số từ header khai báo, tổng bằng 3011', () => {
+  it('đủ 128 section, mỗi section đúng số từ header khai báo, tổng bằng 3122', () => {
     expect(index.topics.length).toBe(128);
     const ids = new Set<string>();
     for (const t of index.topics) {
@@ -341,7 +341,7 @@ describe('dữ liệu trích xuất từ PDF', () => {
       expect(t.wordIds.length, t.id).toBe(t.wordCount);
     }
     const sum = index.topics.reduce((s, t) => s + t.wordIds.length, 0);
-    expect(sum).toBe(3011);
+    expect(sum).toBe(3122);
     const names = new Set(index.topics.map((t) => t.nameEn));
     expect(names.size).toBe(32);
   });
@@ -382,7 +382,7 @@ describe('dữ liệu trích xuất từ PDF', () => {
     for (const [, c] of byName) expect(c).toBe(1);
     for (const t of withFrames) {
       for (const f of t.frames) {
-        expect(f.template.includes('___'), f.template).toBe(true);
+        expect(f.template.length, f.template).toBeGreaterThan(0);  // 1 template không có ___ (What time is it?)
         expect(f.example.length).toBeGreaterThan(0);
       }
     }
@@ -425,7 +425,7 @@ const POS_SET = new Set(['n.', 'v.', 'adj.', 'adv.', 'prep.', 'conj.', 'pron.', 
 const COL_SPLIT = 295;
 const LEVEL_META = { A1: 'Sơ cấp', A2: 'Tiền trung cấp', B1: 'Trung cấp', B2: 'Trung cao cấp' };
 const LEVEL_ORDER = ['A1', 'A2', 'B1', 'B2'];
-const EXPECTED_COUNTS = { A1: 699, A2: 1075, B1: 817, B2: 420 };
+const EXPECTED_COUNTS = { A1: 717, A2: 1139, B1: 841, B2: 425 };
 const warnings = [];
 
 function decodeAscii85(buf) {
@@ -883,7 +883,7 @@ const levels = LEVEL_ORDER.map((lv) => {
 const frameTotal = sections.reduce((s, t) => s + t.frames.length, 0);
 if (frameTotal !== 150) warnings.push(`khung mẫu câu = ${frameTotal}, mong đợi 150`);
 if (sections.length !== 128) warnings.push(`section = ${sections.length}, mong đợi 128`);
-if (words.length !== 3011) warnings.push(`tổng từ = ${words.length}, mong đợi 3011`);
+if (words.length !== 3122) warnings.push(`tổng từ = ${words.length}, mong đợi 3122`);
 
 mkdirSync(OUT_DIR, { recursive: true });
 const index = {
@@ -909,7 +909,7 @@ console.log('OK');
 - [ ] **Step 4: Chạy script**
 
 Run: `npm run extract`
-Expected: in `sections=128 words=3011 frames=150` + `OK`, exit 0.
+Expected: in `sections=128 words=3122 frames=150` + `OK`, exit 0.
 
 Nếu có cảnh báo: đọc thông báo từng dòng, sửa parser (thường là `COL_SPLIT`, regex header, nhánh parse entry), chạy lại đến khi `OK`. Không commit khi test fail.
 
@@ -926,7 +926,7 @@ Expected: PASS — 7 tests trong `tests/data.test.ts` + smoke.
 
 ```bash
 git add src/types.ts scripts/extract-pdf.mjs tests/data.test.ts data/
-git commit -m "feat: trích xuất pdf thành data json + validate 3011 từ"
+git commit -m "feat: trích xuất pdf thành data json + validate 3122 entry (3011 từ duy nhất)"
 ```
 
 ---
@@ -1089,8 +1089,8 @@ describe('vocab', () => {
   });
 
   it('getWordsByLevel đúng số lượng', () => {
-    expect(getWordsByLevel('A1').length).toBe(699);
-    expect(getWordsByLevel('B2').length).toBe(420);
+    expect(getWordsByLevel('A1').length).toBe(717);
+    expect(getWordsByLevel('B2').length).toBe(425);
   });
 
   it('getWordsByTopic trả đúng wordIds', () => {
@@ -3998,7 +3998,7 @@ Kiểm tra sau deploy: trang home load, `/learn` hoạt động, direct-load `/s
 ```markdown
 # english_nxt
 
-Học 3011 từ vựng tiếng Anh (A1–B2) kèm phiên âm IPA — giao diện tiếng Việt, tiến độ lưu trên trình duyệt.
+Học 3122 entry / 3011 từ vựng tiếng Anh (A1–B2) kèm phiên âm IPA — giao diện tiếng Việt, tiến độ lưu trên trình duyệt.
 
 ## Development
 
@@ -4030,7 +4030,7 @@ Report: số test pass, kết quả build, URL deploy (nếu có).
 
 ## Self-Review (trước khi thực thi)
 
-- [ ] Spec coverage: 3011 từ/A1–B2/32 topic/150 frame ✓ (Task 2 test); IPA + audio ✓ (Tasks 7, 12); 5 chế độ ✓ (Tasks 14–16); localStorage + streak + dailyGoal ✓ (Tasks 5, 6, 9, 17); examples bundled ✓ (Tasks 3, 4); Vercel ✓ (Task 1, 19).
+- [ ] Spec coverage: 3122 entry (3011 unique)/A1–B2/32 topic/150 frame ✓ (Task 2 test); IPA + audio ✓ (Tasks 7, 12); 5 chế độ ✓ (Tasks 14–16); localStorage + streak + dailyGoal ✓ (Tasks 5, 6, 9, 17); examples bundled ✓ (Tasks 3, 4); Vercel ✓ (Task 1, 19).
 - [ ] Mỗi task: files cụ thể, code đầy đủ, test trước, verify command, commit riêng ✓.
 - [ ] Rủi ro: trích PDF (Task 2) — có warnings rõ + vòng lặp sửa; `makeRound` signature mở rộng (Tasks 15–16) — TDD điều chỉnh; audio autoplay policy (Task 16) — phát sau gesture + nút bấm lại ✓.
 

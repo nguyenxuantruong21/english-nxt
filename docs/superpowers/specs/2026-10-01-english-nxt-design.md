@@ -2,7 +2,7 @@
 
 - **Ngày:** 2026-10-01
 - **Trạng thái:** Đã duyệt bởi người dùng
-- **Nguồn dữ liệu:** `3000_tu_tieng_anh_co_phien_am.pdf` (3011 từ, IPA Anh-Mỹ, 32 chủ đề × 4 cấp độ A1–B2, 150 mẫu câu khung theo chủ đề)
+- **Nguồn dữ liệu:** `3000_tu_tieng_anh_co_phien_am.pdf` (3122 entry = 3011 từ duy nhất — sách liệt kê 108 từ hai lần vì khác từ loại hoặc thuộc 2 chủ đề; IPA Anh-Mỹ; 32 chủ đề × 4 cấp độ A1–B2; 150 mẫu câu khung theo chủ đề, 1 template không có `___`)
 
 ## 1. Mục tiêu
 
@@ -45,7 +45,7 @@ english_nxt/
 
 1. `scripts/extract-pdf.mjs` parse PDF: streams dùng `ASCII85Decode + FlateDecode`; font subset DejaVuSans có ToUnicode CMap (bfchar + bfrange) để map byte → Unicode; tái cấu trúc layout theo tọa độ (Td/TD/Tm/T*) để gộp dòng: số thứ tự từ, từ, IPA, từ loại, nghĩa tiếng Việt, tiêu đề topic + số từ, khung mẫu câu.
    - *Đã test thành công trên trang mẫu:* trích xuất đúng tiếng Việt có dấu, IPA, cấu trúc mục lục (32 topic × 4 level = 128 section).
-2. Validate output: đúng 3011 từ; level counts A1=699, A2=1075, B1=817, B2=420; 128 topic-section; mọi từ có `ipa` bắt đầu bằng `/` và kết thúc bằng `/`; mọi từ có nghĩa tiếng Việt không rỗng; word id liên tục 1→3011.
+2. Validate output: đúng 3122 entry; level counts A1=717, A2=1139, B1=841, B2=425 (đúng số in trong 128 section header của body — bìa sách ghi 3011 = số từ duy nhất); 128 topic-section; mọi từ có `ipa` bắt đầu bằng `/` và kết thúc bằng `/`; mọi từ có nghĩa tiếng Việt không rỗng; word id liên tục 1→3122 (renumber từ id theo cấp độ in trong sách).
 3. `scripts/fetch-examples.mjs` gộp mẫu câu theo từng từ từ Free Dictionary API (`api.dictionaryapi.dev`, không cần key), lưu `data/examples.json`. Từ không có mẫu câu → fallback khung mẫu câu chủ đề.
 
 ## 3. Mô hình dữ liệu
@@ -54,8 +54,8 @@ english_nxt/
 
 ```ts
 {
-  totalWords: 3011,
-  levels: [{ id: "A1", name: "Sơ cấp", wordCount: 699 }, /* A2, B1, B2 */],
+  totalWords: 3122,
+  levels: [{ id: "A1", name: "Sơ cấp", wordCount: 717 }, /* A2=1139, B1=841, B2=425 */],
   topics: [{
     id: "a1-family",              // slug: {level}-{topic-slug}
     level: "A1",
@@ -68,7 +68,7 @@ english_nxt/
     ]
   }],                              // 128 section
   words: [{
-    id: 1,                         // số thứ tự trong PDF, 1→3011
+    id: 1,                         // renumber toàn cục, 1→3122
     word: "boy",
     ipa: "/bɔɪ/",
     pos: "n.",
@@ -147,7 +147,7 @@ Tiến độ = số `completed` / tổng từ, hiển thị tổng thể, theo c
   - `review.ts`: chuỗi interval, reset khi quên/quá hạn 7 ngày, chọn bộ từ đến hạn.
   - `storage.ts`: đọc/ghi/migrate schema, quota error được bắt.
   - `exercises.ts`: đáp án không trùng, 4 lựa chọn, fallback cloze → mcq, chuẩn hóa dictation.
-  - `extract-pdf` validation: 3011 từ, level counts, 128 topic, IPA format `/…/`, nghĩa không rỗng.
+  - `extract-pdf` validation: 3122 entry, level counts, 128 topic, IPA format `/…/`, nghĩa không rỗng.
 - **QA tay:** 5 chế độ luyện tập trên Chrome desktop + mobile; deploy preview trên Vercel.
 
 ## 8. Deploy Vercel
@@ -160,4 +160,4 @@ Tiến độ = số `completed` / tổng từ, hiển thị tổng thể, theo c
 
 - Giọng đọc Web Speech tùy trình duyệt (Chrome/Edge tốt nhất) — chấp nhận, có fallback text.
 - Mẫu câu nguồn free có thể thiếu từ hiếm — fallback khung chủ đề.
-- Cấu trúc layout PDF phức tạp (3011 từ, nhiều segment tọa độ) — đã test trích xuất; parser cần chạy validate toàn bộ 55 trang trước khi commit JSON.
+- Cấu trúc layout PDF phức tạp (3122 entry, nhiều segment tọa độ) — đã test trích xuất; parser cần chạy validate toàn bộ 55 trang trước khi commit JSON.
