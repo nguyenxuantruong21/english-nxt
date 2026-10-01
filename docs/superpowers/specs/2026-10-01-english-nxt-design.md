@@ -46,7 +46,7 @@ english_nxt/
 1. `scripts/extract-pdf.mjs` parse PDF: streams dùng `ASCII85Decode + FlateDecode`; font subset DejaVuSans có ToUnicode CMap (bfchar + bfrange) để map byte → Unicode; tái cấu trúc layout theo tọa độ (Td/TD/Tm/T*) để gộp dòng: số thứ tự từ, từ, IPA, từ loại, nghĩa tiếng Việt, tiêu đề topic + số từ, khung mẫu câu.
    - *Đã test thành công trên trang mẫu:* trích xuất đúng tiếng Việt có dấu, IPA, cấu trúc mục lục (32 topic × 4 level = 128 section).
 2. Validate output: đúng 3011 từ; level counts A1=699, A2=1075, B1=817, B2=420; 128 topic-section; mọi từ có `ipa` bắt đầu bằng `/` và kết thúc bằng `/`; mọi từ có nghĩa tiếng Việt không rỗng; word id liên tục 1→3011.
-3. `scripts/fetch-examples.mjs` gộp mẫu câu theo từng từ từ nguồn miễn phí (Free Dictionary API, Tatoeba en–vi), lưu `data/examples.json`. Từ không có mẫu câu → fallback khung mẫu câu chủ đề.
+3. `scripts/fetch-examples.mjs` gộp mẫu câu theo từng từ từ Free Dictionary API (`api.dictionaryapi.dev`, không cần key), lưu `data/examples.json`. Từ không có mẫu câu → fallback khung mẫu câu chủ đề.
 
 ## 3. Mô hình dữ liệu
 
@@ -84,7 +84,7 @@ english_nxt/
 ### `data/examples.json`
 
 ```ts
-{ [wordId: number]: [{ en: "...", vi: "..." }] }   // 1–3 mẫu câu/từ nếu có
+{ [wordId: number]: [{ en: "..." }] }   // 1 mẫu câu/từ nếu nguồn có; không có → fallback frame chủ đề
 ```
 
 ### localStorage (key `english_nxt_v1`)
