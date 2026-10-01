@@ -104,7 +104,7 @@ Tiến độ = số `completed` / tổng từ, hiển thị tổng thể, theo c
 
 ## 4. Màn hình & luồng UI
 
-1. **Dashboard (`/`)** — thanh tiến độ tổng `x/3011 (y%)`; vòng tròn tiến độ cấp độ hiện tại; mục tiêu hôm nay `x/20 từ`; nút lớn "Học hôm nay →"; streak; 4 card cấp độ A1→B2 (click → Levels).
+1. **Dashboard (`/`)** — thanh tiến độ tổng `x/3122 (y%)`; vòng tròn tiến độ cấp độ hiện tại; mục tiêu hôm nay `x/20 từ`; nút lớn "Học hôm nay →"; streak; 4 card cấp độ A1→B2 (click → Levels).
 2. **Levels (`/level/:level`)** — 32 chủ đề của cấp độ: tên EN/VN, `x/y từ`, mini-progress. Click → Topic.
 3. **Topic (`/level/:level/:topic`)** — danh sách từ: checkbox hoàn thành, từ, IPA, nghĩa, nút 🔊. Nút "Học chủ đề này" khởi động session học chủ đề đó. Khung mẫu câu chủ đề hiển thị cuối danh sách.
 4. **Learn session (`/learn`)** — phiên hằng ngày: từ mới (flashcard) → từ đến hạn ôn → tổng kết `đã học X · ôn Y · đúng Z%`. Nhận query `?topic=id` để học trọn 1 chủ đề.
