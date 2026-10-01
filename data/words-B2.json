@@ -1,0 +1,3827 @@
+[
+ {
+  "id": 2698,
+  "word": "spouse",
+  "ipa": "/spaʊs/",
+  "pos": "n.",
+  "meaningVi": "vợ/chồng",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2699,
+  "word": "stepmother",
+  "ipa": "/ˈstɛpˌmʌðər/",
+  "pos": "n.",
+  "meaningVi": "mẹ kế",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2700,
+  "word": "stepfather",
+  "ipa": "/ˈstɛpˌfɑːðər/",
+  "pos": "n.",
+  "meaningVi": "bố dượng",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2701,
+  "word": "colleague",
+  "ipa": "/ˈkɑːliɡ/",
+  "pos": "n.",
+  "meaningVi": "đồng nghiệp",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2702,
+  "word": "roommate",
+  "ipa": "/ˈruːˌmeɪt/",
+  "pos": "n.",
+  "meaningVi": "bạn cùng phòng",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2703,
+  "word": "resident",
+  "ipa": "/ˈrɛzɪdənt/",
+  "pos": "n.",
+  "meaningVi": "cư dân",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2704,
+  "word": "client",
+  "ipa": "/ˈklaɪənt/",
+  "pos": "n.",
+  "meaningVi": "thân chủ, khách",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2705,
+  "word": "community",
+  "ipa": "/kəˈmjuːnəti/",
+  "pos": "n.",
+  "meaningVi": "cộng đồng",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2706,
+  "word": "divorce",
+  "ipa": "/dɪˈvɔːrs/",
+  "pos": "v.",
+  "meaningVi": "ly hôn",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2707,
+  "word": "widow",
+  "ipa": "/ˈwɪdoʊ/",
+  "pos": "n.",
+  "meaningVi": "góa phụ",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2708,
+  "word": "inherit",
+  "ipa": "/ɪnˈhɛrət/",
+  "pos": "v.",
+  "meaningVi": "thừa kế",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2709,
+  "word": "heir",
+  "ipa": "/ɛr/",
+  "pos": "n.",
+  "meaningVi": "người thừa kế",
+  "level": "B2",
+  "topicId": "b2-family-people"
+ },
+ {
+  "id": 2710,
+  "word": "throat",
+  "ipa": "/θroʊt/",
+  "pos": "n.",
+  "meaningVi": "họng",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2711,
+  "word": "waist",
+  "ipa": "/weɪst/",
+  "pos": "n.",
+  "meaningVi": "eo",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2712,
+  "word": "joint",
+  "ipa": "/dʒɔɪnt/",
+  "pos": "n.",
+  "meaningVi": "khớp",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2713,
+  "word": "ache",
+  "ipa": "/eɪk/",
+  "pos": "n.",
+  "meaningVi": "sự đau nhức",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2714,
+  "word": "cough",
+  "ipa": "/kɑːf/",
+  "pos": "n.",
+  "meaningVi": "ho",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2715,
+  "word": "sneeze",
+  "ipa": "/sniːz/",
+  "pos": "v.",
+  "meaningVi": "hắt hơi",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2716,
+  "word": "allergy",
+  "ipa": "/ˈælərdʒi/",
+  "pos": "n.",
+  "meaningVi": "dị ứng",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2717,
+  "word": "wound",
+  "ipa": "/wuːnd/",
+  "pos": "n.",
+  "meaningVi": "vết thương",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2718,
+  "word": "sprain",
+  "ipa": "/spreɪn/",
+  "pos": "v.",
+  "meaningVi": "bong gân",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2719,
+  "word": "cure",
+  "ipa": "/kjʊr/",
+  "pos": "v.",
+  "meaningVi": "chữa khỏi",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2720,
+  "word": "treat",
+  "ipa": "/triːt/",
+  "pos": "v.",
+  "meaningVi": "điều trị",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2721,
+  "word": "vaccine",
+  "ipa": "/vækˈsiːn/",
+  "pos": "n.",
+  "meaningVi": "vắc-xin",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2722,
+  "word": "stress",
+  "ipa": "/strɛs/",
+  "pos": "n.",
+  "meaningVi": "căng thẳng",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2723,
+  "word": "faint",
+  "ipa": "/feɪnt/",
+  "pos": "v.",
+  "meaningVi": "ngất",
+  "level": "B2",
+  "topicId": "b2-body-health"
+ },
+ {
+  "id": 2724,
+  "word": "noodle",
+  "ipa": "/ˈnuːdəl/",
+  "pos": "n.",
+  "meaningVi": "mì, bún, phở",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2725,
+  "word": "crab",
+  "ipa": "/kræb/",
+  "pos": "n.",
+  "meaningVi": "cua",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2726,
+  "word": "pumpkin",
+  "ipa": "/ˈpʌmpkɪn/",
+  "pos": "n.",
+  "meaningVi": "bí ngô",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2727,
+  "word": "mango",
+  "ipa": "/ˈmæŋɡoʊ/",
+  "pos": "n.",
+  "meaningVi": "xoài",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2728,
+  "word": "peach",
+  "ipa": "/piːtʃ/",
+  "pos": "n.",
+  "meaningVi": "đào",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2729,
+  "word": "coconut",
+  "ipa": "/ˈkoʊkəˌnʌt/",
+  "pos": "n.",
+  "meaningVi": "dừa",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2730,
+  "word": "nut",
+  "ipa": "/nʌt/",
+  "pos": "n.",
+  "meaningVi": "hạt",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2731,
+  "word": "vinegar",
+  "ipa": "/ˈvɪnəɡər/",
+  "pos": "n.",
+  "meaningVi": "giấm",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2732,
+  "word": "herb",
+  "ipa": "/ɜːrb/",
+  "pos": "n.",
+  "meaningVi": "rau thơm",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2733,
+  "word": "salty",
+  "ipa": "/ˈsɔːlti/",
+  "pos": "adj.",
+  "meaningVi": "mặn",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2734,
+  "word": "bland",
+  "ipa": "/blænd/",
+  "pos": "adj.",
+  "meaningVi": "nhạt",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2735,
+  "word": "crispy",
+  "ipa": "/ˈkrɪspi/",
+  "pos": "adj.",
+  "meaningVi": "giòn",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2736,
+  "word": "greasy",
+  "ipa": "/ˈɡriːsi/",
+  "pos": "adj.",
+  "meaningVi": "nhiều dầu mỡ",
+  "level": "B2",
+  "topicId": "b2-food-drink"
+ },
+ {
+  "id": 2737,
+  "word": "chop",
+  "ipa": "/tʃɑːp/",
+  "pos": "v.",
+  "meaningVi": "thái, băm",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2738,
+  "word": "peel",
+  "ipa": "/piːl/",
+  "pos": "v.",
+  "meaningVi": "gọt vỏ",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2739,
+  "word": "marinate",
+  "ipa": "/ˈmɛrəˌneɪt/",
+  "pos": "v.",
+  "meaningVi": "ướp",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2740,
+  "word": "simmer",
+  "ipa": "/ˈsɪmər/",
+  "pos": "v.",
+  "meaningVi": "ninh nhỏ lửa",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2741,
+  "word": "recipe",
+  "ipa": "/ˈrɛsəpi/",
+  "pos": "n.",
+  "meaningVi": "công thức",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2742,
+  "word": "portion",
+  "ipa": "/ˈpɔːrʃən/",
+  "pos": "n.",
+  "meaningVi": "suất ăn",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2743,
+  "word": "microwave",
+  "ipa": "/ˈmaɪkrəˌweɪv/",
+  "pos": "n.",
+  "meaningVi": "lò vi sóng",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2744,
+  "word": "tray",
+  "ipa": "/treɪ/",
+  "pos": "n.",
+  "meaningVi": "khay",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2745,
+  "word": "tablecloth",
+  "ipa": "/ˈteɪbəlˌklɔːθ/",
+  "pos": "n.",
+  "meaningVi": "khăn trải bàn",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2746,
+  "word": "teapot",
+  "ipa": "/ˈtiːˌpɑːt/",
+  "pos": "n.",
+  "meaningVi": "ấm trà",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2747,
+  "word": "blender",
+  "ipa": "/ˈblɛndər/",
+  "pos": "n.",
+  "meaningVi": "máy xay",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2748,
+  "word": "buffet",
+  "ipa": "/ˈbʌfət/",
+  "pos": "n.",
+  "meaningVi": "tiệc buffet",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2749,
+  "word": "refill",
+  "ipa": "/ˈriːfɪl/",
+  "pos": "n.",
+  "meaningVi": "phần đổ đầy lại",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2750,
+  "word": "leftover",
+  "ipa": "/ˈlɛfˌtoʊvər/",
+  "pos": "n.",
+  "meaningVi": "đồ ăn thừa",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2751,
+  "word": "homemade",
+  "ipa": "/ˈhoʊmˈmeɪd/",
+  "pos": "adj.",
+  "meaningVi": "tự làm",
+  "level": "B2",
+  "topicId": "b2-cooking-restaurant"
+ },
+ {
+  "id": 2752,
+  "word": "villa",
+  "ipa": "/ˈvɪlə/",
+  "pos": "n.",
+  "meaningVi": "biệt thự",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2753,
+  "word": "cottage",
+  "ipa": "/ˈkɑːtədʒ/",
+  "pos": "n.",
+  "meaningVi": "nhà tranh, nhà nhỏ",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2754,
+  "word": "ceiling",
+  "ipa": "/ˈsiːlɪŋ/",
+  "pos": "n.",
+  "meaningVi": "trần nhà",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2755,
+  "word": "corridor",
+  "ipa": "/ˈkɔːrədər/",
+  "pos": "n.",
+  "meaningVi": "hành lang",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2756,
+  "word": "mattress",
+  "ipa": "/ˈmætrəs/",
+  "pos": "n.",
+  "meaningVi": "nệm",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2757,
+  "word": "rug",
+  "ipa": "/rʌɡ/",
+  "pos": "n.",
+  "meaningVi": "thảm nhỏ",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2758,
+  "word": "broom",
+  "ipa": "/bruːm/",
+  "pos": "n.",
+  "meaningVi": "chổi",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2759,
+  "word": "plug",
+  "ipa": "/plʌɡ/",
+  "pos": "n.",
+  "meaningVi": "phích cắm",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2760,
+  "word": "socket",
+  "ipa": "/ˈsɑːkət/",
+  "pos": "n.",
+  "meaningVi": "ổ cắm",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2761,
+  "word": "mortgage",
+  "ipa": "/ˈmɔːrɡədʒ/",
+  "pos": "n.",
+  "meaningVi": "khoản vay thế chấp",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2762,
+  "word": "decorate",
+  "ipa": "/ˈdɛkərˌeɪt/",
+  "pos": "v.",
+  "meaningVi": "trang trí",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2763,
+  "word": "sweep",
+  "ipa": "/swiːp/",
+  "pos": "v.",
+  "meaningVi": "quét",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2764,
+  "word": "mop",
+  "ipa": "/mɑːp/",
+  "pos": "v.",
+  "meaningVi": "lau nhà",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2765,
+  "word": "cozy",
+  "ipa": "/ˈkoʊzi/",
+  "pos": "adj.",
+  "meaningVi": "ấm cúng",
+  "level": "B2",
+  "topicId": "b2-home-furniture"
+ },
+ {
+  "id": 2766,
+  "word": "clothing",
+  "ipa": "/ˈkloʊðɪŋ/",
+  "pos": "n.",
+  "meaningVi": "trang phục",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2767,
+  "word": "outfit",
+  "ipa": "/ˈaʊtˌfɪt/",
+  "pos": "n.",
+  "meaningVi": "bộ trang phục",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2768,
+  "word": "blouse",
+  "ipa": "/blaʊs/",
+  "pos": "n.",
+  "meaningVi": "áo cánh nữ",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2769,
+  "word": "hoodie",
+  "ipa": "/ˈhʊdi/",
+  "pos": "n.",
+  "meaningVi": "áo hoodie",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2770,
+  "word": "vest",
+  "ipa": "/vɛst/",
+  "pos": "n.",
+  "meaningVi": "áo gi-lê",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2771,
+  "word": "pajamas",
+  "ipa": "/pəˈdʒɑːməz/",
+  "pos": "n.",
+  "meaningVi": "đồ ngủ",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2772,
+  "word": "underwear",
+  "ipa": "/ˈʌndərˌwɛr/",
+  "pos": "n.",
+  "meaningVi": "đồ lót",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2773,
+  "word": "sneaker",
+  "ipa": "/ˈsniːkər/",
+  "pos": "n.",
+  "meaningVi": "giày thể thao",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2774,
+  "word": "zipper",
+  "ipa": "/ˈzɪpər/",
+  "pos": "n.",
+  "meaningVi": "khóa kéo",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2775,
+  "word": "fabric",
+  "ipa": "/ˈfæbrɪk/",
+  "pos": "n.",
+  "meaningVi": "vải",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2776,
+  "word": "denim",
+  "ipa": "/ˈdɛnəm/",
+  "pos": "n.",
+  "meaningVi": "vải bò",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2777,
+  "word": "tailor",
+  "ipa": "/ˈteɪlər/",
+  "pos": "n.",
+  "meaningVi": "thợ may",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2778,
+  "word": "hang",
+  "ipa": "/hæŋ/",
+  "pos": "v.",
+  "meaningVi": "treo",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2779,
+  "word": "baggy",
+  "ipa": "/ˈbæɡi/",
+  "pos": "adj.",
+  "meaningVi": "thùng thình",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2780,
+  "word": "elegant",
+  "ipa": "/ˈɛləɡənt/",
+  "pos": "adj.",
+  "meaningVi": "thanh lịch",
+  "level": "B2",
+  "topicId": "b2-clothes-fashion"
+ },
+ {
+  "id": 2781,
+  "word": "commute",
+  "ipa": "/kəˈmjuːt/",
+  "pos": "v.",
+  "meaningVi": "đi làm hằng ngày",
+  "level": "B2",
+  "topicId": "b2-daily-routine-habits"
+ },
+ {
+  "id": 2782,
+  "word": "chore",
+  "ipa": "/tʃɔːr/",
+  "pos": "n.",
+  "meaningVi": "việc vặt",
+  "level": "B2",
+  "topicId": "b2-daily-routine-habits"
+ },
+ {
+  "id": 2783,
+  "word": "laundry",
+  "ipa": "/ˈlɔːndri/",
+  "pos": "n.",
+  "meaningVi": "đồ giặt",
+  "level": "B2",
+  "topicId": "b2-daily-routine-habits"
+ },
+ {
+  "id": 2784,
+  "word": "jog",
+  "ipa": "/dʒɑːɡ/",
+  "pos": "v.",
+  "meaningVi": "chạy bộ",
+  "level": "B2",
+  "topicId": "b2-daily-routine-habits"
+ },
+ {
+  "id": 2785,
+  "word": "seldom",
+  "ipa": "/ˈsɛldəm/",
+  "pos": "adv.",
+  "meaningVi": "ít khi",
+  "level": "B2",
+  "topicId": "b2-daily-routine-habits"
+ },
+ {
+  "id": 2786,
+  "word": "florist",
+  "ipa": "/ˈflɑːrɪst/",
+  "pos": "n.",
+  "meaningVi": "tiệm hoa",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2787,
+  "word": "butcher",
+  "ipa": "/ˈbʊtʃər/",
+  "pos": "n.",
+  "meaningVi": "người bán thịt",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2788,
+  "word": "cashier",
+  "ipa": "/kæˈʃɪr/",
+  "pos": "n.",
+  "meaningVi": "thu ngân",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2789,
+  "word": "seller",
+  "ipa": "/ˈsɛlər/",
+  "pos": "n.",
+  "meaningVi": "người bán",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2790,
+  "word": "shipping",
+  "ipa": "/ˈʃɪpɪŋ/",
+  "pos": "n.",
+  "meaningVi": "vận chuyển",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2791,
+  "word": "queue",
+  "ipa": "/kjuː/",
+  "pos": "n.",
+  "meaningVi": "hàng chờ",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2792,
+  "word": "purchase",
+  "ipa": "/ˈpɜːrtʃəs/",
+  "pos": "v.",
+  "meaningVi": "mua (trang trọng)",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2793,
+  "word": "browse",
+  "ipa": "/braʊz/",
+  "pos": "v.",
+  "meaningVi": "xem lướt",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2794,
+  "word": "debit card",
+  "ipa": "/ˈdɛbɪt kɑːrd/",
+  "pos": "n.",
+  "meaningVi": "thẻ ghi nợ",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2795,
+  "word": "balance",
+  "ipa": "/ˈbæləns/",
+  "pos": "n.",
+  "meaningVi": "số dư",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2796,
+  "word": "deposit",
+  "ipa": "/dəˈpɑːzɪt/",
+  "pos": "v.",
+  "meaningVi": "gửi tiền",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2797,
+  "word": "withdraw",
+  "ipa": "/wɪðˈdrɔː/",
+  "pos": "v.",
+  "meaningVi": "rút tiền",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2798,
+  "word": "transfer",
+  "ipa": "/trænsˈfɜːr/",
+  "pos": "v.",
+  "meaningVi": "chuyển khoản",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2799,
+  "word": "loan",
+  "ipa": "/loʊn/",
+  "pos": "n.",
+  "meaningVi": "khoản vay",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2800,
+  "word": "savings",
+  "ipa": "/ˈseɪvɪŋz/",
+  "pos": "n.",
+  "meaningVi": "tiền tiết kiệm",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2801,
+  "word": "salary",
+  "ipa": "/ˈsæləri/",
+  "pos": "n.",
+  "meaningVi": "lương",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2802,
+  "word": "wage",
+  "ipa": "/weɪdʒ/",
+  "pos": "n.",
+  "meaningVi": "tiền công",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2803,
+  "word": "wealthy",
+  "ipa": "/ˈwɛlθi/",
+  "pos": "adj.",
+  "meaningVi": "giàu có",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2804,
+  "word": "affordable",
+  "ipa": "/əˈfɔːrdəbəl/",
+  "pos": "adj.",
+  "meaningVi": "giá phải chăng",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2805,
+  "word": "out of stock",
+  "ipa": "/aʊt ʌv stɑːk/",
+  "pos": "adj.",
+  "meaningVi": "hết hàng",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2806,
+  "word": "secondhand",
+  "ipa": "/ˈsɛkəndˌhænd/",
+  "pos": "adj.",
+  "meaningVi": "đã qua sử dụng",
+  "level": "B2",
+  "topicId": "b2-shopping-money"
+ },
+ {
+  "id": 2807,
+  "word": "transport",
+  "ipa": "/ˈtrænspɔːrt/",
+  "pos": "n.",
+  "meaningVi": "giao thông vận tải",
+  "level": "B2",
+  "topicId": "b2-transport-travel"
+ },
+ {
+  "id": 2808,
+  "word": "helicopter",
+  "ipa": "/ˈhɛlɪˌkɑːptər/",
+  "pos": "n.",
+  "meaningVi": "trực thăng",
+  "level": "B2",
+  "topicId": "b2-transport-travel"
+ },
+ {
+  "id": 2809,
+  "word": "motorbike",
+  "ipa": "/ˈmoʊtərˌbaɪk/",
+  "pos": "n.",
+  "meaningVi": "xe máy",
+  "level": "B2",
+  "topicId": "b2-transport-travel"
+ },
+ {
+  "id": 2810,
+  "word": "scooter",
+  "ipa": "/ˈskuːtər/",
+  "pos": "n.",
+  "meaningVi": "xe tay ga",
+  "level": "B2",
+  "topicId": "b2-transport-travel"
+ },
+ {
+  "id": 2811,
+  "word": "tunnel",
+  "ipa": "/ˈtʌnəl/",
+  "pos": "n.",
+  "meaningVi": "đường hầm",
+  "level": "B2",
+  "topicId": "b2-transport-travel"
+ },
+ {
+  "id": 2812,
+  "word": "zebra crossing",
+  "ipa": "/ˈziːbrə ˈkrɔːsɪŋ/",
+  "pos": "n.",
+  "meaningVi": "vạch qua đường",
+  "level": "B2",
+  "topicId": "b2-transport-travel"
+ },
+ {
+  "id": 2813,
+  "word": "route",
+  "ipa": "/ruːt/",
+  "pos": "n.",
+  "meaningVi": "tuyến đường",
+  "level": "B2",
+  "topicId": "b2-transport-travel"
+ },
+ {
+  "id": 2814,
+  "word": "sail",
+  "ipa": "/seɪl/",
+  "pos": "v.",
+  "meaningVi": "đi thuyền",
+  "level": "B2",
+  "topicId": "b2-transport-travel"
+ },
+ {
+  "id": 2815,
+  "word": "accommodation",
+  "ipa": "/əˌkɑːməˈdeɪʃən/",
+  "pos": "n.",
+  "meaningVi": "chỗ ở",
+  "level": "B2",
+  "topicId": "b2-transport-travel"
+ },
+ {
+  "id": 2816,
+  "word": "domestic",
+  "ipa": "/dəˈmɛstɪk/",
+  "pos": "adj.",
+  "meaningVi": "trong nước",
+  "level": "B2",
+  "topicId": "b2-transport-travel"
+ },
+ {
+  "id": 2817,
+  "word": "suburb",
+  "ipa": "/ˈsʌbərb/",
+  "pos": "n.",
+  "meaningVi": "ngoại ô",
+  "level": "B2",
+  "topicId": "b2-places-directions"
+ },
+ {
+  "id": 2818,
+  "word": "embassy",
+  "ipa": "/ˈɛmbəsi/",
+  "pos": "n.",
+  "meaningVi": "đại sứ quán",
+  "level": "B2",
+  "topicId": "b2-places-directions"
+ },
+ {
+  "id": 2819,
+  "word": "rural",
+  "ipa": "/ˈrʊrəl/",
+  "pos": "adj.",
+  "meaningVi": "nông thôn",
+  "level": "B2",
+  "topicId": "b2-places-directions"
+ },
+ {
+  "id": 2820,
+  "word": "urban",
+  "ipa": "/ˈɜːrbən/",
+  "pos": "adj.",
+  "meaningVi": "đô thị",
+  "level": "B2",
+  "topicId": "b2-places-directions"
+ },
+ {
+  "id": 2821,
+  "word": "typhoon",
+  "ipa": "/taɪˈfuːn/",
+  "pos": "n.",
+  "meaningVi": "bão nhiệt đới",
+  "level": "B2",
+  "topicId": "b2-weather-nature"
+ },
+ {
+  "id": 2822,
+  "word": "mist",
+  "ipa": "/mɪst/",
+  "pos": "n.",
+  "meaningVi": "sương mỏng",
+  "level": "B2",
+  "topicId": "b2-weather-nature"
+ },
+ {
+  "id": 2823,
+  "word": "hail",
+  "ipa": "/heɪl/",
+  "pos": "n.",
+  "meaningVi": "mưa đá",
+  "level": "B2",
+  "topicId": "b2-weather-nature"
+ },
+ {
+  "id": 2824,
+  "word": "rainbow",
+  "ipa": "/ˈreɪnˌboʊ/",
+  "pos": "n.",
+  "meaningVi": "cầu vồng",
+  "level": "B2",
+  "topicId": "b2-weather-nature"
+ },
+ {
+  "id": 2825,
+  "word": "drought",
+  "ipa": "/draʊt/",
+  "pos": "n.",
+  "meaningVi": "hạn hán",
+  "level": "B2",
+  "topicId": "b2-weather-nature"
+ },
+ {
+  "id": 2826,
+  "word": "soil",
+  "ipa": "/sɔɪl/",
+  "pos": "n.",
+  "meaningVi": "đất trồng",
+  "level": "B2",
+  "topicId": "b2-weather-nature"
+ },
+ {
+  "id": 2827,
+  "word": "meadow",
+  "ipa": "/ˈmɛˌdoʊ/",
+  "pos": "n.",
+  "meaningVi": "đồng cỏ",
+  "level": "B2",
+  "topicId": "b2-weather-nature"
+ },
+ {
+  "id": 2828,
+  "word": "drizzle",
+  "ipa": "/ˈdrɪzəl/",
+  "pos": "v.",
+  "meaningVi": "mưa phùn",
+  "level": "B2",
+  "topicId": "b2-weather-nature"
+ },
+ {
+  "id": 2829,
+  "word": "mammal",
+  "ipa": "/ˈmæməl/",
+  "pos": "n.",
+  "meaningVi": "động vật có vú",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2830,
+  "word": "reptile",
+  "ipa": "/ˈrɛptaɪl/",
+  "pos": "n.",
+  "meaningVi": "bò sát",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2831,
+  "word": "ox",
+  "ipa": "/ɑːks/",
+  "pos": "n.",
+  "meaningVi": "bò đực",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2832,
+  "word": "goat",
+  "ipa": "/ɡoʊt/",
+  "pos": "n.",
+  "meaningVi": "dê",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2833,
+  "word": "eagle",
+  "ipa": "/ˈiːɡəl/",
+  "pos": "n.",
+  "meaningVi": "đại bàng",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2834,
+  "word": "owl",
+  "ipa": "/aʊl/",
+  "pos": "n.",
+  "meaningVi": "cú",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2835,
+  "word": "pigeon",
+  "ipa": "/ˈpɪdʒən/",
+  "pos": "n.",
+  "meaningVi": "chim bồ câu",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2836,
+  "word": "sparrow",
+  "ipa": "/ˈspɛroʊ/",
+  "pos": "n.",
+  "meaningVi": "chim sẻ",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2837,
+  "word": "swan",
+  "ipa": "/swɑːn/",
+  "pos": "n.",
+  "meaningVi": "thiên nga",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2838,
+  "word": "leopard",
+  "ipa": "/ˈlɛpərd/",
+  "pos": "n.",
+  "meaningVi": "báo",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2839,
+  "word": "wolf",
+  "ipa": "/wʊlf/",
+  "pos": "n.",
+  "meaningVi": "sói",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2840,
+  "word": "fox",
+  "ipa": "/fɑːks/",
+  "pos": "n.",
+  "meaningVi": "cáo",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2841,
+  "word": "deer",
+  "ipa": "/dɪr/",
+  "pos": "n.",
+  "meaningVi": "nai",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2842,
+  "word": "zebra",
+  "ipa": "/ˈziːbrə/",
+  "pos": "n.",
+  "meaningVi": "ngựa vằn",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2843,
+  "word": "kangaroo",
+  "ipa": "/ˌkæŋɡərˈuː/",
+  "pos": "n.",
+  "meaningVi": "chuột túi",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2844,
+  "word": "panda",
+  "ipa": "/ˈpændə/",
+  "pos": "n.",
+  "meaningVi": "gấu trúc",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2845,
+  "word": "shark",
+  "ipa": "/ʃɑːrk/",
+  "pos": "n.",
+  "meaningVi": "cá mập",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2846,
+  "word": "crocodile",
+  "ipa": "/ˈkrɑːkəˌdaɪl/",
+  "pos": "n.",
+  "meaningVi": "cá sấu",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2847,
+  "word": "lizard",
+  "ipa": "/ˈlɪzərd/",
+  "pos": "n.",
+  "meaningVi": "thằn lằn",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2848,
+  "word": "worm",
+  "ipa": "/wɜːrm/",
+  "pos": "n.",
+  "meaningVi": "con giun",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2849,
+  "word": "tail",
+  "ipa": "/teɪl/",
+  "pos": "n.",
+  "meaningVi": "đuôi",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2850,
+  "word": "claw",
+  "ipa": "/klɔː/",
+  "pos": "n.",
+  "meaningVi": "móng vuốt",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2851,
+  "word": "nest",
+  "ipa": "/nɛst/",
+  "pos": "n.",
+  "meaningVi": "tổ",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2852,
+  "word": "breed",
+  "ipa": "/briːd/",
+  "pos": "v.",
+  "meaningVi": "nhân giống",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2853,
+  "word": "trunk",
+  "ipa": "/trʌŋk/",
+  "pos": "n.",
+  "meaningVi": "thân cây",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2854,
+  "word": "bamboo",
+  "ipa": "/bæmˈbuː/",
+  "pos": "n.",
+  "meaningVi": "tre",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2855,
+  "word": "pine",
+  "ipa": "/paɪn/",
+  "pos": "n.",
+  "meaningVi": "cây thông",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2856,
+  "word": "tame",
+  "ipa": "/teɪm/",
+  "pos": "adj.",
+  "meaningVi": "thuần hóa",
+  "level": "B2",
+  "topicId": "b2-animals-plants"
+ },
+ {
+  "id": 2857,
+  "word": "decade",
+  "ipa": "/dɛˈkeɪd/",
+  "pos": "n.",
+  "meaningVi": "thập kỷ",
+  "level": "B2",
+  "topicId": "b2-time-numbers"
+ },
+ {
+  "id": 2858,
+  "word": "billion",
+  "ipa": "/ˈbɪljən/",
+  "pos": "n.",
+  "meaningVi": "tỷ",
+  "level": "B2",
+  "topicId": "b2-time-numbers"
+ },
+ {
+  "id": 2859,
+  "word": "subtract",
+  "ipa": "/səbˈtrækt/",
+  "pos": "v.",
+  "meaningVi": "trừ",
+  "level": "B2",
+  "topicId": "b2-time-numbers"
+ },
+ {
+  "id": 2860,
+  "word": "multiply",
+  "ipa": "/ˈmʌltəˌplaɪ/",
+  "pos": "v.",
+  "meaningVi": "nhân",
+  "level": "B2",
+  "topicId": "b2-time-numbers"
+ },
+ {
+  "id": 2861,
+  "word": "kindergarten",
+  "ipa": "/ˈkɪndərˌɡɑːrtən/",
+  "pos": "n.",
+  "meaningVi": "mẫu giáo",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2862,
+  "word": "primary school",
+  "ipa": "/ˈpraɪˌmɛri skuːl/",
+  "pos": "n.",
+  "meaningVi": "tiểu học",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2863,
+  "word": "secondary school",
+  "ipa": "/ˈsɛkənˌdɛri skuːl/",
+  "pos": "n.",
+  "meaningVi": "trung học",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2864,
+  "word": "syllabus",
+  "ipa": "/ˈsɪləbəs/",
+  "pos": "n.",
+  "meaningVi": "giáo trình",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2865,
+  "word": "tutor",
+  "ipa": "/ˈtuːtər/",
+  "pos": "n.",
+  "meaningVi": "gia sư",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2866,
+  "word": "diploma",
+  "ipa": "/dɪˈploʊmɑː/",
+  "pos": "n.",
+  "meaningVi": "văn bằng",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2867,
+  "word": "certificate",
+  "ipa": "/sərˈtɪfɪkət/",
+  "pos": "n.",
+  "meaningVi": "chứng chỉ",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2868,
+  "word": "project",
+  "ipa": "/ˈprɑːdʒɛkt/",
+  "pos": "n.",
+  "meaningVi": "dự án",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2869,
+  "word": "thesis",
+  "ipa": "/ˈθiːsəs/",
+  "pos": "n.",
+  "meaningVi": "luận văn",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2870,
+  "word": "chalk",
+  "ipa": "/tʃɑːk/",
+  "pos": "n.",
+  "meaningVi": "phấn",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2871,
+  "word": "enroll",
+  "ipa": "/ɛnˈroʊl/",
+  "pos": "v.",
+  "meaningVi": "đăng ký học",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2872,
+  "word": "cheat",
+  "ipa": "/tʃiːt/",
+  "pos": "v.",
+  "meaningVi": "gian lận",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2873,
+  "word": "skip",
+  "ipa": "/skɪp/",
+  "pos": "v.",
+  "meaningVi": "bỏ (học)",
+  "level": "B2",
+  "topicId": "b2-school-education"
+ },
+ {
+  "id": 2874,
+  "word": "employer",
+  "ipa": "/ɛmˈplɔɪər/",
+  "pos": "n.",
+  "meaningVi": "nhà tuyển dụng",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2875,
+  "word": "employee",
+  "ipa": "/ɛmˈplɔɪi/",
+  "pos": "n.",
+  "meaningVi": "nhân viên",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2876,
+  "word": "supervisor",
+  "ipa": "/ˈsuːpərˌvaɪzər/",
+  "pos": "n.",
+  "meaningVi": "người giám sát",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2877,
+  "word": "intern",
+  "ipa": "/ˈɪntərn/",
+  "pos": "n.",
+  "meaningVi": "thực tập sinh",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2878,
+  "word": "designer",
+  "ipa": "/dɪˈzaɪnər/",
+  "pos": "n.",
+  "meaningVi": "nhà thiết kế",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2879,
+  "word": "programmer",
+  "ipa": "/ˈproʊˌɡræmər/",
+  "pos": "n.",
+  "meaningVi": "lập trình viên",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2880,
+  "word": "electrician",
+  "ipa": "/ɪlɛkˈtrɪʃən/",
+  "pos": "n.",
+  "meaningVi": "thợ điện",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2881,
+  "word": "plumber",
+  "ipa": "/ˈplʌmər/",
+  "pos": "n.",
+  "meaningVi": "thợ ống nước",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2882,
+  "word": "carpenter",
+  "ipa": "/ˈkɑːrpəntər/",
+  "pos": "n.",
+  "meaningVi": "thợ mộc",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2883,
+  "word": "salesperson",
+  "ipa": "/ˈseɪlzˌpɜːrsən/",
+  "pos": "n.",
+  "meaningVi": "nhân viên bán hàng",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2884,
+  "word": "headquarters",
+  "ipa": "/ˈhɛdˌkwɔːrtərz/",
+  "pos": "n.",
+  "meaningVi": "trụ sở chính",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2885,
+  "word": "profit",
+  "ipa": "/ˈprɑːfət/",
+  "pos": "n.",
+  "meaningVi": "lợi nhuận",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2886,
+  "word": "contract",
+  "ipa": "/ˈkɑːnˌtrækt/",
+  "pos": "n.",
+  "meaningVi": "hợp đồng",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2887,
+  "word": "resume",
+  "ipa": "/ˈrɛzjʊmeɪ/",
+  "pos": "n.",
+  "meaningVi": "sơ yếu lý lịch",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2888,
+  "word": "qualification",
+  "ipa": "/ˌkwɑːləfəˈkeɪʃən/",
+  "pos": "n.",
+  "meaningVi": "trình độ",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2889,
+  "word": "overtime",
+  "ipa": "/ˈoʊvərˌtaɪm/",
+  "pos": "n.",
+  "meaningVi": "làm thêm giờ",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2890,
+  "word": "employ",
+  "ipa": "/ɛmˈplɔɪ/",
+  "pos": "v.",
+  "meaningVi": "tuyển dụng",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2891,
+  "word": "resign",
+  "ipa": "/rɪˈzaɪn/",
+  "pos": "v.",
+  "meaningVi": "từ chức",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2892,
+  "word": "cooperate",
+  "ipa": "/koʊˈɑːpərˌeɪt/",
+  "pos": "v.",
+  "meaningVi": "hợp tác",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2893,
+  "word": "submit",
+  "ipa": "/səbˈmɪt/",
+  "pos": "v.",
+  "meaningVi": "nộp",
+  "level": "B2",
+  "topicId": "b2-work-jobs"
+ },
+ {
+  "id": 2894,
+  "word": "laptop",
+  "ipa": "/ˈlæpˌtɑːp/",
+  "pos": "n.",
+  "meaningVi": "máy tính xách tay",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2895,
+  "word": "desktop",
+  "ipa": "/ˈdɛskˌtɑːp/",
+  "pos": "n.",
+  "meaningVi": "máy tính để bàn",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2896,
+  "word": "scanner",
+  "ipa": "/ˈskænər/",
+  "pos": "n.",
+  "meaningVi": "máy quét",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2897,
+  "word": "microphone",
+  "ipa": "/ˈmaɪkrəˌfoʊn/",
+  "pos": "n.",
+  "meaningVi": "micro",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2898,
+  "word": "cable",
+  "ipa": "/ˈkeɪbəl/",
+  "pos": "n.",
+  "meaningVi": "dây cáp",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2899,
+  "word": "USB",
+  "ipa": "/ˌjuː ɛs ˈbiː/",
+  "pos": "n.",
+  "meaningVi": "cổng USB",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2900,
+  "word": "hardware",
+  "ipa": "/ˈhɑːrˌdwɛr/",
+  "pos": "n.",
+  "meaningVi": "phần cứng",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2901,
+  "word": "browser",
+  "ipa": "/ˈbraʊzər/",
+  "pos": "n.",
+  "meaningVi": "trình duyệt",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2902,
+  "word": "Wi-Fi",
+  "ipa": "/ˈwaɪ faɪ/",
+  "pos": "n.",
+  "meaningVi": "mạng không dây",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2903,
+  "word": "data",
+  "ipa": "/ˈdeɪtə/",
+  "pos": "n.",
+  "meaningVi": "dữ liệu",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2904,
+  "word": "database",
+  "ipa": "/ˈdeɪtəˌbeɪs/",
+  "pos": "n.",
+  "meaningVi": "cơ sở dữ liệu",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2905,
+  "word": "profile",
+  "ipa": "/ˈproʊˌfaɪl/",
+  "pos": "n.",
+  "meaningVi": "hồ sơ cá nhân",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2906,
+  "word": "social media",
+  "ipa": "/ˈsoʊʃəl ˈmiːdiə/",
+  "pos": "n.",
+  "meaningVi": "mạng xã hội",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2907,
+  "word": "comment",
+  "ipa": "/ˈkɑːmɛnt/",
+  "pos": "n.",
+  "meaningVi": "bình luận",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2908,
+  "word": "follower",
+  "ipa": "/ˈfɑːloʊər/",
+  "pos": "n.",
+  "meaningVi": "người theo dõi",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2909,
+  "word": "hacker",
+  "ipa": "/ˈhækər/",
+  "pos": "n.",
+  "meaningVi": "tin tặc",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2910,
+  "word": "scroll",
+  "ipa": "/skroʊl/",
+  "pos": "v.",
+  "meaningVi": "cuộn",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2911,
+  "word": "update",
+  "ipa": "/əpˈdeɪt/",
+  "pos": "v.",
+  "meaningVi": "cập nhật",
+  "level": "B2",
+  "topicId": "b2-technology-internet"
+ },
+ {
+  "id": 2912,
+  "word": "media",
+  "ipa": "/ˈmiːdiə/",
+  "pos": "n.",
+  "meaningVi": "truyền thông",
+  "level": "B2",
+  "topicId": "b2-media-entertainment"
+ },
+ {
+  "id": 2913,
+  "word": "broadcast",
+  "ipa": "/ˈbrɔːdˌkæst/",
+  "pos": "n.",
+  "meaningVi": "phát sóng",
+  "level": "B2",
+  "topicId": "b2-media-entertainment"
+ },
+ {
+  "id": 2914,
+  "word": "commercial",
+  "ipa": "/kəˈmɜːrʃəl/",
+  "pos": "n.",
+  "meaningVi": "quảng cáo thương mại",
+  "level": "B2",
+  "topicId": "b2-media-entertainment"
+ },
+ {
+  "id": 2915,
+  "word": "plot",
+  "ipa": "/plɑːt/",
+  "pos": "n.",
+  "meaningVi": "cốt truyện",
+  "level": "B2",
+  "topicId": "b2-media-entertainment"
+ },
+ {
+  "id": 2916,
+  "word": "villain",
+  "ipa": "/ˈvɪlən/",
+  "pos": "n.",
+  "meaningVi": "nhân vật phản diện",
+  "level": "B2",
+  "topicId": "b2-media-entertainment"
+ },
+ {
+  "id": 2917,
+  "word": "lyrics",
+  "ipa": "/ˈlɪrɪks/",
+  "pos": "n.",
+  "meaningVi": "lời bài hát",
+  "level": "B2",
+  "topicId": "b2-media-entertainment"
+ },
+ {
+  "id": 2918,
+  "word": "melody",
+  "ipa": "/ˈmɛlədi/",
+  "pos": "n.",
+  "meaningVi": "giai điệu",
+  "level": "B2",
+  "topicId": "b2-media-entertainment"
+ },
+ {
+  "id": 2919,
+  "word": "nightclub",
+  "ipa": "/ˈnaɪtˌklʌb/",
+  "pos": "n.",
+  "meaningVi": "hộp đêm",
+  "level": "B2",
+  "topicId": "b2-media-entertainment"
+ },
+ {
+  "id": 2920,
+  "word": "subscribe",
+  "ipa": "/səbˈskraɪb/",
+  "pos": "v.",
+  "meaningVi": "đăng ký theo dõi",
+  "level": "B2",
+  "topicId": "b2-media-entertainment"
+ },
+ {
+  "id": 2921,
+  "word": "amuse",
+  "ipa": "/əˈmjuːz/",
+  "pos": "v.",
+  "meaningVi": "làm vui",
+  "level": "B2",
+  "topicId": "b2-media-entertainment"
+ },
+ {
+  "id": 2922,
+  "word": "pastime",
+  "ipa": "/ˈpæˌstaɪm/",
+  "pos": "n.",
+  "meaningVi": "thú tiêu khiển",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2923,
+  "word": "martial arts",
+  "ipa": "/ˈmɑːrʃəl ɑːrts/",
+  "pos": "n.",
+  "meaningVi": "võ thuật",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2924,
+  "word": "athletics",
+  "ipa": "/æθˈlɛtɪks/",
+  "pos": "n.",
+  "meaningVi": "điền kinh",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2925,
+  "word": "marathon",
+  "ipa": "/ˈmɛrəˌθɑːn/",
+  "pos": "n.",
+  "meaningVi": "cuộc chạy marathon",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2926,
+  "word": "opponent",
+  "ipa": "/əˈpoʊnənt/",
+  "pos": "n.",
+  "meaningVi": "đối thủ",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2927,
+  "word": "penalty",
+  "ipa": "/ˈpɛnəlti/",
+  "pos": "n.",
+  "meaningVi": "quả phạt",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2928,
+  "word": "trophy",
+  "ipa": "/ˈtroʊfi/",
+  "pos": "n.",
+  "meaningVi": "cúp",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2929,
+  "word": "pitch",
+  "ipa": "/pɪtʃ/",
+  "pos": "n.",
+  "meaningVi": "sân bóng",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2930,
+  "word": "whistle",
+  "ipa": "/ˈwɪsəl/",
+  "pos": "n.",
+  "meaningVi": "còi",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2931,
+  "word": "beat",
+  "ipa": "/biːt/",
+  "pos": "v.",
+  "meaningVi": "đánh bại",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2932,
+  "word": "amateur",
+  "ipa": "/ˈæmətʃʊr/",
+  "pos": "adj.",
+  "meaningVi": "nghiệp dư",
+  "level": "B2",
+  "topicId": "b2-sports-hobbies"
+ },
+ {
+  "id": 2933,
+  "word": "relief",
+  "ipa": "/rɪˈliːf/",
+  "pos": "n.",
+  "meaningVi": "sự nhẹ nhõm",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2934,
+  "word": "grief",
+  "ipa": "/ɡriːf/",
+  "pos": "n.",
+  "meaningVi": "nỗi đau mất mát",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2935,
+  "word": "loneliness",
+  "ipa": "/ˈloʊnlinəs/",
+  "pos": "n.",
+  "meaningVi": "sự cô đơn",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2936,
+  "word": "thrilled",
+  "ipa": "/θrɪld/",
+  "pos": "adj.",
+  "meaningVi": "cực kỳ phấn khích",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2937,
+  "word": "optimistic",
+  "ipa": "/ˌɑːptəˈmɪstɪk/",
+  "pos": "adj.",
+  "meaningVi": "lạc quan",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2938,
+  "word": "furious",
+  "ipa": "/ˈfjʊriəs/",
+  "pos": "adj.",
+  "meaningVi": "giận dữ",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2939,
+  "word": "irritated",
+  "ipa": "/ˈɪrəˌteɪtəd/",
+  "pos": "adj.",
+  "meaningVi": "khó chịu",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2940,
+  "word": "homesick",
+  "ipa": "/ˈhoʊmˌsɪk/",
+  "pos": "adj.",
+  "meaningVi": "nhớ nhà",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2941,
+  "word": "pessimistic",
+  "ipa": "/ˌpɛsəˈmɪstɪk/",
+  "pos": "adj.",
+  "meaningVi": "bi quan",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2942,
+  "word": "sigh",
+  "ipa": "/saɪ/",
+  "pos": "v.",
+  "meaningVi": "thở dài",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2943,
+  "word": "blush",
+  "ipa": "/blʌʃ/",
+  "pos": "v.",
+  "meaningVi": "đỏ mặt",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2944,
+  "word": "adore",
+  "ipa": "/əˈdɔːr/",
+  "pos": "v.",
+  "meaningVi": "yêu mến",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2945,
+  "word": "cope with",
+  "ipa": "/koʊp wɪð/",
+  "pos": "v.",
+  "meaningVi": "đương đầu với",
+  "level": "B2",
+  "topicId": "b2-feelings-emotions"
+ },
+ {
+  "id": 2946,
+  "word": "friendly",
+  "ipa": "/ˈfrɛndli/",
+  "pos": "adj.",
+  "meaningVi": "thân thiện",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2947,
+  "word": "hardworking",
+  "ipa": "/ˈhɑːrˌdwɜːrkɪŋ/",
+  "pos": "adj.",
+  "meaningVi": "chăm chỉ",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2948,
+  "word": "cowardly",
+  "ipa": "/ˈkaʊərdli/",
+  "pos": "adj.",
+  "meaningVi": "hèn nhát",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2949,
+  "word": "outgoing",
+  "ipa": "/ˈaʊtˌɡoʊɪŋ/",
+  "pos": "adj.",
+  "meaningVi": "hướng ngoại",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2950,
+  "word": "sociable",
+  "ipa": "/ˈsoʊʃəbəl/",
+  "pos": "adj.",
+  "meaningVi": "hòa đồng",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2951,
+  "word": "sensible",
+  "ipa": "/ˈsɛnsəbəl/",
+  "pos": "adj.",
+  "meaningVi": "biết điều",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2952,
+  "word": "arrogant",
+  "ipa": "/ˈɛrəɡənt/",
+  "pos": "adj.",
+  "meaningVi": "kiêu ngạo",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2953,
+  "word": "humble",
+  "ipa": "/ˈhʌmbəl/",
+  "pos": "adj.",
+  "meaningVi": "khiêm tốn",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2954,
+  "word": "modest",
+  "ipa": "/ˈmɑːdəst/",
+  "pos": "adj.",
+  "meaningVi": "khiêm nhường",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2955,
+  "word": "moody",
+  "ipa": "/ˈmuːdi/",
+  "pos": "adj.",
+  "meaningVi": "hay thay đổi tâm trạng",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2956,
+  "word": "sensitive",
+  "ipa": "/ˈsɛnsətɪv/",
+  "pos": "adj.",
+  "meaningVi": "nhạy cảm",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2957,
+  "word": "mature",
+  "ipa": "/məˈtʃʊr/",
+  "pos": "adj.",
+  "meaningVi": "trưởng thành",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2958,
+  "word": "childish",
+  "ipa": "/ˈtʃaɪldɪʃ/",
+  "pos": "adj.",
+  "meaningVi": "trẻ con",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2959,
+  "word": "mustache",
+  "ipa": "/ˈmʌˌstæʃ/",
+  "pos": "n.",
+  "meaningVi": "ria mép",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2960,
+  "word": "freckle",
+  "ipa": "/ˈfrɛkəl/",
+  "pos": "n.",
+  "meaningVi": "tàn nhang",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2961,
+  "word": "wrinkle",
+  "ipa": "/ˈrɪŋkəl/",
+  "pos": "n.",
+  "meaningVi": "nếp nhăn",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2962,
+  "word": "tattoo",
+  "ipa": "/tæˈtuː/",
+  "pos": "n.",
+  "meaningVi": "hình xăm",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2963,
+  "word": "skinny",
+  "ipa": "/ˈskɪni/",
+  "pos": "adj.",
+  "meaningVi": "gầy nhom",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2964,
+  "word": "plump",
+  "ipa": "/plʌmp/",
+  "pos": "adj.",
+  "meaningVi": "mũm mĩm",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2965,
+  "word": "muscular",
+  "ipa": "/ˈmʌskjələr/",
+  "pos": "adj.",
+  "meaningVi": "vạm vỡ",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2966,
+  "word": "blond",
+  "ipa": "/blɑːnd/",
+  "pos": "adj.",
+  "meaningVi": "tóc vàng",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2967,
+  "word": "wavy",
+  "ipa": "/ˈweɪvi/",
+  "pos": "adj.",
+  "meaningVi": "gợn sóng",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2968,
+  "word": "tanned",
+  "ipa": "/tænd/",
+  "pos": "adj.",
+  "meaningVi": "rám nắng",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2969,
+  "word": "neat",
+  "ipa": "/niːt/",
+  "pos": "adj.",
+  "meaningVi": "gọn gàng",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2970,
+  "word": "scruffy",
+  "ipa": "/ˈskrʌfi/",
+  "pos": "adj.",
+  "meaningVi": "lôi thôi",
+  "level": "B2",
+  "topicId": "b2-personality-appearance"
+ },
+ {
+  "id": 2971,
+  "word": "remark",
+  "ipa": "/rɪˈmɑːrk/",
+  "pos": "n.",
+  "meaningVi": "lời nhận xét",
+  "level": "B2",
+  "topicId": "b2-communication-opinions"
+ },
+ {
+  "id": 2972,
+  "word": "gossip",
+  "ipa": "/ˈɡɑːsəp/",
+  "pos": "n.",
+  "meaningVi": "chuyện ngồi lê đôi mách",
+  "level": "B2",
+  "topicId": "b2-communication-opinions"
+ },
+ {
+  "id": 2973,
+  "word": "praise",
+  "ipa": "/preɪz/",
+  "pos": "v.",
+  "meaningVi": "khen ngợi",
+  "level": "B2",
+  "topicId": "b2-communication-opinions"
+ },
+ {
+  "id": 2974,
+  "word": "whisper",
+  "ipa": "/ˈwɪspər/",
+  "pos": "v.",
+  "meaningVi": "thì thầm",
+  "level": "B2",
+  "topicId": "b2-communication-opinions"
+ },
+ {
+  "id": 2975,
+  "word": "mumble",
+  "ipa": "/ˈmʌmbəl/",
+  "pos": "v.",
+  "meaningVi": "lẩm bẩm",
+  "level": "B2",
+  "topicId": "b2-communication-opinions"
+ },
+ {
+  "id": 2976,
+  "word": "probable",
+  "ipa": "/ˈprɑːbəbəl/",
+  "pos": "adj.",
+  "meaningVi": "có khả năng",
+  "level": "B2",
+  "topicId": "b2-communication-opinions"
+ },
+ {
+  "id": 2977,
+  "word": "sharp",
+  "ipa": "/ʃɑːrp/",
+  "pos": "adj.",
+  "meaningVi": "sắc",
+  "level": "B2",
+  "topicId": "b2-common-adjectives"
+ },
+ {
+  "id": 2978,
+  "word": "particular",
+  "ipa": "/pərˈtɪkjələr/",
+  "pos": "adj.",
+  "meaningVi": "riêng biệt",
+  "level": "B2",
+  "topicId": "b2-common-adjectives"
+ },
+ {
+  "id": 2979,
+  "word": "actual",
+  "ipa": "/ˈæktʃəwəl/",
+  "pos": "adj.",
+  "meaningVi": "thực tế",
+  "level": "B2",
+  "topicId": "b2-common-adjectives"
+ },
+ {
+  "id": 2980,
+  "word": "willing",
+  "ipa": "/ˈwɪlɪŋ/",
+  "pos": "adj.",
+  "meaningVi": "sẵn lòng",
+  "level": "B2",
+  "topicId": "b2-common-adjectives"
+ },
+ {
+  "id": 2981,
+  "word": "lean",
+  "ipa": "/liːn/",
+  "pos": "v.",
+  "meaningVi": "nghiêng",
+  "level": "B2",
+  "topicId": "b2-common-verbs-actions"
+ },
+ {
+  "id": 2982,
+  "word": "chase",
+  "ipa": "/tʃeɪs/",
+  "pos": "v.",
+  "meaningVi": "đuổi theo",
+  "level": "B2",
+  "topicId": "b2-common-verbs-actions"
+ },
+ {
+  "id": 2983,
+  "word": "select",
+  "ipa": "/səˈlɛkt/",
+  "pos": "v.",
+  "meaningVi": "chọn lọc",
+  "level": "B2",
+  "topicId": "b2-common-verbs-actions"
+ },
+ {
+  "id": 2984,
+  "word": "neither",
+  "ipa": "/ˈniːðər/",
+  "pos": "adv.",
+  "meaningVi": "cũng không",
+  "level": "B2",
+  "topicId": "b2-adverbs-connectors"
+ },
+ {
+  "id": 2985,
+  "word": "according to",
+  "ipa": "/əˈkɔːrdɪŋ tuː/",
+  "pos": "prep.",
+  "meaningVi": "theo như",
+  "level": "B2",
+  "topicId": "b2-prepositions-pronouns-determiners"
+ },
+ {
+  "id": 2986,
+  "word": "neither",
+  "ipa": "/ˈniːðər/",
+  "pos": "det.",
+  "meaningVi": "không cái nào",
+  "level": "B2",
+  "topicId": "b2-prepositions-pronouns-determiners"
+ },
+ {
+  "id": 2987,
+  "word": "minister",
+  "ipa": "/ˈmɪnəstər/",
+  "pos": "n.",
+  "meaningVi": "bộ trưởng",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2988,
+  "word": "prime minister",
+  "ipa": "/praɪm ˈmɪnəstər/",
+  "pos": "n.",
+  "meaningVi": "thủ tướng",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2989,
+  "word": "parliament",
+  "ipa": "/ˈpɑːrləmənt/",
+  "pos": "n.",
+  "meaningVi": "quốc hội",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2990,
+  "word": "candidate",
+  "ipa": "/ˈkændədeɪt/",
+  "pos": "n.",
+  "meaningVi": "ứng viên",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2991,
+  "word": "campaign",
+  "ipa": "/kæmˈpeɪn/",
+  "pos": "n.",
+  "meaningVi": "chiến dịch",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2992,
+  "word": "navy",
+  "ipa": "/ˈneɪvi/",
+  "pos": "n.",
+  "meaningVi": "hải quân",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2993,
+  "word": "ally",
+  "ipa": "/ˈælaɪ/",
+  "pos": "n.",
+  "meaningVi": "đồng minh",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2994,
+  "word": "treaty",
+  "ipa": "/ˈtriːti/",
+  "pos": "n.",
+  "meaningVi": "hiệp ước",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2995,
+  "word": "alliance",
+  "ipa": "/əˈlaɪəns/",
+  "pos": "n.",
+  "meaningVi": "liên minh",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2996,
+  "word": "protest",
+  "ipa": "/ˈproʊˌtɛst/",
+  "pos": "n.",
+  "meaningVi": "cuộc biểu tình",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2997,
+  "word": "revolution",
+  "ipa": "/ˌrɛvəˈluːʃən/",
+  "pos": "n.",
+  "meaningVi": "cuộc cách mạng",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2998,
+  "word": "reform",
+  "ipa": "/rəˈfɔːrm/",
+  "pos": "n.",
+  "meaningVi": "cải cách",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 2999,
+  "word": "export",
+  "ipa": "/ˈɛkspɔːrt/",
+  "pos": "n.",
+  "meaningVi": "xuất khẩu",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3000,
+  "word": "import",
+  "ipa": "/ˈɪmpɔːrt/",
+  "pos": "n.",
+  "meaningVi": "nhập khẩu",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3001,
+  "word": "inflation",
+  "ipa": "/ɪnˈfleɪʃən/",
+  "pos": "n.",
+  "meaningVi": "lạm phát",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3002,
+  "word": "welfare",
+  "ipa": "/ˈwɛlˌfɛr/",
+  "pos": "n.",
+  "meaningVi": "phúc lợi",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3003,
+  "word": "pension",
+  "ipa": "/ˈpɛnʃən/",
+  "pos": "n.",
+  "meaningVi": "lương hưu",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3004,
+  "word": "equal",
+  "ipa": "/ˈiːkwəl/",
+  "pos": "adj.",
+  "meaningVi": "bình đẳng",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3005,
+  "word": "elect",
+  "ipa": "/ɪˈlɛkt/",
+  "pos": "v.",
+  "meaningVi": "bầu chọn",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3006,
+  "word": "protest",
+  "ipa": "/ˈproʊˌtɛst/",
+  "pos": "v.",
+  "meaningVi": "biểu tình",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3007,
+  "word": "ban",
+  "ipa": "/bæn/",
+  "pos": "v.",
+  "meaningVi": "cấm",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3008,
+  "word": "migrate",
+  "ipa": "/ˈmaɪˌɡreɪt/",
+  "pos": "v.",
+  "meaningVi": "di cư",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3009,
+  "word": "immigrant",
+  "ipa": "/ˈɪməɡrənt/",
+  "pos": "n.",
+  "meaningVi": "người nhập cư",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3010,
+  "word": "refugee",
+  "ipa": "/ˈrɛfjudʒi/",
+  "pos": "n.",
+  "meaningVi": "người tị nạn",
+  "level": "B2",
+  "topicId": "b2-society-government"
+ },
+ {
+  "id": 3011,
+  "word": "criminal",
+  "ipa": "/ˈkrɪmənəl/",
+  "pos": "n.",
+  "meaningVi": "tội phạm (người)",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3012,
+  "word": "offense",
+  "ipa": "/əˈfɛns/",
+  "pos": "n.",
+  "meaningVi": "hành vi phạm tội",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3013,
+  "word": "burglary",
+  "ipa": "/ˈbɜːrɡləri/",
+  "pos": "n.",
+  "meaningVi": "vụ đột nhập",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3014,
+  "word": "fraud",
+  "ipa": "/frɔːd/",
+  "pos": "n.",
+  "meaningVi": "gian lận",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3015,
+  "word": "scam",
+  "ipa": "/skæm/",
+  "pos": "n.",
+  "meaningVi": "trò lừa đảo",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3016,
+  "word": "kidnapping",
+  "ipa": "/ˈkɪdˌnæpɪŋ/",
+  "pos": "n.",
+  "meaningVi": "bắt cóc",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3017,
+  "word": "corruption",
+  "ipa": "/kərˈʌpʃən/",
+  "pos": "n.",
+  "meaningVi": "tham nhũng",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3018,
+  "word": "pickpocket",
+  "ipa": "/ˈpɪkˌpɑːkət/",
+  "pos": "n.",
+  "meaningVi": "kẻ móc túi",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3019,
+  "word": "suspect",
+  "ipa": "/ˈsʌspɛkt/",
+  "pos": "n.",
+  "meaningVi": "nghi phạm",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3020,
+  "word": "witness",
+  "ipa": "/ˈwɪtnəs/",
+  "pos": "n.",
+  "meaningVi": "nhân chứng",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3021,
+  "word": "trial",
+  "ipa": "/ˈtraɪəl/",
+  "pos": "n.",
+  "meaningVi": "phiên tòa",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3022,
+  "word": "jury",
+  "ipa": "/ˈdʒʊri/",
+  "pos": "n.",
+  "meaningVi": "bồi thẩm đoàn",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3023,
+  "word": "unsafe",
+  "ipa": "/ənˈseɪf/",
+  "pos": "adj.",
+  "meaningVi": "không an toàn",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3024,
+  "word": "risky",
+  "ipa": "/ˈrɪski/",
+  "pos": "adj.",
+  "meaningVi": "nhiều rủi ro",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3025,
+  "word": "harmless",
+  "ipa": "/ˈhɑːrmləs/",
+  "pos": "adj.",
+  "meaningVi": "vô hại",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3026,
+  "word": "suspicious",
+  "ipa": "/səˈspɪʃəs/",
+  "pos": "adj.",
+  "meaningVi": "đáng ngờ",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3027,
+  "word": "collision",
+  "ipa": "/kəˈlɪʒən/",
+  "pos": "n.",
+  "meaningVi": "sự va chạm",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3028,
+  "word": "risk",
+  "ipa": "/rɪsk/",
+  "pos": "n.",
+  "meaningVi": "rủi ro",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3029,
+  "word": "threaten",
+  "ipa": "/ˈθrɛtən/",
+  "pos": "v.",
+  "meaningVi": "đe dọa",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3030,
+  "word": "kidnap",
+  "ipa": "/ˈkɪdˌnæp/",
+  "pos": "v.",
+  "meaningVi": "bắt cóc",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3031,
+  "word": "deceive",
+  "ipa": "/dɪˈsiːv/",
+  "pos": "v.",
+  "meaningVi": "đánh lừa",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3032,
+  "word": "bribe",
+  "ipa": "/braɪb/",
+  "pos": "v.",
+  "meaningVi": "hối lộ",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3033,
+  "word": "smuggle",
+  "ipa": "/ˈsmʌɡəl/",
+  "pos": "v.",
+  "meaningVi": "buôn lậu",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3034,
+  "word": "convict",
+  "ipa": "/kənˈvɪkt/",
+  "pos": "v.",
+  "meaningVi": "kết án",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3035,
+  "word": "investigate",
+  "ipa": "/ɪnˈvɛstəˌɡeɪt/",
+  "pos": "v.",
+  "meaningVi": "điều tra",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3036,
+  "word": "obey",
+  "ipa": "/oʊˈbeɪ/",
+  "pos": "v.",
+  "meaningVi": "tuân theo",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3037,
+  "word": "violate",
+  "ipa": "/ˈvaɪəleɪt/",
+  "pos": "v.",
+  "meaningVi": "vi phạm",
+  "level": "B2",
+  "topicId": "b2-law-crime-safety"
+ },
+ {
+  "id": 3038,
+  "word": "environment",
+  "ipa": "/ɪnˈvaɪrənmənt/",
+  "pos": "n.",
+  "meaningVi": "môi trường",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3039,
+  "word": "litter",
+  "ipa": "/ˈlɪtər/",
+  "pos": "n.",
+  "meaningVi": "rác vứt bừa bãi",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3040,
+  "word": "energy",
+  "ipa": "/ˈɛnərdʒi/",
+  "pos": "n.",
+  "meaningVi": "năng lượng",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3041,
+  "word": "solar",
+  "ipa": "/ˈsoʊlər/",
+  "pos": "adj.",
+  "meaningVi": "thuộc mặt trời",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3042,
+  "word": "carbon",
+  "ipa": "/ˈkɑːrbən/",
+  "pos": "n.",
+  "meaningVi": "các-bon",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3043,
+  "word": "emission",
+  "ipa": "/ɪˈmɪʃən/",
+  "pos": "n.",
+  "meaningVi": "khí thải",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3044,
+  "word": "smog",
+  "ipa": "/smɑːɡ/",
+  "pos": "n.",
+  "meaningVi": "khói bụi",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3045,
+  "word": "acid rain",
+  "ipa": "/ˈæsəd reɪn/",
+  "pos": "n.",
+  "meaningVi": "mưa axit",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3046,
+  "word": "ozone",
+  "ipa": "/ˈoʊˌzoʊn/",
+  "pos": "n.",
+  "meaningVi": "tầng ô-dôn",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3047,
+  "word": "species",
+  "ipa": "/ˈspiːʃiz/",
+  "pos": "n.",
+  "meaningVi": "loài",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3048,
+  "word": "deforestation",
+  "ipa": "/dɪˌfɔːrɪˈsteɪʃən/",
+  "pos": "n.",
+  "meaningVi": "nạn phá rừng",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3049,
+  "word": "experiment",
+  "ipa": "/ɪkˈspɛrəmənt/",
+  "pos": "n.",
+  "meaningVi": "thí nghiệm",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3050,
+  "word": "inventor",
+  "ipa": "/ɪnˈvɛntər/",
+  "pos": "n.",
+  "meaningVi": "nhà phát minh",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3051,
+  "word": "process",
+  "ipa": "/ˈprɑːˌsɛs/",
+  "pos": "n.",
+  "meaningVi": "quá trình",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3052,
+  "word": "substance",
+  "ipa": "/ˈsʌbstəns/",
+  "pos": "n.",
+  "meaningVi": "chất",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3053,
+  "word": "copper",
+  "ipa": "/ˈkɑːpər/",
+  "pos": "n.",
+  "meaningVi": "đồng",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3054,
+  "word": "carbon dioxide",
+  "ipa": "/ˈkɑːrbən daɪˈɑːkˌsaɪd/",
+  "pos": "n.",
+  "meaningVi": "khí CO2",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3055,
+  "word": "bacteria",
+  "ipa": "/bækˈtɪriə/",
+  "pos": "n.",
+  "meaningVi": "vi khuẩn",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3056,
+  "word": "gravity",
+  "ipa": "/ˈɡrævəti/",
+  "pos": "n.",
+  "meaningVi": "trọng lực",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3057,
+  "word": "galaxy",
+  "ipa": "/ˈɡæləksi/",
+  "pos": "n.",
+  "meaningVi": "thiên hà",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3058,
+  "word": "rocket",
+  "ipa": "/ˈrɑːkət/",
+  "pos": "n.",
+  "meaningVi": "tên lửa",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3059,
+  "word": "telescope",
+  "ipa": "/ˈtɛləˌskoʊp/",
+  "pos": "n.",
+  "meaningVi": "kính thiên văn",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3060,
+  "word": "microscope",
+  "ipa": "/ˈmaɪkrəˌskoʊp/",
+  "pos": "n.",
+  "meaningVi": "kính hiển vi",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3061,
+  "word": "reuse",
+  "ipa": "/riˈjuːs/",
+  "pos": "v.",
+  "meaningVi": "tái sử dụng",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3062,
+  "word": "conserve",
+  "ipa": "/kənˈsɜːrv/",
+  "pos": "v.",
+  "meaningVi": "bảo tồn",
+  "level": "B2",
+  "topicId": "b2-environment-science"
+ },
+ {
+  "id": 3063,
+  "word": "heritage",
+  "ipa": "/ˈhɛrətədʒ/",
+  "pos": "n.",
+  "meaningVi": "di sản",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3064,
+  "word": "faith",
+  "ipa": "/feɪθ/",
+  "pos": "n.",
+  "meaningVi": "đức tin",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3065,
+  "word": "god",
+  "ipa": "/ɡɑːd/",
+  "pos": "n.",
+  "meaningVi": "thần, Chúa",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3066,
+  "word": "ritual",
+  "ipa": "/ˈrɪtʃuəl/",
+  "pos": "n.",
+  "meaningVi": "nghi lễ",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3067,
+  "word": "Halloween",
+  "ipa": "/ˌhæləˈwiːn/",
+  "pos": "n.",
+  "meaningVi": "lễ Halloween",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3068,
+  "word": "parade",
+  "ipa": "/pərˈeɪd/",
+  "pos": "n.",
+  "meaningVi": "cuộc diễu hành",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3069,
+  "word": "lantern",
+  "ipa": "/ˈlæntərn/",
+  "pos": "n.",
+  "meaningVi": "đèn lồng",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3070,
+  "word": "costume",
+  "ipa": "/kɑːˈstuːm/",
+  "pos": "n.",
+  "meaningVi": "trang phục biểu diễn",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3071,
+  "word": "mask",
+  "ipa": "/mæsk/",
+  "pos": "n.",
+  "meaningVi": "mặt nạ",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3072,
+  "word": "decoration",
+  "ipa": "/ˌdɛkərˈeɪʃən/",
+  "pos": "n.",
+  "meaningVi": "đồ trang trí",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3073,
+  "word": "legend",
+  "ipa": "/ˈlɛdʒənd/",
+  "pos": "n.",
+  "meaningVi": "truyền thuyết",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3074,
+  "word": "dialect",
+  "ipa": "/ˈdaɪəˌlɛkt/",
+  "pos": "n.",
+  "meaningVi": "phương ngữ",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3075,
+  "word": "ethnic",
+  "ipa": "/ˈɛθnɪk/",
+  "pos": "adj.",
+  "meaningVi": "thuộc dân tộc",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3076,
+  "word": "etiquette",
+  "ipa": "/ˈɛtəkət/",
+  "pos": "n.",
+  "meaningVi": "phép xã giao",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3077,
+  "word": "fiancé",
+  "ipa": "/ˌfiːɑːnˈseɪ/",
+  "pos": "n.",
+  "meaningVi": "hôn phu",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3078,
+  "word": "hang out",
+  "ipa": "/hæŋ aʊt/",
+  "pos": "v.",
+  "meaningVi": "đi chơi",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3079,
+  "word": "worship",
+  "ipa": "/ˈwɜːrʃəp/",
+  "pos": "v.",
+  "meaningVi": "thờ cúng",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3080,
+  "word": "tease",
+  "ipa": "/tiːz/",
+  "pos": "v.",
+  "meaningVi": "trêu chọc",
+  "level": "B2",
+  "topicId": "b2-culture-relationships-festivals"
+ },
+ {
+  "id": 3081,
+  "word": "aim",
+  "ipa": "/eɪm/",
+  "pos": "n.",
+  "meaningVi": "mục tiêu",
+  "level": "B2",
+  "topicId": "b2-abstract-nouns-ideas"
+ },
+ {
+  "id": 3082,
+  "word": "progress",
+  "ipa": "/ˈprɑːˌɡrɛs/",
+  "pos": "n.",
+  "meaningVi": "tiến bộ",
+  "level": "B2",
+  "topicId": "b2-abstract-nouns-ideas"
+ },
+ {
+  "id": 3083,
+  "word": "standard",
+  "ipa": "/ˈstændərd/",
+  "pos": "n.",
+  "meaningVi": "tiêu chuẩn",
+  "level": "B2",
+  "topicId": "b2-abstract-nouns-ideas"
+ },
+ {
+  "id": 3084,
+  "word": "sort",
+  "ipa": "/sɔːrt/",
+  "pos": "n.",
+  "meaningVi": "thứ",
+  "level": "B2",
+  "topicId": "b2-abstract-nouns-ideas"
+ },
+ {
+  "id": 3085,
+  "word": "hammer",
+  "ipa": "/ˈhæmər/",
+  "pos": "n.",
+  "meaningVi": "búa",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3086,
+  "word": "thread",
+  "ipa": "/θrɛd/",
+  "pos": "n.",
+  "meaningVi": "sợi chỉ",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3087,
+  "word": "glue",
+  "ipa": "/ɡluː/",
+  "pos": "n.",
+  "meaningVi": "keo dán",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3088,
+  "word": "label",
+  "ipa": "/ˈleɪbəl/",
+  "pos": "n.",
+  "meaningVi": "nhãn",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3089,
+  "word": "sack",
+  "ipa": "/sæk/",
+  "pos": "n.",
+  "meaningVi": "bao tải",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3090,
+  "word": "stick",
+  "ipa": "/stɪk/",
+  "pos": "n.",
+  "meaningVi": "cây gậy",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3091,
+  "word": "triangle",
+  "ipa": "/ˈtraɪˌæŋɡəl/",
+  "pos": "n.",
+  "meaningVi": "hình tam giác",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3092,
+  "word": "rectangle",
+  "ipa": "/ˈrɛktæŋɡəl/",
+  "pos": "n.",
+  "meaningVi": "hình chữ nhật",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3093,
+  "word": "crack",
+  "ipa": "/kræk/",
+  "pos": "n.",
+  "meaningVi": "vết nứt",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3094,
+  "word": "lump",
+  "ipa": "/lʌmp/",
+  "pos": "n.",
+  "meaningVi": "cục",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3095,
+  "word": "puddle",
+  "ipa": "/ˈpʌdəl/",
+  "pos": "n.",
+  "meaningVi": "vũng nước",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3096,
+  "word": "flame",
+  "ipa": "/fleɪm/",
+  "pos": "n.",
+  "meaningVi": "ngọn lửa",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3097,
+  "word": "ash",
+  "ipa": "/æʃ/",
+  "pos": "n.",
+  "meaningVi": "tro",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3098,
+  "word": "echo",
+  "ipa": "/ˈɛkoʊ/",
+  "pos": "n.",
+  "meaningVi": "tiếng vang",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3099,
+  "word": "goodbye",
+  "ipa": "/ɡʊdˈbaɪ/",
+  "pos": "n.",
+  "meaningVi": "lời tạm biệt",
+  "level": "B2",
+  "topicId": "b2-extra-everyday-nouns"
+ },
+ {
+  "id": 3100,
+  "word": "aim",
+  "ipa": "/eɪm/",
+  "pos": "v.",
+  "meaningVi": "nhắm tới",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3101,
+  "word": "balance",
+  "ipa": "/ˈbæləns/",
+  "pos": "v.",
+  "meaningVi": "cân bằng",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3102,
+  "word": "confess",
+  "ipa": "/kənˈfɛs/",
+  "pos": "v.",
+  "meaningVi": "thú nhận",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3103,
+  "word": "estimate",
+  "ipa": "/ˈɛstəˌmeɪt/",
+  "pos": "v.",
+  "meaningVi": "ước tính",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3104,
+  "word": "evaluate",
+  "ipa": "/ɪˈvæljuˌeɪt/",
+  "pos": "v.",
+  "meaningVi": "đánh giá",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3105,
+  "word": "exaggerate",
+  "ipa": "/ɪɡˈzædʒərˌeɪt/",
+  "pos": "v.",
+  "meaningVi": "phóng đại",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3106,
+  "word": "insert",
+  "ipa": "/ɪnˈsɜːrt/",
+  "pos": "v.",
+  "meaningVi": "chèn vào",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3107,
+  "word": "lean on",
+  "ipa": "/liːn ɑːn/",
+  "pos": "v.",
+  "meaningVi": "dựa vào",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3108,
+  "word": "neglect",
+  "ipa": "/nəˈɡlɛkt/",
+  "pos": "v.",
+  "meaningVi": "bỏ bê",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3109,
+  "word": "shrink",
+  "ipa": "/ʃrɪŋk/",
+  "pos": "v.",
+  "meaningVi": "co lại",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3110,
+  "word": "struggle",
+  "ipa": "/ˈstrʌɡəl/",
+  "pos": "v.",
+  "meaningVi": "vật lộn",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3111,
+  "word": "supply",
+  "ipa": "/səˈplaɪ/",
+  "pos": "v.",
+  "meaningVi": "cung cấp",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3112,
+  "word": "bare",
+  "ipa": "/bɛr/",
+  "pos": "adj.",
+  "meaningVi": "trần trụi",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3113,
+  "word": "fierce",
+  "ipa": "/fɪrs/",
+  "pos": "adj.",
+  "meaningVi": "dữ tợn",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3114,
+  "word": "flexible",
+  "ipa": "/ˈflɛksəbəl/",
+  "pos": "adj.",
+  "meaningVi": "linh hoạt",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3115,
+  "word": "genuine",
+  "ipa": "/ˈdʒɛnjəwən/",
+  "pos": "adj.",
+  "meaningVi": "chân thật",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3116,
+  "word": "joint",
+  "ipa": "/dʒɔɪnt/",
+  "pos": "adj.",
+  "meaningVi": "chung",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3117,
+  "word": "sincere",
+  "ipa": "/sɪnˈsɪr/",
+  "pos": "adj.",
+  "meaningVi": "chân thành",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3118,
+  "word": "tender",
+  "ipa": "/ˈtɛndər/",
+  "pos": "adj.",
+  "meaningVi": "dịu dàng",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3119,
+  "word": "tough",
+  "ipa": "/tʌf/",
+  "pos": "adj.",
+  "meaningVi": "dẻo dai",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3120,
+  "word": "ultimate",
+  "ipa": "/ˈʌltəmət/",
+  "pos": "adj.",
+  "meaningVi": "tối thượng",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3121,
+  "word": "vital",
+  "ipa": "/ˈvaɪtəl/",
+  "pos": "adj.",
+  "meaningVi": "sống còn",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ },
+ {
+  "id": 3122,
+  "word": "voluntary",
+  "ipa": "/ˈvɑːləntɛri/",
+  "pos": "adj.",
+  "meaningVi": "tự nguyện",
+  "level": "B2",
+  "topicId": "b2-extra-verbs-adjectives"
+ }
+]
