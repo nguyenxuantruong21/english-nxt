@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -27,6 +27,16 @@ function cleanExample(s) {
     .trim();
 }
 
+function isGoodExample(s) {
+  const t = s.trim();
+  return (
+    t.length > 15 &&
+    /[.?!]["']?$/.test(t) &&
+    !/^\d{4}\b/.test(t) &&
+    t.includes(' ')
+  );
+}
+
 for (const w of words) {
   const key = w.word;
   if (!(key in cache) || cache[key] === 'retry') {
@@ -45,8 +55,9 @@ for (const w of words) {
         const exs = [];
         for (const meaning of json[0]?.meanings ?? []) {
           for (const def of meaning.definitions ?? []) {
-            if (def.example && def.example.trim().length > 15) {
-              exs.push(cleanExample(def.example));
+            const ex = def.example ? cleanExample(def.example) : '';
+            if (isGoodExample(ex)) {
+              exs.push(ex);
             }
             if (exs.length >= 4) break;
           }
@@ -54,7 +65,7 @@ for (const w of words) {
         }
         cache[key] = [...new Set(exs)].slice(0, 2);
       } catch {
-        cache[key] = [];
+        cache[key] = 'retry';
       }
     } else {
       cache[key] = res && res.status === 404 ? [] : 'retry';
@@ -62,7 +73,7 @@ for (const w of words) {
     fetched++;
     if (fetched % 25 === 0) {
       writeFileSync(CACHE, JSON.stringify(cache));
-      console.log(`đã xử lý ${fetched}/${words.length} từ (cache: ${cache[key]?.length ?? 0} ví dụ cho "${key}")`);
+      console.log(`đã xử lý ${fetched}/${words.length} từ (cache: ${Array.isArray(cache[key]) ? cache[key].length : 0} ví dụ cho "${key}")`);
     }
     await new Promise((r) => setTimeout(r, 120));
   }
