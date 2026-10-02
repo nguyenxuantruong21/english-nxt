@@ -29,7 +29,7 @@ function cleanExample(s) {
 
 for (const w of words) {
   const key = w.word;
-  if (!(key in cache)) {
+  if (!(key in cache) || cache[key] === 'retry') {
     let res;
     try {
       res = await fetch(
