@@ -40,12 +40,13 @@ export function restartIfStale(entry: ReviewEntry, today: string): number {
 export function computeStreak(sessions: ProgressData['sessions'], today: string): number {
   if (!sessions[today]) return 0;
   let streak = 0;
-  const cursor = new Date(`${today}T00:00:00Z`);
+  const [y, m, d] = today.split('-').map(Number);
+  const cursor = new Date(y, m - 1, d);
   for (;;) {
     const key = todayStr(cursor);
     if (!sessions[key]) break;
     streak++;
-    cursor.setUTCDate(cursor.getUTCDate() - 1);
+    cursor.setDate(cursor.getDate() - 1);
   }
   return streak;
 }
