@@ -50,10 +50,6 @@ export function hasOptions(ex: ClozeExercise): ex is ClozeWithOptions {
   return Array.isArray(ex.options) && ex.answerIndex !== undefined;
 }
 
-export interface McqWithOptions extends McqExercise {}
-
-export interface ListenWithOptions extends ListenExercise {}
-
 export function shuffle<T>(arr: readonly T[], rng: () => number = Math.random): T[] {
   const out = [...arr];
   for (let i = out.length - 1; i > 0; i--) {
