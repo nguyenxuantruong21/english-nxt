@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import Levels from './pages/Levels';
@@ -24,7 +24,16 @@ export default function App() {
         <Route path="practice" element={<Practice />} />
         <Route path="practice/:kind" element={<PracticeRound />} />
         <Route path="settings" element={<Settings />} />
-        <Route path="*" element={<div className="p-8 text-center">Không tìm thấy trang</div>} />
+        <Route
+          path="*"
+          element={
+            <div className="p-8 text-center">
+              <p className="text-4xl">🔍</p>
+              <p className="mt-2 font-semibold">Không tìm thấy trang</p>
+              <Link to="/" className="mt-2 inline-block text-indigo-600">Về trang chủ</Link>
+            </div>
+          }
+        />
       </Route>
     </Routes>
   );

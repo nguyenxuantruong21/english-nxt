@@ -1,28 +1,35 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getWord } from '../lib/vocab';
+import { speak } from '../lib/speech';
 import { useProgress } from '../store/progress';
+import AudioButton from '../components/AudioButton';
 
 export default function WordDetail() {
   const store = useProgress();
-  const location = useLocation();
-  const searchParams = new URLSearchParams(
-    new URL(' ' + location.pathname + location.search, 'https://example.com')
-      .searchParams,
-  );
-  const wordId = Number(searchParams.get('id') || '0');
+  const { id } = useParams();
 
-  const word = getWord(wordId);
+  const word = getWord(Number(id));
   if (!word) {
-    return <div className="p-8 text-center">Không tìm thấy từ</div>;
+    return (
+      <div className="p-8 text-center">
+        <p>Không tìm thấy từ</p>
+        <Link to="/" className="mt-2 inline-block text-indigo-600 hover:text-indigo-800">
+          Về trang chủ
+        </Link>
+      </div>
+    );
   }
 
   const completed = Object.keys(store.data.completed).map(Number);
 
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-bold mb-4">
-        {word.word} {word.pos}
-      </h1>
+      <div className="flex items-center gap-3">
+        <h1 className="text-2xl font-bold">
+          {word.word} {word.pos}
+        </h1>
+        <AudioButton onPlay={() => speak(word.word)} />
+      </div>
       <div className="grid grid-cols-2 gap-4">
         <div>
           <p className="text-sm text-slate-500">ID</p>
@@ -42,12 +49,12 @@ export default function WordDetail() {
       {word.topicId && (
         <div className="mt-4">
           <p className="text-sm text-slate-500">Chủ đề</p>
-          <a
-            href={`/topics/${word.topicId}`}
+          <Link
+            to={`/topics/${word.topicId}`}
             className="text-indigo-600 underline hover:text-indigo-800"
           >
             {word.topicId}
-          </a>
+          </Link>
         </div>
       )}
     </div>
