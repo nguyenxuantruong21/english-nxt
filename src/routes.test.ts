@@ -3,6 +3,8 @@ import { renderToString } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { afterEach, describe, expect, it } from "vitest";
 import App from "./App";
+import SessionSummary from "./components/SessionSummary";
+import type { SessionSummaryProps } from "./components/SessionSummary";
 import { defaultProgress } from "./lib/storage";
 import { getWordsByLevel, getWordsByTopic } from "./lib/vocab";
 import { useProgress } from "./store/progress";
@@ -179,5 +181,99 @@ describe("error/edge states theo route", () => {
     const html = renderAt("/settings");
     expect(html).toContain("Export tiến độ");
     expect(html).toContain("Import tiến độ");
+  });
+});
+
+describe("đánh dấu đã biết + trang từ chưa biết", () => {
+  it("/learn → nút bỏ qua trên mặt trước thẻ, chưa hiện nút trả lời", () => {
+    const html = renderAt("/learn");
+    expect(html).toContain("Đã biết rồi");
+    expect(html).toContain("Xem nghĩa");
+    expect(html).not.toContain("Nhớ rồi");
+    expect(html).not.toContain("Chưa nhớ");
+  });
+
+  it("/unknown → bộ lọc + dòng từ + nút Đã biết + link chi tiết", () => {
+    const html = renderAt("/unknown");
+    expect(html).toContain("từ chưa biết");
+    expect(html).toContain('href="/learn"');
+    expect(html).toContain("Đã biết");
+    expect(html).toContain('href="/words/1"');
+    expect(html).toContain("Tất cả");
+  });
+
+  it("/unknown → phân trang khi còn nhiều từ", () => {
+    const html = renderAt("/unknown");
+    expect(html).toMatch(/Trang \d+\/\d+/);
+  });
+
+  it("/unknown khi đã biết tất cả → empty state", () => {
+    const all = (["A1", "A2", "B1", "B2"] as const).flatMap((l) =>
+      getWordsByLevel(l).map((w) => w.id),
+    );
+    markAllLearned(all);
+    const html = renderAt("/unknown");
+    expect(html).toContain("Bạn đã biết tất cả");
+    expect(html).not.toContain("Đã biết rồi");
+  });
+
+  it("menu có mục Chưa biết → /unknown", () => {
+    const html = renderAt("/");
+    expect(html).toContain('href="/unknown"');
+    expect(html).toContain("Chưa biết");
+  });
+
+  it("Dashboard → card số từ chưa biết", () => {
+    const html = renderAt("/");
+    expect(html).toContain("từ chưa biết");
+  });
+});
+
+describe("TopicDetail word actions", () => {
+  it("/topics/:id → word rows có nút Đánh dấu đã học cho từ chưa học", () => {
+    const html = renderAt("/topics/a1-family-people");
+    expect(html).toContain("Đánh dấu đã học");
+  });
+});
+
+describe("SessionSummary recap", () => {
+  it("hiện dòng bỏ qua khi recap.skipped > 0", () => {
+    const html = renderToString(
+      h(
+        MemoryRouter,
+        null,
+        h<SessionSummaryProps>(
+          SessionSummary,
+          { recap: { learned: 3, correct: 5, total: 6, skipped: 2 } },
+          null,
+        ),
+      ),
+    );
+    expect(html).toContain("Đã học 3 · trả lời đúng 5/6 (83%)");
+    expect(html).toContain("Đã biết, bỏ qua: 2 từ");
+  });
+
+  it("không hiện dòng bỏ qua khi thiếu prop (PracticeRound)", () => {
+    const html = renderToString(
+      h(
+        MemoryRouter,
+        null,
+        h<SessionSummaryProps>(
+          SessionSummary,
+          { recap: { learned: 3, correct: 5, total: 6 } },
+          null,
+        ),
+      ),
+    );
+    expect(html).not.toContain("Đã biết, bỏ qua");
+  });
+});
+
+describe("settings âm lượng", () => {
+  it("/settings → slider âm lượng + nhãn", () => {
+    const html = renderAt("/settings");
+    expect(html).toContain("Âm lượng");
+    expect(html).toContain('type="range"');
+    expect(html).toContain("Thử nghe");
   });
 });

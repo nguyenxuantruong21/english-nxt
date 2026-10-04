@@ -6,9 +6,10 @@ import AudioButton from './AudioButton';
 
 export interface WordRowProps {
   word: Word;
+  onMarkKnown?: () => void;
 }
 
-export default function WordRow({ word }: WordRowProps) {
+export default function WordRow({ word, onMarkKnown }: WordRowProps) {
   const learned = useProgress((s) => s.data.completed[word.id] !== undefined);
 
   return (
@@ -27,11 +28,19 @@ export default function WordRow({ word }: WordRowProps) {
         </span>
         <span className="text-sm text-slate-700">{word.meaningVi}</span>
       </Link>
-      {learned && (
+      {learned ? (
         <span className="text-xs text-emerald-600" title="Đã học">
           ✓
         </span>
-      )}
+      ) : onMarkKnown ? (
+        <button
+          type="button"
+          onClick={onMarkKnown}
+          className="shrink-0 rounded-lg border border-indigo-300 px-3 py-1.5 text-xs font-medium text-indigo-700 hover:bg-indigo-50"
+        >
+          Đánh dấu đã học
+        </button>
+      ) : null}
     </div>
   );
 }

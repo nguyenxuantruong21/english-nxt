@@ -32,6 +32,10 @@ export function getWord(id: number): Word | undefined {
   return WORD_MAP.get(id);
 }
 
+export function getAllWords(): Word[] {
+  return ALL_WORDS;
+}
+
 export function getWordsByLevel(level: Word["level"]): Word[] {
   return ALL_WORDS.filter((w) => w.level === level);
 }

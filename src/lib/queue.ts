@@ -89,3 +89,13 @@ export function buildDailyQueue(opts: DailyQueueOptions): DailyQueueResult {
     dueTotal: dueIds.length,
   };
 }
+
+export function nextActivePos(
+  queue: QueueItem[],
+  pos: number,
+  completed: Record<number, string>,
+): number {
+  let p = pos;
+  while (p < queue.length && completed[queue[p].wordId] !== undefined) p++;
+  return p;
+}

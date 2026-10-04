@@ -4,6 +4,7 @@ interface FakeUtter {
   text: string;
   lang: string;
   rate: number;
+  volume: number;
   handlers: Record<string, (() => void)[]>;
   addEventListener(ev: string, cb: () => void): void;
 }
@@ -13,6 +14,7 @@ function stubUtterance(): void {
     text = "";
     lang = "";
     rate = 1;
+    volume = 1;
     handlers: Record<string, (() => void)[]> = {};
     addEventListener(ev: string, cb: () => void) {
       (this.handlers[ev] ??= []).push(cb);
@@ -74,5 +76,50 @@ describe("speech", () => {
     };
     mod.stopSpeaking();
     expect(w.speechSynthesis.cancel).toHaveBeenCalled();
+  });
+});
+
+describe("speech volume", () => {
+  beforeEach(() => {
+    vi.resetModules();
+    vi.unstubAllGlobals();
+    vi.stubGlobal("localStorage", {
+      getItem: () => null,
+      setItem: () => {},
+      removeItem: () => {},
+    });
+    stubUtterance();
+    vi.stubGlobal("window", { speechSynthesis: { speak: vi.fn(), cancel: vi.fn() } });
+  });
+
+  async function speakWithVolume(volume?: number) {
+    const { useProgress } = await import("../store/progress");
+    const { speak } = await import("./speech");
+    if (volume !== undefined) {
+      const data = useProgress.getState().data;
+      useProgress.setState({
+        data: { ...data, settings: { ...data.settings, volume } },
+      });
+    }
+    speak("hello");
+    const w = window as unknown as {
+      speechSynthesis: { speak: ReturnType<typeof vi.fn> };
+    };
+    return w.speechSynthesis.speak.mock.calls[0][0] as FakeUtter;
+  }
+
+  it("áp dụng settings.volume/100 vào utter.volume", async () => {
+    const u = await speakWithVolume(75);
+    expect(u.volume).toBe(0.75);
+  });
+
+  it("mặc định volume = 100% → utter.volume 1", async () => {
+    const u = await speakWithVolume();
+    expect(u.volume).toBe(1);
+  });
+
+  it("volume 0 → im lặng tuyệt đối", async () => {
+    const u = await speakWithVolume(0);
+    expect(u.volume).toBe(0);
   });
 });

@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { getIndex, getWord } from "../lib/vocab";
 import { useProgress } from "../store/progress";
-import { buildDailyQueue, LEVEL_ORDER } from "../lib/queue";
+import { buildDailyQueue, LEVEL_ORDER, nextActivePos } from "../lib/queue";
 import { todayStr } from "../lib/review";
 import type { LevelId } from "../types";
 import Flashcard from "../components/Flashcard";
@@ -19,12 +19,14 @@ export default function Learn() {
 
   const data = useProgress((s) => s.data);
   const learnWord = useProgress((s) => s.learnWord);
+  const markKnown = useProgress((s) => s.markKnown);
   const answerWord = useProgress((s) => s.answerWord);
   const logExercise = useProgress((s) => s.logExercise);
 
   const [epoch, setEpoch] = useState(0);
   const [pos, setPos] = useState(0);
   const [results, setResults] = useState<Record<number, boolean>>({});
+  const [skipped, setSkipped] = useState<Record<number, true>>({});
 
   const sessionKey = `${topicId ?? ""}|${level ?? ""}|${epoch}`;
   const [activeKey, setActiveKey] = useState(sessionKey);
@@ -32,6 +34,7 @@ export default function Learn() {
     setActiveKey(sessionKey);
     setPos(0);
     setResults({});
+    setSkipped({});
   }
 
   const today = todayStr();
@@ -43,6 +46,7 @@ export default function Learn() {
     [topicId, level, epoch],
   );
   const queue = result.queue;
+  const displayPos = nextActivePos(queue, pos, data.completed);
 
   if (topicId && !topic) {
     return (
@@ -59,7 +63,7 @@ export default function Learn() {
   }
 
   const handleResult = (ok: boolean) => {
-    const item = queue[pos];
+    const item = queue[displayPos];
     if (!item) return;
     if (results[item.wordId] === undefined) {
       learnWord(item.wordId);
@@ -67,18 +71,35 @@ export default function Learn() {
       logExercise("flashcard");
       setResults((r) => ({ ...r, [item.wordId]: ok }));
     }
-    setPos((p) => p + 1);
+    setPos((p) => Math.max(p, displayPos + 1));
+  };
+
+  const handleKnown = () => {
+    const item = queue[displayPos];
+    if (!item) return;
+    markKnown(item.wordId);
+    setSkipped((s) => ({ ...s, [item.wordId]: true }));
+    setPos((p) => Math.max(p, displayPos + 1));
   };
 
   const restart = () => setEpoch((e) => e + 1);
 
-  if (queue.length > 0 && pos >= queue.length) {
-    const newCount = queue.filter((q) => q.isNew).length;
-    const correct = Object.values(results).filter(Boolean).length;
+  if (queue.length > 0 && displayPos >= queue.length) {
+    const answeredIds = Object.keys(results).map(Number);
+    const learned = queue.filter(
+      (q) => q.isNew && results[q.wordId] !== undefined,
+    ).length;
+    const correct = answeredIds.filter((id) => results[id]).length;
+    const skippedCount = Object.keys(skipped).length;
     return (
       <div className="p-8">
         <SessionSummary
-          recap={{ learned: newCount, correct, total: queue.length }}
+          recap={{
+            learned,
+            correct,
+            total: answeredIds.length,
+            skipped: skippedCount,
+          }}
           onAgain={restart}
         />
       </div>
@@ -168,27 +189,38 @@ export default function Learn() {
     );
   }
 
-  const item = queue[pos];
+  const item = queue[displayPos];
   const word = getWord(item.wordId);
+  let prevActive = displayPos - 1;
+  while (prevActive >= 0 && data.completed[queue[prevActive].wordId] !== undefined) {
+    prevActive--;
+  }
 
   return (
     <div className="p-8 space-y-6">
       <SessionSummary />
       <div className="flex items-center justify-between text-sm text-slate-500">
         <span>
-          {pos + 1}/{queue.length}
+          {displayPos + 1}/{queue.length}
         </span>
         <span>{item.isNew ? "Từ mới" : "Ôn tập"}</span>
         <button
           type="button"
-          onClick={() => setPos((p) => Math.max(0, p - 1))}
-          disabled={pos === 0}
+          onClick={() => setPos(prevActive)}
+          disabled={prevActive < 0}
           className="rounded border border-slate-300 px-3 py-1 disabled:opacity-40"
         >
           ← Trước
         </button>
       </div>
-      {word && <Flashcard key={word.id} word={word} onResult={handleResult} />}
+      {word && (
+        <Flashcard
+          key={word.id}
+          word={word}
+          onResult={handleResult}
+          onKnown={handleKnown}
+        />
+      )}
     </div>
   );
 }

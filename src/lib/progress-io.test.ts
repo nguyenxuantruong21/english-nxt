@@ -32,7 +32,7 @@ describe("parseProgressJson", () => {
     };
     const res = parseProgressJson(JSON.stringify(data));
     expect(res.ok).toBe(true);
-    if (res.ok) expect(res.data).toEqual(data);
+    if (res.ok) expect(res.data).toEqual({ ...data, settings: { dailyGoal: 30, volume: 100 } });
   });
 
   it("rejects invalid JSON", () => {
@@ -191,7 +191,7 @@ describe("parseProgressJson", () => {
     expect(() => dailyStats(res.data, today)).not.toThrow();
     expect(() => buildDailyQueue({ data: res.data, today })).not.toThrow();
     expect(res.data).toEqual({
-      settings: { dailyGoal: 20 },
+      settings: { dailyGoal: 20, volume: 100 },
       completed: {},
       review: {},
       sessions: {},
@@ -226,12 +226,37 @@ describe("parseProgressJson", () => {
 
 describe("progressExport", () => {
   it("produces a dated filename and pretty-printed content", () => {
-    const data = { ...defaultProgress(), settings: { dailyGoal: 25 } };
+    const data = { ...defaultProgress(), settings: { dailyGoal: 25, volume: 100 } };
     const out = progressExport(data);
     expect(out.filename).toMatch(
       /^english-nxt-progress-\d{4}-\d{2}-\d{2}\.json$/,
     );
     expect(JSON.parse(out.content)).toEqual(data);
     expect(out.content).toContain("\n  ");
+  });
+});
+
+describe("volume sanitize", () => {
+  const vol = (raw: string): unknown => {
+    const res = parseProgressJson(raw);
+    return res.ok ? res.data.settings.volume : "ERR";
+  };
+
+  it("thiếu volume → default 100", () => {
+    expect(vol('{"settings":{"dailyGoal":20}}')).toBe(100);
+  });
+
+  it("clamp 0-100, bỏ giá trị không hợp lệ", () => {
+    expect(vol('{"settings":{"volume":999}}')).toBe(100);
+    expect(vol('{"settings":{"volume":-3}}')).toBe(0);
+    expect(vol('{"settings":{"volume":"loud"}}')).toBe(100);
+    expect(vol('{"settings":{"volume":null}}')).toBe(100);
+    expect(vol('{"settings":{"volume":55}}')).toBe(55);
+  });
+
+  it("payload cũ không volume vẫn import được (backward-compat)", () => {
+    const res = parseProgressJson('{"settings":{"dailyGoal":30}}');
+    expect(res.ok).toBe(true);
+    if (res.ok) expect(res.data.settings).toEqual({ dailyGoal: 30, volume: 100 });
   });
 });

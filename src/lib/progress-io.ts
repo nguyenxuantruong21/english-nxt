@@ -19,6 +19,8 @@ function isFiniteNumber(v: unknown): v is number {
  * (data luôn tuân thủ `ProgressData`, an toàn cho `dailyStats`/`buildDailyQueue`):
  * - `settings.dailyGoal`: số hữu hạn → kẹp trong [5, 100]; thiếu hoặc không hợp
  *   lệ (chuỗi, null, object…) → 20. `settings` không phải object → coi như {}.
+ * - `settings.volume`: số hữu hạn → kẹp trong [0, 100]; thiếu hoặc không hợp lệ
+ *   → 100 (âm lượng mặc định).
  * - `completed`: container không phải object → {}. Entry được giữ khi key là số
  *   nguyên an toàn dạng chữ số ("/^\d+$/") VÀ giá trị là string; entry sai bị bỏ.
  * - `review`: container không phải object → {}. Entry được giữ khi key là số
@@ -50,6 +52,11 @@ const EXERCISE_KINDS: readonly ExerciseKind[] = [
 function sanitizeDailyGoal(v: unknown): number {
   if (!isFiniteNumber(v)) return 20;
   return Math.min(100, Math.max(5, v));
+}
+
+function sanitizeVolume(v: unknown): number {
+  if (!isFiniteNumber(v)) return 100;
+  return Math.min(100, Math.max(0, v));
 }
 
 function safeId(key: string): number | undefined {
@@ -150,7 +157,10 @@ export function parseProgressJson(text: string): ImportResult {
   return {
     ok: true,
     data: {
-      settings: { dailyGoal: sanitizeDailyGoal(settings.dailyGoal) },
+      settings: {
+        dailyGoal: sanitizeDailyGoal(settings.dailyGoal),
+        volume: sanitizeVolume(settings.volume),
+      },
       completed,
       review,
       sessions,

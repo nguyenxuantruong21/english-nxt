@@ -9,6 +9,7 @@ export default function Settings() {
   const data = store.data;
   const [confirming, setConfirming] = useState(false);
   const [goalDraft, setGoalDraft] = useState(String(data.settings.dailyGoal));
+  const [volumeDraft, setVolumeDraft] = useState(String(data.settings.volume ?? 100));
   const [importError, setImportError] = useState("");
   const [importSuccess, setImportSuccess] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -17,7 +18,8 @@ export default function Settings() {
 
   useEffect(() => {
     setGoalDraft(String(data.settings.dailyGoal));
-  }, [data.settings.dailyGoal]);
+    setVolumeDraft(String(data.settings.volume ?? 100));
+  }, [data.settings.dailyGoal, data.settings.volume]);
 
   const commitGoal = () => {
     const n = Number(goalDraft);
@@ -26,6 +28,15 @@ export default function Settings() {
       return;
     }
     store.setDailyGoal(Math.min(100, Math.max(5, Math.round(n))));
+  };
+
+  const commitVolume = () => {
+    const n = Number(volumeDraft);
+    if (volumeDraft.trim() === "" || !Number.isFinite(n)) {
+      setVolumeDraft(String(data.settings.volume ?? 100));
+      return;
+    }
+    store.setVolume(Math.min(100, Math.max(0, Math.round(n))));
   };
 
   const handleExport = () => {
@@ -91,6 +102,37 @@ export default function Settings() {
             className="w-24 rounded-xl border border-slate-300 p-2 text-center focus:border-indigo-500 focus:outline-none"
           />
           <span className="text-sm text-slate-500">từ/ngày (5–100)</span>
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-4">
+        <label htmlFor="volume" className="font-semibold">
+          Âm lượng phát âm
+        </label>
+        <div className="mt-2 flex items-center gap-3">
+          <input
+            id="volume"
+            type="range"
+            min={0}
+            max={100}
+            value={volumeDraft}
+            onChange={(e) => setVolumeDraft(e.target.value)}
+            onBlur={commitVolume}
+            className="flex-1"
+          />
+          <span className="w-12 text-sm text-slate-500 text-right">
+            {volumeDraft}%
+          </span>
+          <button
+            type="button"
+            onClick={() => {
+              const { speak } = require("../lib/speech");
+              speak("Volume preview");
+            }}
+            className="rounded-xl border border-indigo-600 px-3 py-1.5 text-sm font-medium text-indigo-600 hover:bg-indigo-50"
+          >
+            Thử nghe
+          </button>
         </div>
       </section>
 

@@ -6,6 +6,7 @@ import LevelDetail from "./pages/LevelDetail";
 import TopicDetail from "./pages/TopicDetail";
 import WordDetail from "./pages/WordDetail";
 import Learn from "./pages/Learn";
+import UnknownWords from "./pages/UnknownWords";
 import Practice from "./pages/Practice";
 import PracticeRound from "./pages/PracticeRound";
 import Settings from "./pages/Settings";
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="words/:id" element={<WordDetail />} />
         <Route path="learn" element={<Learn />} />
         <Route path="learn/:topicId" element={<Learn />} />
+        <Route path="unknown" element={<UnknownWords />} />
         <Route path="practice" element={<Practice />} />
         <Route path="practice/:kind" element={<PracticeRound />} />
         <Route path="settings" element={<Settings />} />

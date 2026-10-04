@@ -9,6 +9,7 @@ export default function TopicDetail() {
   const idx = getIndex();
   const topic = idx.topics.find((t) => t.id === topicId);
   const completed = useProgress((s) => s.data.completed);
+  const learnWord = useProgress((s) => s.learnWord);
 
   if (!topic) {
     return (
@@ -67,7 +68,7 @@ export default function TopicDetail() {
       ) : (
         <section className="rounded-2xl border border-slate-200 bg-white">
           {words.map((w) => (
-            <WordRow key={w.id} word={w} />
+            <WordRow key={w.id} word={w} onMarkKnown={() => learnWord(w.id)} />
           ))}
         </section>
       )}

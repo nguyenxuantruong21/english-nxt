@@ -328,3 +328,77 @@ describe("storage failure handling", () => {
     }
   });
 });
+
+describe("markKnown", () => {
+  it("marks completed + totalLearned without touching daily goal", () => {
+    useProgress.getState().markKnown(1);
+    const s = useProgress.getState();
+    expect(s.data.completed[1]).toBe(todayStr());
+    expect(s.data.stats.totalLearned).toBe(1);
+    expect(s.data.sessions[todayStr()]).toBeUndefined();
+    useProgress.getState().markKnown(2);
+    expect(useProgress.getState().data.stats.totalLearned).toBe(2);
+    expect(useProgress.getState().data.sessions[todayStr()]).toBeUndefined();
+  });
+
+  it("creates a review entry due in 30 days at interval 30", () => {
+    useProgress.getState().markKnown(1);
+    expect(useProgress.getState().data.review[1]).toEqual({
+      due: addDays(todayStr(), 30),
+      interval: 30,
+    });
+  });
+
+  it("does not bump reviewed count for today", () => {
+    useProgress.getState().learnWord(1);
+    useProgress.getState().markKnown(2);
+    const session = useProgress.getState().data.sessions[todayStr()];
+    expect(session.reviewed).toBe(0);
+  });
+
+  it("is idempotent on second call", () => {
+    useProgress.getState().markKnown(1);
+    const before = useProgress.getState().data;
+    useProgress.getState().markKnown(1);
+    const after = useProgress.getState().data;
+    expect(after.completed).toEqual(before.completed);
+    expect(after.review).toEqual(before.review);
+    expect(after.stats.totalLearned).toBe(1);
+    expect(after.sessions).toEqual(before.sessions);
+  });
+
+  it("overwrites an existing due review entry (word currently due)", () => {
+    useProgress.setState({
+      data: {
+        ...useProgress.getState().data,
+        completed: {},
+        review: { 1: { due: todayStr(), interval: 1 } },
+      },
+    });
+    useProgress.getState().markKnown(1);
+    expect(useProgress.getState().data.review[1]).toEqual({
+      due: addDays(todayStr(), 30),
+      interval: 30,
+    });
+  });
+});
+
+describe("setVolume", () => {
+  it("sets volume and clamps to 0-100", () => {
+    useProgress.getState().setVolume(75);
+    expect(useProgress.getState().data.settings.volume).toBe(75);
+    useProgress.getState().setVolume(999);
+    expect(useProgress.getState().data.settings.volume).toBe(100);
+    useProgress.getState().setVolume(-5);
+    expect(useProgress.getState().data.settings.volume).toBe(0);
+    useProgress.getState().setVolume(0);
+    expect(useProgress.getState().data.settings.volume).toBe(0);
+  });
+
+  it("updates settings object in state (persist verified by other tests)", () => {
+    useProgress.getState().setVolume(40);
+    const state = useProgress.getState();
+    expect(state.data.settings.volume).toBe(40);
+    expect(state.data.settings.dailyGoal).toBe(20);
+  });
+});

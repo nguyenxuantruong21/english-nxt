@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useProgress } from "../store/progress";
 import { computeStreak, dailyStats, todayStr } from "../lib/review";
 import { getIndex } from "../lib/vocab";
+import { selectUnknown } from "../lib/unknown";
 import ProgressBar from "../components/ProgressBar";
 
 export default function Dashboard() {
@@ -11,6 +12,12 @@ export default function Dashboard() {
   const stats = dailyStats(data, today);
   const streak = computeStreak(data.sessions, today);
   const idx = getIndex();
+  const unknownCount = selectUnknown(
+    data.completed,
+    {},
+    1,
+    Number.MAX_SAFE_INTEGER,
+  ).total;
 
   return (
     <div className="space-y-4">
@@ -54,6 +61,21 @@ export default function Dashboard() {
             }`}
           >
             Ôn ngay
+          </Link>
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="font-semibold">Từ chưa biết</h2>
+            <p className="text-sm text-slate-500">{unknownCount} từ chưa biết</p>
+          </div>
+          <Link
+            to="/unknown"
+            className="rounded-xl bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200"
+          >
+            Xem ngay
           </Link>
         </div>
       </section>

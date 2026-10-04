@@ -4,7 +4,7 @@ export const STORAGE_KEY = "english_nxt_v1";
 
 export function defaultProgress(): ProgressData {
   return {
-    settings: { dailyGoal: 20 },
+    settings: { dailyGoal: 20, volume: 100 },
     completed: {},
     review: {},
     sessions: {},

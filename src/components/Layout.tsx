@@ -5,6 +5,7 @@ import { useProgress } from '../store/progress';
 const tabs = [
   { to: '/', label: 'Trang chủ', icon: '🏠' },
   { to: '/learn', label: 'Học', icon: '📖' },
+  { to: '/unknown', label: 'Chưa biết', icon: '📌' },
   { to: '/practice', label: 'Luyện', icon: '✏️' },
   { to: '/settings', label: 'Cài đặt', icon: '⚙️' },
 ];
@@ -70,7 +71,7 @@ export default function Layout() {
       <nav
         className="fixed inset-x-0 bottom-0 z-10 border-t border-slate-200 bg-white sm:hidden"
       >
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-5">
           {tabs.map((t) => (
             <NavLink
               key={t.to}

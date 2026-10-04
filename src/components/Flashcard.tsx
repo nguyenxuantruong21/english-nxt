@@ -1,16 +1,17 @@
-import { useState } from 'react';
-import type { Word } from '../types';
-import { getExamples } from '../lib/vocab';
-import { speak } from '../lib/speech';
-import { useProgress } from '../store/progress';
-import AudioButton from './AudioButton';
+import { useState } from "react";
+import type { Word } from "../types";
+import { getExamples } from "../lib/vocab";
+import { speak } from "../lib/speech";
+import { useProgress } from "../store/progress";
+import AudioButton from "./AudioButton";
 
 export interface FlashcardProps {
   word: Word;
   onResult?: (ok: boolean) => void;
+  onKnown?: () => void;
 }
 
-export default function Flashcard({ word, onResult }: FlashcardProps) {
+export default function Flashcard({ word, onResult, onKnown }: FlashcardProps) {
   const learned = useProgress((s) => s.data.completed[word.id] !== undefined);
   const learnWord = useProgress((s) => s.learnWord);
   const [flipped, setFlipped] = useState(false);
@@ -18,7 +19,7 @@ export default function Flashcard({ word, onResult }: FlashcardProps) {
   if (onResult) {
     const examples = getExamples(word.id);
     return (
-      <div className="space-y-4">
+      <div className="`space-y-4`">
         <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm">
           <div className="flex items-center justify-center gap-3">
             <h2 className="text-3xl font-bold">{word.word}</h2>
@@ -30,11 +31,15 @@ export default function Flashcard({ word, onResult }: FlashcardProps) {
               <p className="text-xl">{word.meaningVi}</p>
               <p className="text-sm text-slate-400">{word.pos}</p>
               {examples.length > 0 && (
-                <p className="mt-3 text-sm italic text-slate-600">“{examples[0].en}”</p>
+                <p className="mt-3 text-sm italic text-slate-600">
+                  “{examples[0].en}”
+                </p>
               )}
             </div>
           ) : (
-            <p className="mt-6 text-sm text-indigo-600">Bấm “Xem nghĩa” để lật thẻ →</p>
+            <p className="mt-6 text-sm text-indigo-600">
+              Bấm “Xem nghĩa” để lật thẻ →
+            </p>
           )}
         </div>
         {flipped ? (
@@ -55,13 +60,24 @@ export default function Flashcard({ word, onResult }: FlashcardProps) {
             </button>
           </div>
         ) : (
-          <button
-            type="button"
-            onClick={() => setFlipped(true)}
-            className="w-full rounded-xl border border-slate-300 py-3 font-medium text-slate-600 hover:bg-slate-100"
-          >
-            Xem nghĩa
-          </button>
+          <div className="mt-6 space-y-2">
+            <button
+              type="button"
+              onClick={() => setFlipped(true)}
+              className="w-full rounded-xl border border-slate-300 py-3 font-medium text-slate-600 hover:bg-slate-100"
+            >
+              Xem nghĩa
+            </button>
+            {onKnown && (
+              <button
+                type="button"
+                onClick={onKnown}
+                className="w-full rounded-xl border border-slate-200 py-2.5 text-sm text-slate-400 hover:border-slate-300 hover:text-slate-600"
+              >
+                Đã biết rồi — bỏ qua
+              </button>
+            )}
+          </div>
         )}
       </div>
     );

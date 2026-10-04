@@ -59,7 +59,7 @@ export interface DaySession {
 }
 
 export interface ProgressData {
-  settings: { dailyGoal: number };
+  settings: { dailyGoal: number; volume?: number };
   completed: Record<number, string>;
   review: Record<number, { due: string; interval: number }>;
   sessions: Record<string, DaySession>;

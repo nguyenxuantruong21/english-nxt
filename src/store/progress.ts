@@ -16,9 +16,11 @@ export interface ProgressStore {
   data: ProgressData;
   storageError: boolean;
   learnWord: (id: number) => void;
+  markKnown: (id: number) => void;
   answerWord: (id: number, ok: boolean) => void;
   logExercise: (kind: ExerciseKind) => void;
   setDailyGoal: (n: number) => void;
+  setVolume: (n: number) => void;
   resetProgress: () => void;
   replaceData: (data: ProgressData) => void;
   clearStorageError: () => void;
@@ -114,6 +116,27 @@ export const useProgress = create<ProgressStore>()(
         });
       },
 
+      markKnown: (id: number) => {
+        const data = get().data;
+        if (data.completed[id] !== undefined) return;
+        const today = todayStr();
+        const completed = { ...data.completed, [id]: today };
+        set({
+          data: {
+            ...data,
+            completed,
+            review: {
+              ...data.review,
+              [id]: { due: addDays(today, 30), interval: 30 },
+            },
+            stats: {
+              ...data.stats,
+              totalLearned: Object.keys(completed).length,
+            },
+          },
+        });
+      },
+
       answerWord: (id: number, ok: boolean) => {
         const data = get().data;
         const today = todayStr();
@@ -165,6 +188,18 @@ export const useProgress = create<ProgressStore>()(
           data: {
             ...get().data,
             settings: { ...get().data.settings, dailyGoal: n },
+          },
+        });
+      },
+
+      setVolume: (n: number) => {
+        set({
+          data: {
+            ...get().data,
+            settings: {
+              ...get().data.settings,
+              volume: Math.min(100, Math.max(0, Math.round(n))),
+            },
           },
         });
       },

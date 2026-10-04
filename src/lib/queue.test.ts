@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildDailyQueue, LEVEL_ORDER } from "./queue";
+import { buildDailyQueue, LEVEL_ORDER, nextActivePos } from "./queue";
 import { defaultProgress } from "./storage";
 import { todayStr } from "./review";
 import { getWordsByLevel, getWordsByTopic } from "./vocab";
@@ -144,5 +144,33 @@ describe("buildDailyQueue", () => {
     const r = buildDailyQueue({ data, today });
     expect(r.queue.map((q) => q.wordId)).not.toContain(9);
     expect(r.dueTotal).toBe(0);
+  });
+});
+
+describe("nextActivePos (skip từ đã biết trong phiên)", () => {
+  const completed = { 2: "2026-01-01", 3: "2026-01-01" } as Record<
+    number,
+    string
+  >;
+  const queue = [
+    { wordId: 1, isNew: true },
+    { wordId: 2, isNew: true },
+    { wordId: 3, isNew: true },
+    { wordId: 4, isNew: true },
+  ];
+
+  it("bỏ qua các mục đã completed khi duyệt tới", () => {
+    expect(nextActivePos(queue, 0, completed)).toBe(0);
+    expect(nextActivePos(queue, 1, completed)).toBe(3);
+    expect(nextActivePos(queue, 2, completed)).toBe(3);
+  });
+
+  it("trả về cuối hàng đợi khi tất cả còn lại đã biết", () => {
+    expect(nextActivePos(queue, 1, { 2: "x", 3: "x", 4: "x" })).toBe(4);
+    expect(nextActivePos(queue, 4, completed)).toBe(4);
+  });
+
+  it("không bỏ qua từ chưa completed", () => {
+    expect(nextActivePos(queue, 0, {})).toBe(0);
   });
 });

@@ -7,6 +7,7 @@ export interface SessionRecap {
   learned: number;
   correct: number;
   total: number;
+  skipped?: number;
 }
 
 export interface SessionSummaryProps {
@@ -22,8 +23,13 @@ function RecapCard({ recap, onAgain }: { recap: SessionRecap; onAgain?: () => vo
       <p className="text-5xl">🎉</p>
       <h2 className="mt-2 text-xl font-bold">Hoàn thành phiên học!</h2>
       <p className="mt-3 text-sm text-slate-600">
-        Đã học {recap.learned} · trả lời đúng {recap.correct}/{recap.total} ({pct}%)
+        {`Đã học ${recap.learned} · trả lời đúng ${recap.correct}/${recap.total} (${pct}%)`}
       </p>
+      {recap.skipped ? (
+        <p className="mt-1 text-sm text-slate-500">
+          {`Đã biết, bỏ qua: ${recap.skipped} từ`}
+        </p>
+      ) : null}
       <div className="mt-5 flex gap-3">
         {onAgain && (
           <button
