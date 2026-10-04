@@ -1,7 +1,7 @@
-import { Link, useParams } from 'react-router-dom';
-import { getIndex } from '../lib/vocab';
-import { useProgress } from '../store/progress';
-import ProgressBar from '../components/ProgressBar';
+import { Link, useParams } from "react-router-dom";
+import { getIndex } from "../lib/vocab";
+import { useProgress } from "../store/progress";
+import ProgressBar from "../components/ProgressBar";
 
 export default function LevelDetail() {
   const { level } = useParams();
@@ -28,7 +28,10 @@ export default function LevelDetail() {
   return (
     <div className="space-y-4">
       <div>
-        <Link to="/levels" className="text-sm text-indigo-600 hover:text-indigo-800">
+        <Link
+          to="/levels"
+          className="text-sm text-indigo-600 hover:text-indigo-800"
+        >
           ← Cấp độ
         </Link>
         <h1 className="mt-1 text-2xl font-bold">
@@ -43,14 +46,18 @@ export default function LevelDetail() {
       ) : (
         <div className="grid grid-cols-2 gap-4">
           {topics.map((t) => {
-            const learned = t.wordIds.filter((id) => completed[id] !== undefined).length;
+            const learned = t.wordIds.filter(
+              (id) => completed[id] !== undefined,
+            ).length;
             return (
               <Link
                 key={t.id}
                 to={`/topics/${t.id}`}
                 className="rounded-2xl border border-slate-200 bg-white p-4 hover:border-indigo-300 transition-colors"
               >
-                <h2 className="text-lg font-bold text-indigo-600">{t.nameEn}</h2>
+                <h2 className="text-lg font-bold text-indigo-600">
+                  {t.nameEn}
+                </h2>
                 <p className="text-sm text-slate-500">{t.nameVi}</p>
                 <p className="mt-2 text-xs">{`${learned}/${t.wordCount} từ`}</p>
                 <div className="mt-1">

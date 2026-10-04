@@ -1,16 +1,16 @@
-import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
-import type { StateStorage } from 'zustand/middleware';
-import type { DaySession, ProgressData } from '../types';
-import { defaultProgress, STORAGE_KEY } from '../lib/storage';
+import { create } from "zustand";
+import { persist, createJSONStorage } from "zustand/middleware";
+import type { StateStorage } from "zustand/middleware";
+import type { DaySession, ProgressData } from "../types";
+import { defaultProgress, STORAGE_KEY } from "../lib/storage";
 import {
   INTERVALS,
   computeStreak,
   nextInterval,
   restartIfStale,
   todayStr,
-} from '../lib/review';
-import type { ExerciseKind } from '../types';
+} from "../lib/review";
+import type { ExerciseKind } from "../types";
 
 export interface ProgressStore {
   data: ProgressData;
@@ -106,7 +106,10 @@ export const useProgress = create<ProgressStore>()(
               ...data.sessions,
               [today]: { ...session, learned: session.learned + 1 },
             },
-            stats: { ...data.stats, totalLearned: Object.keys(completed).length },
+            stats: {
+              ...data.stats,
+              totalLearned: Object.keys(completed).length,
+            },
           },
         });
       },
@@ -123,7 +126,10 @@ export const useProgress = create<ProgressStore>()(
             ...data,
             review: {
               ...data.review,
-              [id]: { due: addDays(today, INTERVALS[tier - 1]), interval: tier },
+              [id]: {
+                due: addDays(today, INTERVALS[tier - 1]),
+                interval: tier,
+              },
             },
             sessions: {
               ...data.sessions,
@@ -139,7 +145,10 @@ export const useProgress = create<ProgressStore>()(
         const session = normalizeSession(data.sessions[today]);
         const newSession: DaySession = {
           ...session,
-          exercises: { ...session.exercises, [kind]: session.exercises[kind] + 1 },
+          exercises: {
+            ...session.exercises,
+            [kind]: session.exercises[kind] + 1,
+          },
         };
         const newSessions = { ...data.sessions, [today]: newSession };
         set({
@@ -152,7 +161,12 @@ export const useProgress = create<ProgressStore>()(
       },
 
       setDailyGoal: (n: number) => {
-        set({ data: { ...get().data, settings: { ...get().data.settings, dailyGoal: n } } });
+        set({
+          data: {
+            ...get().data,
+            settings: { ...get().data.settings, dailyGoal: n },
+          },
+        });
       },
 
       resetProgress: () => {
@@ -171,8 +185,8 @@ export const useProgress = create<ProgressStore>()(
     {
       name: STORAGE_KEY,
       storage: createJSONStorage(() => {
-        if (typeof localStorage === 'undefined') {
-          throw new Error('localStorage unavailable');
+        if (typeof localStorage === "undefined") {
+          throw new Error("localStorage unavailable");
         }
         return safeStorage;
       }),

@@ -1,33 +1,38 @@
-import { useEffect, useMemo, useState } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
-import { buildFlashcard, hasOptions, makeRound, shuffle } from '../lib/exercises';
-import type { Exercise } from '../lib/exercises';
+import { useEffect, useMemo, useState } from "react";
+import { useParams, useSearchParams } from "react-router-dom";
+import {
+  buildFlashcard,
+  hasOptions,
+  makeRound,
+  shuffle,
+} from "../lib/exercises";
+import type { Exercise } from "../lib/exercises";
 import {
   getExamples,
   getFrames,
   getWord,
   getWordsByLevel,
   getWordsByTopic,
-} from '../lib/vocab';
-import { useProgress } from '../store/progress';
-import McqExercise from '../components/exercises/McqExercise';
-import ListenExercise from '../components/exercises/ListenExercise';
-import ClozeExercise from '../components/exercises/ClozeExercise';
-import DictationExercise from '../components/exercises/DictationExercise';
-import Flashcard from '../components/Flashcard';
-import SessionSummary from '../components/SessionSummary';
+} from "../lib/vocab";
+import { useProgress } from "../store/progress";
+import McqExercise from "../components/exercises/McqExercise";
+import ListenExercise from "../components/exercises/ListenExercise";
+import ClozeExercise from "../components/exercises/ClozeExercise";
+import DictationExercise from "../components/exercises/DictationExercise";
+import Flashcard from "../components/Flashcard";
+import SessionSummary from "../components/SessionSummary";
 
 const ROUND_SIZE = 10;
 
 function allWords() {
-  return (['A1', 'A2', 'B1', 'B2'] as const).flatMap((l) => getWordsByLevel(l));
+  return (["A1", "A2", "B1", "B2"] as const).flatMap((l) => getWordsByLevel(l));
 }
 
 export default function PracticeRound() {
   const { kind } = useParams();
   const [params] = useSearchParams();
-  const wordParam = params.get('word');
-  const topicParam = params.get('topic');
+  const wordParam = params.get("word");
+  const topicParam = params.get("topic");
   const store = useProgress();
 
   const pool = useMemo(() => {
@@ -42,29 +47,34 @@ export default function PracticeRound() {
   const target = wordParam ? getWord(Number(wordParam)) : undefined;
 
   const round = useMemo<Exercise[]>(() => {
-    if (kind === 'flash') {
-      return shuffle(pool).slice(0, ROUND_SIZE).map((w) => buildFlashcard(w));
+    if (kind === "flash") {
+      return shuffle(pool)
+        .slice(0, ROUND_SIZE)
+        .map((w) => buildFlashcard(w));
     }
     if (target && kind) {
       const frame = getFrames(target.topicId)[0];
       return makeRound(target, pool, frame, getExamples(target.id));
     }
-    if (kind === 'mcq') return makeRound(undefined, pool, undefined, [], 'mcq');
-    if (kind === 'listen') return makeRound(undefined, pool, undefined, [], 'listen');
-    if (kind === 'cloze') return makeRound(undefined, pool, undefined, [], 'cloze');
-    if (kind === 'dictation') return makeRound(undefined, pool, undefined, [], 'dictation');
+    if (kind === "mcq") return makeRound(undefined, pool, undefined, [], "mcq");
+    if (kind === "listen")
+      return makeRound(undefined, pool, undefined, [], "listen");
+    if (kind === "cloze")
+      return makeRound(undefined, pool, undefined, [], "cloze");
+    if (kind === "dictation")
+      return makeRound(undefined, pool, undefined, [], "dictation");
     return makeRound(undefined, pool);
   }, [kind, pool, target]);
 
   const wordIdOf = useMemo(() => {
     const byText = new Map(pool.map((w) => [w.word.toLowerCase(), w.id]));
     return (ex: Exercise): number | undefined => {
-      if (ex.kind === 'flashcard') return ex.word.id;
-      if (ex.kind === 'dictation') return ex.wordId;
+      if (ex.kind === "flashcard") return ex.word.id;
+      if (ex.kind === "dictation") return ex.wordId;
       const text =
-        ex.kind === 'mcq'
+        ex.kind === "mcq"
           ? ex.question
-          : ex.kind === 'listen'
+          : ex.kind === "listen"
             ? ex.options[ex.answerIndex]
             : ex.answer;
       return byText.get(text.toLowerCase()) ?? target?.id;
@@ -120,7 +130,8 @@ export default function PracticeRound() {
   }
 
   const ex = round[pos];
-  const dictationWord = ex.kind === 'dictation' ? getWord(ex.wordId) : undefined;
+  const dictationWord =
+    ex.kind === "dictation" ? getWord(ex.wordId) : undefined;
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between text-sm text-slate-500">
@@ -130,7 +141,7 @@ export default function PracticeRound() {
         <span>Đúng: {correct}</span>
       </div>
 
-      {ex.kind === 'flashcard' && (
+      {ex.kind === "flashcard" && (
         <div className="space-y-3">
           <Flashcard word={ex.word} />
           <div className="flex justify-center gap-3">
@@ -151,22 +162,26 @@ export default function PracticeRound() {
           </div>
         </div>
       )}
-      {ex.kind === 'mcq' && (
+      {ex.kind === "mcq" && (
         <McqExercise key={pos} exercise={ex} onAnswer={handleAnswer} />
       )}
-      {ex.kind === 'listen' && (
+      {ex.kind === "listen" && (
         <ListenExercise key={pos} exercise={ex} onAnswer={handleAnswer} />
       )}
-      {ex.kind === 'cloze' && hasOptions(ex) && (
+      {ex.kind === "cloze" && hasOptions(ex) && (
         <ClozeExercise key={pos} exercise={ex} onAnswer={handleAnswer} />
       )}
-      {ex.kind === 'cloze' && !hasOptions(ex) && (
+      {ex.kind === "cloze" && !hasOptions(ex) && (
         <p className="text-center text-slate-500">Bỏ qua câu này...</p>
       )}
-      {ex.kind === 'dictation' && dictationWord && (
-        <DictationExercise key={pos} word={dictationWord} onAnswer={handleAnswer} />
+      {ex.kind === "dictation" && dictationWord && (
+        <DictationExercise
+          key={pos}
+          word={dictationWord}
+          onAnswer={handleAnswer}
+        />
       )}
-      {ex.kind === 'dictation' && !dictationWord && (
+      {ex.kind === "dictation" && !dictationWord && (
         <p className="text-center text-slate-500">Bỏ qua câu này...</p>
       )}
     </div>

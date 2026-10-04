@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import { useProgress } from '../store/progress';
-import { computeStreak, dailyStats, todayStr } from '../lib/review';
-import { getIndex } from '../lib/vocab';
-import ProgressBar from '../components/ProgressBar';
+import { Link } from "react-router-dom";
+import { useProgress } from "../store/progress";
+import { computeStreak, dailyStats, todayStr } from "../lib/review";
+import { getIndex } from "../lib/vocab";
+import ProgressBar from "../components/ProgressBar";
 
 export default function Dashboard() {
   const store = useProgress();
@@ -31,7 +31,9 @@ export default function Dashboard() {
           to="/learn"
           className="mt-4 block rounded-xl bg-indigo-600 py-2.5 text-center font-medium text-white hover:bg-indigo-700"
         >
-          {stats.remaining > 0 ? `Học tiếp (${stats.remaining} từ)` : 'Ôn lại hôm nay'}
+          {stats.remaining > 0
+            ? `Học tiếp (${stats.remaining} từ)`
+            : "Ôn lại hôm nay"}
         </Link>
       </section>
 
@@ -39,14 +41,16 @@ export default function Dashboard() {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="font-semibold">Ôn tập</h2>
-            <p className="text-sm text-slate-500">{stats.dueCount} từ đến hạn</p>
+            <p className="text-sm text-slate-500">
+              {stats.dueCount} từ đến hạn
+            </p>
           </div>
           <Link
             to="/practice"
             className={`rounded-xl px-4 py-2 text-sm font-medium ${
               stats.dueCount > 0
-                ? 'bg-emerald-600 text-white hover:bg-emerald-700'
-                : 'bg-slate-100 text-slate-400'
+                ? "bg-emerald-600 text-white hover:bg-emerald-700"
+                : "bg-slate-100 text-slate-400"
             }`}
           >
             Ôn ngay

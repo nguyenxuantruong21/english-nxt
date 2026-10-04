@@ -1,4 +1,4 @@
-import type { DaySession, ProgressData } from '../types';
+import type { DaySession, ProgressData } from "../types";
 
 export const INTERVALS = [1, 3, 7, 14, 30];
 export const STALE_DAYS = 7;
@@ -10,8 +10,8 @@ export interface ReviewEntry {
 
 export function todayStr(d: Date = new Date()): string {
   const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
   return `${y}-${m}-${day}`;
 }
 
@@ -37,10 +37,13 @@ export function restartIfStale(entry: ReviewEntry, today: string): number {
   return entry.interval;
 }
 
-export function computeStreak(sessions: ProgressData['sessions'], today: string): number {
+export function computeStreak(
+  sessions: ProgressData["sessions"],
+  today: string,
+): number {
   if (!sessions[today]) return 0;
   let streak = 0;
-  const [y, m, d] = today.split('-').map(Number);
+  const [y, m, d] = today.split("-").map(Number);
   const cursor = new Date(y, m - 1, d);
   for (;;) {
     const key = todayStr(cursor);
@@ -59,7 +62,9 @@ const emptySession = (): DaySession => ({
 
 export function dailyStats(p: ProgressData, today: string) {
   const session = p.sessions[today] ?? emptySession();
-  const dueCount = Object.values(p.review).filter((e) => isDue(e, today)).length;
+  const dueCount = Object.values(p.review).filter((e) =>
+    isDue(e, today),
+  ).length;
   return {
     goal: p.settings.dailyGoal,
     learnedToday: session.learned,

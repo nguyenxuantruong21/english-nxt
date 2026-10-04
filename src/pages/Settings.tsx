@@ -1,15 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
-import { useProgress } from '../store/progress';
-import { computeStreak, todayStr } from '../lib/review';
-import { getIndex } from '../lib/vocab';
-import { parseProgressJson, progressExport } from '../lib/progress-io';
+import { useEffect, useRef, useState } from "react";
+import { useProgress } from "../store/progress";
+import { computeStreak, todayStr } from "../lib/review";
+import { getIndex } from "../lib/vocab";
+import { parseProgressJson, progressExport } from "../lib/progress-io";
 
 export default function Settings() {
   const store = useProgress();
   const data = store.data;
   const [confirming, setConfirming] = useState(false);
   const [goalDraft, setGoalDraft] = useState(String(data.settings.dailyGoal));
-  const [importError, setImportError] = useState('');
+  const [importError, setImportError] = useState("");
+  const [importSuccess, setImportSuccess] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
   const streak = computeStreak(data.sessions, todayStr());
   const idx = getIndex();
@@ -20,7 +21,7 @@ export default function Settings() {
 
   const commitGoal = () => {
     const n = Number(goalDraft);
-    if (goalDraft.trim() === '' || !Number.isFinite(n)) {
+    if (goalDraft.trim() === "" || !Number.isFinite(n)) {
       setGoalDraft(String(data.settings.dailyGoal));
       return;
     }
@@ -29,21 +30,28 @@ export default function Settings() {
 
   const handleExport = () => {
     const { filename, content } = progressExport(data);
-    const url = URL.createObjectURL(new Blob([content], { type: 'application/json' }));
-    const a = document.createElement('a');
+    const url = URL.createObjectURL(
+      new Blob([content], { type: "application/json" }),
+    );
+    const a = document.createElement("a");
     a.href = url;
     a.download = filename;
+    document.body.appendChild(a);
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => {
+      URL.revokeObjectURL(url);
+      a.remove();
+    }, 1000);
   };
 
   const handleImportFile = async (file: File | null | undefined) => {
     if (!file) return;
+    setImportSuccess(false);
     let text: string;
     try {
       text = await file.text();
     } catch {
-      setImportError('Không đọc được file');
+      setImportError("Không đọc được file");
       return;
     }
     const res = parseProgressJson(text);
@@ -51,12 +59,13 @@ export default function Settings() {
       setImportError(res.error);
       return;
     }
-    if (!window.confirm('Ghi đè toàn bộ tiến độ hiện tại bằng file này?')) {
-      setImportError('');
+    if (!window.confirm("Ghi đè toàn bộ tiến độ hiện tại bằng file này?")) {
+      setImportError("");
       return;
     }
     store.replaceData(res.data);
-    setImportError('');
+    setImportError("");
+    setImportSuccess(true);
   };
 
   return (
@@ -77,7 +86,7 @@ export default function Settings() {
             onChange={(e) => setGoalDraft(e.target.value)}
             onBlur={commitGoal}
             onKeyDown={(e) => {
-              if (e.key === 'Enter') e.currentTarget.blur();
+              if (e.key === "Enter") e.currentTarget.blur();
             }}
             className="w-24 rounded-xl border border-slate-300 p-2 text-center focus:border-indigo-500 focus:outline-none"
           />
@@ -112,13 +121,18 @@ export default function Settings() {
             className="hidden"
             onChange={(e) => {
               void handleImportFile(e.target.files?.[0]);
-              e.target.value = '';
+              e.target.value = "";
             }}
           />
         </div>
         {importError && (
           <p className="mt-2 text-sm text-rose-600" role="alert">
             {importError}
+          </p>
+        )}
+        {!importError && importSuccess && (
+          <p className="mt-2 text-sm text-emerald-600" role="status">
+            Đã import tiến độ thành công
           </p>
         )}
       </section>

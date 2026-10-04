@@ -1,21 +1,21 @@
-import type { ExerciseKind, Frame, Word } from '../types';
-import { getExamples, getFrames } from './vocab';
+import type { ExerciseKind, Frame, Word } from "../types";
+import { getExamples, getFrames } from "./vocab";
 
 export interface McqExercise {
-  kind: 'mcq';
+  kind: "mcq";
   question: string;
   options: string[];
   answerIndex: number;
 }
 
 export interface ListenExercise {
-  kind: 'listen';
+  kind: "listen";
   options: string[];
   answerIndex: number;
 }
 
 export interface ClozeExercise {
-  kind: 'cloze';
+  kind: "cloze";
   sentence: string;
   blanks: number[];
   answer: string;
@@ -24,13 +24,13 @@ export interface ClozeExercise {
 }
 
 export interface DictationExercise {
-  kind: 'dictation';
+  kind: "dictation";
   answer: string;
   wordId: number;
 }
 
 export interface FlashcardExercise {
-  kind: 'flashcard';
+  kind: "flashcard";
   word: Word;
 }
 
@@ -50,7 +50,10 @@ export function hasOptions(ex: ClozeExercise): ex is ClozeWithOptions {
   return Array.isArray(ex.options) && ex.answerIndex !== undefined;
 }
 
-export function shuffle<T>(arr: readonly T[], rng: () => number = Math.random): T[] {
+export function shuffle<T>(
+  arr: readonly T[],
+  rng: () => number = Math.random,
+): T[] {
   const out = [...arr];
   for (let i = out.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
@@ -64,7 +67,10 @@ function pickWrong(target: Word, pool: Word[], count: number): Word[] {
   return shuffle(candidates).slice(0, count);
 }
 
-function place<T>(answer: T, wrongs: T[]): { options: T[]; answerIndex: number } {
+function place<T>(
+  answer: T,
+  wrongs: T[],
+): { options: T[]; answerIndex: number } {
   const answerIndex = Math.floor(Math.random() * (wrongs.length + 1));
   const options = [...wrongs];
   options.splice(answerIndex, 0, answer);
@@ -74,17 +80,17 @@ function place<T>(answer: T, wrongs: T[]): { options: T[]; answerIndex: number }
 export function buildMcq(word: Word, pool: Word[]): McqExercise {
   const wrongs = pickWrong(word, pool, 3).map((p) => p.meaningVi);
   const { options, answerIndex } = place(word.meaningVi, wrongs);
-  return { kind: 'mcq', question: word.word, options, answerIndex };
+  return { kind: "mcq", question: word.word, options, answerIndex };
 }
 
 export function buildListen(word: Word, pool: Word[]): ListenExercise {
   const wrongs = pickWrong(word, pool, 3).map((p) => p.word);
   const { options, answerIndex } = place(word.word, wrongs);
-  return { kind: 'listen', options, answerIndex };
+  return { kind: "listen", options, answerIndex };
 }
 
 function normalizeToken(t: string): string {
-  return t.toLowerCase().replace(/[^a-z]/g, '');
+  return t.toLowerCase().replace(/[^a-z]/g, "");
 }
 
 function tokenMatches(token: string, word: string): boolean {
@@ -94,26 +100,27 @@ function tokenMatches(token: string, word: string): boolean {
   if (nt === nw) return true;
   if (nt.includes(nw) && nt.length > nw.length) return true;
   if (nw.includes(nt) && nw.length > nt.length) return true;
-  if (nt.replace(/s$/, '') === nw) return true;
-  if (nt.endsWith('ies') && nw.endsWith('y') && nt.slice(0, -3) + 'y' === nw) return true;
+  if (nt.replace(/s$/, "") === nw) return true;
+  if (nt.endsWith("ies") && nw.endsWith("y") && nt.slice(0, -3) + "y" === nw)
+    return true;
   return false;
 }
 
 function blankSentence(sentence: string, word: string): string | null {
-  if (sentence.includes('___')) {
-    const index = sentence.indexOf('___');
+  if (sentence.includes("___")) {
+    const index = sentence.indexOf("___");
     const truncated = sentence.slice(0, index + 3);
-    return truncated.replace(/\.$/, '') + '.';
+    return truncated.replace(/\.$/, "") + ".";
   }
   const tokens = sentence.split(/(\s+)/);
   for (let i = 0; i < tokens.length; i++) {
     const t = tokens[i];
-    const bare = t.replace(/^[^a-zA-Z']+/, '').replace(/[^a-zA-Z']+$/, '');
+    const bare = t.replace(/^[^a-zA-Z']+/, "").replace(/[^a-zA-Z']+$/, "");
     if (bare && tokenMatches(bare, word)) {
       const before = t.slice(0, t.indexOf(bare));
       const after = t.slice(t.indexOf(bare) + bare.length);
       tokens[i] = `${before}___${after}`;
-      return tokens.join('').replace(/\.$/, '') + '.';
+      return tokens.join("").replace(/\.$/, "") + ".";
     }
   }
   return null;
@@ -126,7 +133,7 @@ export function buildCloze(
 ): ClozeExercise | null {
   const candidates: string[] = [];
 
-  if (typeof frame === 'string') {
+  if (typeof frame === "string") {
     candidates.push(frame);
   } else if (frame?.template) {
     candidates.push(frame.template);
@@ -139,18 +146,18 @@ export function buildCloze(
       const blanks: number[] = [];
       const re = /___/g;
       while (re.exec(blanked) !== null) blanks.push(re.lastIndex - 3);
-      return { kind: 'cloze', sentence: blanked, blanks, answer: word.word };
+      return { kind: "cloze", sentence: blanked, blanks, answer: word.word };
     }
   }
   return null;
 }
 
 export function buildDictation(word: Word): DictationExercise {
-  return { kind: 'dictation', answer: word.word, wordId: word.id };
+  return { kind: "dictation", answer: word.word, wordId: word.id };
 }
 
 export function buildFlashcard(word: Word): FlashcardExercise {
-  return { kind: 'flashcard', word };
+  return { kind: "flashcard", word };
 }
 
 export function buildClozeWithOptions(
@@ -174,15 +181,15 @@ function buildFor(
   examples?: { en: string }[],
 ): Exercise | null {
   switch (kind) {
-    case 'flashcard':
+    case "flashcard":
       return buildFlashcard(word);
-    case 'mcq':
+    case "mcq":
       return buildMcq(word, pool);
-    case 'listen':
+    case "listen":
       return buildListen(word, pool);
-    case 'dictation':
+    case "dictation":
       return buildDictation(word);
-    case 'cloze':
+    case "cloze":
       return buildClozeWithOptions(
         word,
         frame ?? getFrames(word.topicId)[0],
@@ -217,7 +224,8 @@ export function makeRound(
 ): Exercise[] {
   if (pool.length === 0) return [];
   const source = pool;
-  const frameForCloze = frame ?? (target ? getFrames(target.topicId)[0] : undefined);
+  const frameForCloze =
+    frame ?? (target ? getFrames(target.topicId)[0] : undefined);
 
   if (target) {
     const exercises: Exercise[] = [
@@ -226,7 +234,12 @@ export function makeRound(
       buildListen(target, source),
       buildDictation(target),
     ];
-    const cloze = buildClozeWithOptions(target, frameForCloze, examples ?? [], source);
+    const cloze = buildClozeWithOptions(
+      target,
+      frameForCloze,
+      examples ?? [],
+      source,
+    );
     if (cloze) exercises.push(cloze);
     else exercises.push(buildDictation(target));
     return shuffle(exercises);
@@ -237,14 +250,26 @@ export function makeRound(
     const round: Exercise[] = [];
     let i = 0;
     while (round.length < 10 && i < words.length * 10) {
-      const ex = buildFor(onlyKind, words[i % words.length], source, frame, examples);
+      const ex = buildFor(
+        onlyKind,
+        words[i % words.length],
+        source,
+        frame,
+        examples,
+      );
       i++;
       if (ex) round.push(ex);
     }
     return round;
   }
 
-  const kinds: ExerciseKind[] = ['flashcard', 'mcq', 'listen', 'cloze', 'dictation'];
+  const kinds: ExerciseKind[] = [
+    "flashcard",
+    "mcq",
+    "listen",
+    "cloze",
+    "dictation",
+  ];
   const round: Exercise[] = [];
   for (let i = 0; i < 10; i++) {
     const kind = kinds[i % kinds.length];

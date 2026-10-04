@@ -1,9 +1,9 @@
-import { describe, expect, it } from 'vitest';
-import { buildDailyQueue, LEVEL_ORDER } from './queue';
-import { defaultProgress } from './storage';
-import { todayStr } from './review';
-import { getWordsByLevel, getWordsByTopic } from './vocab';
-import type { DaySession, ProgressData } from '../types';
+import { describe, expect, it } from "vitest";
+import { buildDailyQueue, LEVEL_ORDER } from "./queue";
+import { defaultProgress } from "./storage";
+import { todayStr } from "./review";
+import { getWordsByLevel, getWordsByTopic } from "./vocab";
+import type { DaySession, ProgressData } from "../types";
 
 const today = todayStr();
 const ZERO: DaySession = {
@@ -18,12 +18,15 @@ function makeData(overrides: Partial<ProgressData> = {}): ProgressData {
 
 function markAllLearned(level: (typeof LEVEL_ORDER)[number]): ProgressData {
   const completed: Record<number, string> = {};
-  for (const w of getWordsByLevel(level)) completed[w.id] = '2026-01-01';
-  return makeData({ completed, stats: { streak: 0, totalLearned: Object.keys(completed).length } });
+  for (const w of getWordsByLevel(level)) completed[w.id] = "2026-01-01";
+  return makeData({
+    completed,
+    stats: { streak: 0, totalLearned: Object.keys(completed).length },
+  });
 }
 
-describe('buildDailyQueue', () => {
-  it('puts due words first, then new words, capped at remaining goal', () => {
+describe("buildDailyQueue", () => {
+  it("puts due words first, then new words, capped at remaining goal", () => {
     const data = makeData({
       settings: { dailyGoal: 3 },
       review: {
@@ -37,10 +40,10 @@ describe('buildDailyQueue', () => {
     expect(r.queue.map((q) => q.isNew)).toEqual([true, true, true]);
   });
 
-  it('marks due+learned words as not new', () => {
+  it("marks due+learned words as not new", () => {
     const data = makeData({
       settings: { dailyGoal: 2 },
-      completed: { 5: '2026-01-01', 7: '2026-01-01' },
+      completed: { 5: "2026-01-01", 7: "2026-01-01" },
       review: {
         5: { due: today, interval: 2 },
         7: { due: today, interval: 2 },
@@ -54,7 +57,7 @@ describe('buildDailyQueue', () => {
     expect(r.queue.length).toBe(2);
   });
 
-  it('returns empty queue when the daily goal is already met', () => {
+  it("returns empty queue when the daily goal is already met", () => {
     const data = makeData({
       settings: { dailyGoal: 3 },
       sessions: { [today]: { ...ZERO, learned: 3 } },
@@ -65,48 +68,62 @@ describe('buildDailyQueue', () => {
     expect(r.unlearnedTotal).toBeGreaterThan(0);
   });
 
-  it('scopes the queue to the given topic', () => {
-    const topicWords = getWordsByTopic('a1-family-people');
-    const outside = getWordsByLevel('A1').find((w) => w.topicId !== 'a1-family-people')!;
+  it("scopes the queue to the given topic", () => {
+    const topicWords = getWordsByTopic("a1-family-people");
+    const outside = getWordsByLevel("A1").find(
+      (w) => w.topicId !== "a1-family-people",
+    )!;
     const data = makeData({
       settings: { dailyGoal: 100 },
       review: { [outside.id]: { due: today, interval: 1 } },
     });
-    const r = buildDailyQueue({ data, today, topicId: 'a1-family-people' });
+    const r = buildDailyQueue({ data, today, topicId: "a1-family-people" });
     const ids = r.queue.map((q) => q.wordId);
     expect(ids.length).toBe(topicWords.length);
     expect(ids).not.toContain(outside.id);
     expect(r.dueTotal).toBe(1);
   });
 
-  it('takes new words from the requested level when ?level is set', () => {
+  it("takes new words from the requested level when ?level is set", () => {
     const data = makeData({ settings: { dailyGoal: 2 } });
-    const r = buildDailyQueue({ data, today, level: 'A2' });
-    const a2 = getWordsByLevel('A2').slice(0, 2).map((w) => w.id);
+    const r = buildDailyQueue({ data, today, level: "A2" });
+    const a2 = getWordsByLevel("A2")
+      .slice(0, 2)
+      .map((w) => w.id);
     expect(r.queue.map((q) => q.wordId)).toEqual(a2);
   });
 
-  it('defaults new words to the first level that still has unlearned words', () => {
-    const data = { ...markAllLearned('A1'), settings: { dailyGoal: 2 } };
+  it("defaults new words to the first level that still has unlearned words", () => {
+    const data = { ...markAllLearned("A1"), settings: { dailyGoal: 2 } };
     const r = buildDailyQueue({ data, today });
-    const a2 = getWordsByLevel('A2');
-    expect(r.nextLevel).toBe('A2');
-    expect(r.queue.map((q) => q.wordId)).toEqual(a2.slice(0, 2).map((w) => w.id));
+    const a2 = getWordsByLevel("A2");
+    expect(r.nextLevel).toBe("A2");
+    expect(r.queue.map((q) => q.wordId)).toEqual(
+      a2.slice(0, 2).map((w) => w.id),
+    );
     expect(r.queue.every((q) => q.isNew)).toBe(true);
   });
 
-  it('reports the next level and its unlearned count when a level is finished', () => {
-    const data = markAllLearned('A1');
-    const r = buildDailyQueue({ data: { ...data, settings: { dailyGoal: 5 } }, today });
-    expect(r.nextLevel).toBe('A2');
-    expect(r.nextLevelUnlearned).toBe(getWordsByLevel('A2').length);
-    expect(r.unlearnedTotal).toBe(getWordsByLevel('A2').length + getWordsByLevel('B1').length + getWordsByLevel('B2').length);
+  it("reports the next level and its unlearned count when a level is finished", () => {
+    const data = markAllLearned("A1");
+    const r = buildDailyQueue({
+      data: { ...data, settings: { dailyGoal: 5 } },
+      today,
+    });
+    expect(r.nextLevel).toBe("A2");
+    expect(r.nextLevelUnlearned).toBe(getWordsByLevel("A2").length);
+    expect(r.unlearnedTotal).toBe(
+      getWordsByLevel("A2").length +
+        getWordsByLevel("B1").length +
+        getWordsByLevel("B2").length,
+    );
     expect(r.queue.every((q) => q.wordId > 717)).toBe(true);
   });
 
-  it('returns due-only queue when every word is learned', () => {
+  it("returns due-only queue when every word is learned", () => {
     const completed: Record<number, string> = {};
-    for (const lv of LEVEL_ORDER) for (const w of getWordsByLevel(lv)) completed[w.id] = '2026-01-01';
+    for (const lv of LEVEL_ORDER)
+      for (const w of getWordsByLevel(lv)) completed[w.id] = "2026-01-01";
     const data = makeData({
       completed,
       settings: { dailyGoal: 5 },
@@ -118,11 +135,11 @@ describe('buildDailyQueue', () => {
     expect(r.nextLevel).toBeUndefined();
   });
 
-  it('excludes due words that are not due today', () => {
+  it("excludes due words that are not due today", () => {
     const data = makeData({
       settings: { dailyGoal: 10 },
-      completed: { 9: '2026-01-01' },
-      review: { 9: { due: '2099-01-01', interval: 5 } },
+      completed: { 9: "2026-01-01" },
+      review: { 9: { due: "2099-01-01", interval: 5 } },
     });
     const r = buildDailyQueue({ data, today });
     expect(r.queue.map((q) => q.wordId)).not.toContain(9);

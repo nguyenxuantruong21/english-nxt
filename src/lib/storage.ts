@@ -1,6 +1,6 @@
-import type { ProgressData } from '../types';
+import type { ProgressData } from "../types";
 
-export const STORAGE_KEY = 'english_nxt_v1';
+export const STORAGE_KEY = "english_nxt_v1";
 
 export function defaultProgress(): ProgressData {
   return {

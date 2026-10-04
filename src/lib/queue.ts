@@ -1,8 +1,8 @@
-import type { LevelId, ProgressData } from '../types';
-import { getWordsByLevel, getWordsByTopic } from './vocab';
-import { isDue } from './review';
+import type { LevelId, ProgressData } from "../types";
+import { getWordsByLevel, getWordsByTopic } from "./vocab";
+import { isDue } from "./review";
 
-export const LEVEL_ORDER: LevelId[] = ['A1', 'A2', 'B1', 'B2'];
+export const LEVEL_ORDER: LevelId[] = ["A1", "A2", "B1", "B2"];
 
 export interface QueueItem {
   wordId: number;
@@ -40,7 +40,9 @@ export function buildDailyQueue(opts: DailyQueueOptions): DailyQueueResult {
   let nextLevel: LevelId | undefined;
   let nextLevelUnlearned = 0;
   for (const lv of LEVEL_ORDER) {
-    const n = getWordsByLevel(lv).filter((w) => completed[w.id] === undefined).length;
+    const n = getWordsByLevel(lv).filter(
+      (w) => completed[w.id] === undefined,
+    ).length;
     if (n > 0) {
       unlearnedTotal += n;
       if (!nextLevel) {
@@ -56,7 +58,9 @@ export function buildDailyQueue(opts: DailyQueueOptions): DailyQueueResult {
     const topicWords = getWordsByTopic(topicId);
     const topicIds = new Set(topicWords.map((w) => w.id));
     duePool = dueIds.filter((id) => topicIds.has(id));
-    newPool = topicWords.filter((w) => completed[w.id] === undefined).map((w) => w.id);
+    newPool = topicWords
+      .filter((w) => completed[w.id] === undefined)
+      .map((w) => w.id);
   } else if (level) {
     newPool = getWordsByLevel(level)
       .filter((w) => completed[w.id] === undefined)

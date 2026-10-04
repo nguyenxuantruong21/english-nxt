@@ -1,7 +1,7 @@
-import { Link, useParams } from 'react-router-dom';
-import { getFrames, getIndex, getWordsByTopic } from '../lib/vocab';
-import { useProgress } from '../store/progress';
-import WordRow from '../components/WordRow';
+import { Link, useParams } from "react-router-dom";
+import { getFrames, getIndex, getWordsByTopic } from "../lib/vocab";
+import { useProgress } from "../store/progress";
+import WordRow from "../components/WordRow";
 
 export default function TopicDetail() {
   const { topicId } = useParams();
@@ -26,7 +26,9 @@ export default function TopicDetail() {
 
   const words = getWordsByTopic(topic.id);
   const frames = getFrames(topic.id);
-  const learned = topic.wordIds.filter((id) => completed[id] !== undefined).length;
+  const learned = topic.wordIds.filter(
+    (id) => completed[id] !== undefined,
+  ).length;
 
   return (
     <div className="space-y-4">

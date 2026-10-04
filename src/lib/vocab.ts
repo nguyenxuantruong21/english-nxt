@@ -1,10 +1,16 @@
-import type { ExampleSentence, ExamplesMap, Frame, VocabIndex, Word } from '../types';
-import indexJson from '../../data/index.json';
-import wordsA1 from '../../data/words-A1.json';
-import wordsA2 from '../../data/words-A2.json';
-import wordsB1 from '../../data/words-B1.json';
-import wordsB2 from '../../data/words-B2.json';
-import examplesJson from '../../data/examples.json';
+import type {
+  ExampleSentence,
+  ExamplesMap,
+  Frame,
+  VocabIndex,
+  Word,
+} from "../types";
+import indexJson from "../../data/index.json";
+import wordsA1 from "../../data/words-A1.json";
+import wordsA2 from "../../data/words-A2.json";
+import wordsB1 from "../../data/words-B1.json";
+import wordsB2 from "../../data/words-B2.json";
+import examplesJson from "../../data/examples.json";
 
 const ALL_WORDS = [...wordsA1, ...wordsA2, ...wordsB1, ...wordsB2] as Word[];
 const WORD_MAP = new Map<number, Word>(ALL_WORDS.map((w) => [w.id, w]));
@@ -26,7 +32,7 @@ export function getWord(id: number): Word | undefined {
   return WORD_MAP.get(id);
 }
 
-export function getWordsByLevel(level: Word['level']): Word[] {
+export function getWordsByLevel(level: Word["level"]): Word[] {
   return ALL_WORDS.filter((w) => w.level === level);
 }
 

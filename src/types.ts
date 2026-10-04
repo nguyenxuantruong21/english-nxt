@@ -1,4 +1,4 @@
-export type LevelId = 'A1' | 'A2' | 'B1' | 'B2';
+export type LevelId = "A1" | "A2" | "B1" | "B2";
 
 export interface Level {
   id: LevelId;
@@ -45,7 +45,12 @@ export interface ExampleSentence {
 
 export type ExamplesMap = Record<string, ExampleSentence[]>;
 
-export type ExerciseKind = 'flashcard' | 'mcq' | 'listen' | 'cloze' | 'dictation';
+export type ExerciseKind =
+  | "flashcard"
+  | "mcq"
+  | "listen"
+  | "cloze"
+  | "dictation";
 
 export interface DaySession {
   learned: number;

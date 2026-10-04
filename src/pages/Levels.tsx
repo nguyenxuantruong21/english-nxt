@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { getIndex } from '../lib/vocab';
+import { Link } from "react-router-dom";
+import { getIndex } from "../lib/vocab";
 
 export default function Levels() {
   const idx = getIndex();

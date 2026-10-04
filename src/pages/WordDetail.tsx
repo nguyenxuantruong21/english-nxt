@@ -1,9 +1,9 @@
-import { Link, useParams } from 'react-router-dom';
-import { getExamples, getFrames, getWord, getIndex } from '../lib/vocab';
-import { speak } from '../lib/speech';
-import { useProgress } from '../store/progress';
-import { isDue, todayStr } from '../lib/review';
-import AudioButton from '../components/AudioButton';
+import { Link, useParams } from "react-router-dom";
+import { getExamples, getFrames, getWord, getIndex } from "../lib/vocab";
+import { speak } from "../lib/speech";
+import { useProgress } from "../store/progress";
+import { isDue, todayStr } from "../lib/review";
+import AudioButton from "../components/AudioButton";
 
 export default function WordDetail() {
   const store = useProgress();
@@ -15,7 +15,10 @@ export default function WordDetail() {
     return (
       <div className="p-8 text-center">
         <p>Không tìm thấy từ</p>
-        <Link to="/" className="mt-2 inline-block text-indigo-600 hover:text-indigo-800">
+        <Link
+          to="/"
+          className="mt-2 inline-block text-indigo-600 hover:text-indigo-800"
+        >
           Về trang chủ
         </Link>
       </div>
@@ -56,10 +59,12 @@ export default function WordDetail() {
           <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-sm">
             <span
               className={`rounded-full px-3 py-1 ${
-                due ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-500'
+                due
+                  ? "bg-amber-100 text-amber-700"
+                  : "bg-slate-100 text-slate-500"
               }`}
             >
-              {due ? 'Đến hạn ôn' : `Ôn sau ${review.due}`}
+              {due ? "Đến hạn ôn" : `Ôn sau ${review.due}`}
             </span>
           </div>
         )}
@@ -89,7 +94,10 @@ export default function WordDetail() {
           <h2 className="font-semibold">Ví dụ</h2>
           <ul className="mt-2 space-y-2">
             {examples.map((e, i) => (
-              <li key={i} className="flex items-start justify-between gap-3 text-sm">
+              <li
+                key={i}
+                className="flex items-start justify-between gap-3 text-sm"
+              >
                 <span>{e.en}</span>
                 <AudioButton onPlay={() => speak(e.en)} />
               </li>
