@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import { useSpeechSupport } from '../hooks/useSpeechSupport';
+import { useProgress } from '../store/progress';
 
 const tabs = [
   { to: '/', label: 'Trang chủ', icon: '🏠' },
@@ -10,6 +11,8 @@ const tabs = [
 
 export default function Layout() {
   const supported = useSpeechSupport();
+  const storageError = useProgress((s) => s.storageError);
+  const clearStorageError = useProgress((s) => s.clearStorageError);
   return (
     <div className="min-h-dvh bg-slate-50 text-slate-900">
       <header
@@ -40,6 +43,23 @@ export default function Layout() {
           className="bg-amber-100 px-4 py-2 text-center text-sm text-amber-800"
         >
           Trình duyệt này chưa hỗ trợ phát âm — dùng Chrome hoặc Edge để nghe audio.
+        </div>
+      )}
+
+      {storageError && (
+        <div
+          className="flex items-center justify-center gap-3 bg-amber-100 px-4 py-2 text-center text-sm text-amber-800"
+          role="alert"
+        >
+          <span>Không lưu được tiến độ — kiểm tra bộ nhớ trình duyệt</span>
+          <button
+            type="button"
+            onClick={clearStorageError}
+            aria-label="Đóng cảnh báo"
+            className="font-bold hover:text-amber-950"
+          >
+            ×
+          </button>
         </div>
       )}
 

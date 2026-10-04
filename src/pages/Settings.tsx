@@ -1,21 +1,62 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useProgress } from '../store/progress';
 import { computeStreak, todayStr } from '../lib/review';
 import { getIndex } from '../lib/vocab';
+import { parseProgressJson, progressExport } from '../lib/progress-io';
 
 export default function Settings() {
   const store = useProgress();
   const data = store.data;
   const [confirming, setConfirming] = useState(false);
+  const [goalDraft, setGoalDraft] = useState(String(data.settings.dailyGoal));
+  const [importError, setImportError] = useState('');
+  const fileRef = useRef<HTMLInputElement>(null);
   const streak = computeStreak(data.sessions, todayStr());
   const idx = getIndex();
 
-  const handleGoalChange = (raw: string) => {
-    if (raw === '') return;
-    const n = Number(raw);
-    if (!Number.isFinite(n)) return;
-    const clamped = Math.min(100, Math.max(5, Math.round(n)));
-    store.setDailyGoal(clamped);
+  useEffect(() => {
+    setGoalDraft(String(data.settings.dailyGoal));
+  }, [data.settings.dailyGoal]);
+
+  const commitGoal = () => {
+    const n = Number(goalDraft);
+    if (goalDraft.trim() === '' || !Number.isFinite(n)) {
+      setGoalDraft(String(data.settings.dailyGoal));
+      return;
+    }
+    store.setDailyGoal(Math.min(100, Math.max(5, Math.round(n))));
+  };
+
+  const handleExport = () => {
+    const { filename, content } = progressExport(data);
+    const url = URL.createObjectURL(new Blob([content], { type: 'application/json' }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleImportFile = async (file: File | null | undefined) => {
+    if (!file) return;
+    let text: string;
+    try {
+      text = await file.text();
+    } catch {
+      setImportError('Không đọc được file');
+      return;
+    }
+    const res = parseProgressJson(text);
+    if (!res.ok) {
+      setImportError(res.error);
+      return;
+    }
+    if (!window.confirm('Ghi đè toàn bộ tiến độ hiện tại bằng file này?')) {
+      setImportError('');
+      return;
+    }
+    store.replaceData(res.data);
+    setImportError('');
   };
 
   return (
@@ -32,12 +73,54 @@ export default function Settings() {
             type="number"
             min={5}
             max={100}
-            value={data.settings.dailyGoal}
-            onChange={(e) => handleGoalChange(e.target.value)}
+            value={goalDraft}
+            onChange={(e) => setGoalDraft(e.target.value)}
+            onBlur={commitGoal}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') e.currentTarget.blur();
+            }}
             className="w-24 rounded-xl border border-slate-300 p-2 text-center focus:border-indigo-500 focus:outline-none"
           />
           <span className="text-sm text-slate-500">từ/ngày (5–100)</span>
         </div>
+      </section>
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-4">
+        <h2 className="font-semibold">Dữ liệu tiến độ</h2>
+        <p className="mt-1 text-sm text-slate-500">
+          Xuất file JSON để chuyển tiến độ giữa các máy.
+        </p>
+        <div className="mt-3 flex gap-3">
+          <button
+            type="button"
+            onClick={handleExport}
+            className="flex-1 rounded-xl border border-indigo-600 py-2 text-sm font-medium text-indigo-600 hover:bg-indigo-50"
+          >
+            Export tiến độ
+          </button>
+          <button
+            type="button"
+            onClick={() => fileRef.current?.click()}
+            className="flex-1 rounded-xl border border-slate-300 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50"
+          >
+            Import tiến độ
+          </button>
+          <input
+            ref={fileRef}
+            type="file"
+            accept="application/json"
+            className="hidden"
+            onChange={(e) => {
+              void handleImportFile(e.target.files?.[0]);
+              e.target.value = '';
+            }}
+          />
+        </div>
+        {importError && (
+          <p className="mt-2 text-sm text-rose-600" role="alert">
+            {importError}
+          </p>
+        )}
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-white p-4">

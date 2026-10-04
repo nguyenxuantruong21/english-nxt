@@ -22,7 +22,8 @@ function markAllLearned(ids: number[]) {
 
 afterEach(() => {
   useProgress.getInitialState().data = defaultProgress();
-  useProgress.setState({ data: defaultProgress() });
+  useProgress.getInitialState().storageError = false;
+  useProgress.setState({ data: defaultProgress(), storageError: false });
 });
 
 describe('error/edge states theo route', () => {
@@ -163,5 +164,17 @@ describe('error/edge states theo route', () => {
     const html = renderAt('/levels/A1');
     expect(html).toContain('0/39 từ');
     expect(html).toContain('bg-indigo-500');
+  });
+
+  it('storageError → banner "Không lưu được tiến độ"', () => {
+    useProgress.getInitialState().storageError = true;
+    const html = renderAt('/');
+    expect(html).toContain('Không lưu được tiến độ — kiểm tra bộ nhớ trình duyệt');
+  });
+
+  it('/settings → nút Export/Import tiến độ', () => {
+    const html = renderAt('/settings');
+    expect(html).toContain('Export tiến độ');
+    expect(html).toContain('Import tiến độ');
   });
 });

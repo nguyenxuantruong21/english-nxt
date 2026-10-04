@@ -13,6 +13,7 @@ const { mem } = vi.hoisted(() => {
 import { useProgress } from './progress';
 import { defaultProgress, STORAGE_KEY } from '../lib/storage';
 import { INTERVALS, todayStr } from '../lib/review';
+import type { ProgressData } from '../types';
 
 function addDays(date: string, days: number): string {
   const d = new Date(`${date}T00:00:00Z`);
@@ -24,7 +25,7 @@ const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 beforeEach(() => {
   mem.clear();
-  useProgress.setState({ data: defaultProgress() });
+  useProgress.setState({ data: defaultProgress(), storageError: false });
 });
 
 describe('useProgress singleton', () => {
@@ -189,6 +190,19 @@ describe('settings and reset', () => {
     expect(useProgress.getState().data.settings.dailyGoal).toBe(30);
   });
 
+  it('replaceData swaps the whole progress payload and persists it', () => {
+    const next: ProgressData = {
+      ...defaultProgress(),
+      settings: { dailyGoal: 42 },
+      completed: { 3: '2026-01-01' },
+      stats: { streak: 1, totalLearned: 1 },
+    };
+    useProgress.getState().replaceData(next);
+    expect(useProgress.getState().data).toEqual(next);
+    const raw = mem.get(STORAGE_KEY);
+    expect(JSON.parse(raw as string).state.data.settings.dailyGoal).toBe(42);
+  });
+
   it('resetProgress resets to default', () => {
     useProgress.getState().learnWord(1);
     useProgress.getState().logExercise('flashcard');
@@ -233,5 +247,80 @@ describe('persistence', () => {
     expect(fresh.getState().data.completed[1]).toMatch(DATE_RE);
     expect(fresh.getState().data.stats.totalLearned).toBe(1);
     expect(Object.keys(fresh.getState().data.sessions).length).toBe(1);
+  });
+});
+
+describe('storage failure handling', () => {
+  const workingStorage = {
+    getItem: (k: string) => mem.get(k) ?? null,
+    setItem: (k: string, v: string) => void mem.set(k, v),
+    removeItem: (k: string) => void mem.delete(k),
+  };
+
+  it('flags storageError instead of throwing when setItem fails', () => {
+    vi.stubGlobal('localStorage', {
+      getItem: () => null,
+      setItem: () => {
+        throw new Error('QuotaExceededError');
+      },
+      removeItem: () => {
+        throw new Error('nope');
+      },
+    });
+    try {
+      expect(() => useProgress.getState().learnWord(1)).not.toThrow();
+      expect(useProgress.getState().storageError).toBe(true);
+      expect(useProgress.getState().data.completed[1]).toBe(todayStr());
+    } finally {
+      vi.stubGlobal('localStorage', workingStorage);
+    }
+  });
+
+  it('clearStorageError resets the flag and stays dismissed while storage fails', () => {
+    vi.stubGlobal('localStorage', {
+      getItem: () => null,
+      setItem: () => {
+        throw new Error('QuotaExceededError');
+      },
+      removeItem: () => {},
+    });
+    try {
+      useProgress.getState().learnWord(1);
+      expect(useProgress.getState().storageError).toBe(true);
+      useProgress.getState().clearStorageError();
+      expect(useProgress.getState().storageError).toBe(false);
+      useProgress.getState().learnWord(2);
+      expect(useProgress.getState().storageError).toBe(false);
+    } finally {
+      vi.stubGlobal('localStorage', workingStorage);
+    }
+  });
+
+  it('flags again after a successful write clears the dismissal', () => {
+    vi.stubGlobal('localStorage', {
+      getItem: () => null,
+      setItem: () => {
+        throw new Error('QuotaExceededError');
+      },
+      removeItem: () => {},
+    });
+    try {
+      useProgress.getState().learnWord(1);
+      useProgress.getState().clearStorageError();
+      vi.stubGlobal('localStorage', workingStorage);
+      useProgress.getState().learnWord(2);
+      expect(useProgress.getState().storageError).toBe(false);
+      vi.stubGlobal('localStorage', {
+        getItem: () => null,
+        setItem: () => {
+          throw new Error('QuotaExceededError');
+        },
+        removeItem: () => {},
+      });
+      useProgress.getState().learnWord(3);
+      expect(useProgress.getState().storageError).toBe(true);
+    } finally {
+      vi.stubGlobal('localStorage', workingStorage);
+    }
   });
 });

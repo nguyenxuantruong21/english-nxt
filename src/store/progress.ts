@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
+import type { StateStorage } from 'zustand/middleware';
 import type { DaySession, ProgressData } from '../types';
 import { defaultProgress, STORAGE_KEY } from '../lib/storage';
 import {
@@ -13,12 +14,50 @@ import type { ExerciseKind } from '../types';
 
 export interface ProgressStore {
   data: ProgressData;
+  storageError: boolean;
   learnWord: (id: number) => void;
   answerWord: (id: number, ok: boolean) => void;
   logExercise: (kind: ExerciseKind) => void;
   setDailyGoal: (n: number) => void;
   resetProgress: () => void;
+  replaceData: (data: ProgressData) => void;
+  clearStorageError: () => void;
 }
+
+let suppressStorageError = false;
+
+function markStorageError(): void {
+  if (suppressStorageError) return;
+  if (!useProgress.getState().storageError) {
+    useProgress.setState({ storageError: true });
+  }
+}
+
+const safeStorage: StateStorage = {
+  getItem: (name: string) => {
+    try {
+      return localStorage.getItem(name);
+    } catch {
+      markStorageError();
+      return null;
+    }
+  },
+  setItem: (name: string, value: string) => {
+    try {
+      localStorage.setItem(name, value);
+      suppressStorageError = false;
+    } catch {
+      markStorageError();
+    }
+  },
+  removeItem: (name: string) => {
+    try {
+      localStorage.removeItem(name);
+    } catch {
+      markStorageError();
+    }
+  },
+};
 
 const ZERO_EXERCISES: Record<ExerciseKind, number> = {
   flashcard: 0,
@@ -46,6 +85,7 @@ export const useProgress = create<ProgressStore>()(
   persist(
     (set, get) => ({
       data: defaultProgress(),
+      storageError: false,
 
       learnWord: (id: number) => {
         const data = get().data;
@@ -118,10 +158,24 @@ export const useProgress = create<ProgressStore>()(
       resetProgress: () => {
         set({ data: defaultProgress() });
       },
+
+      replaceData: (data: ProgressData) => {
+        set({ data });
+      },
+
+      clearStorageError: () => {
+        suppressStorageError = true;
+        set({ storageError: false });
+      },
     }),
     {
       name: STORAGE_KEY,
-      storage: createJSONStorage(() => localStorage),
+      storage: createJSONStorage(() => {
+        if (typeof localStorage === 'undefined') {
+          throw new Error('localStorage unavailable');
+        }
+        return safeStorage;
+      }),
       partialize: (state) => ({
         data: {
           settings: state.data.settings,
