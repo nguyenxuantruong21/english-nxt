@@ -96,6 +96,14 @@
    "en": "The show is especially popular with middle-aged men."
   }
  ],
+ "22": [
+  {
+   "en": "Kate is dating a boy named Jim."
+  },
+  {
+   "en": "Are you getting a boy cat or a girl cat?"
+  }
+ ],
  "23": [
   {
    "en": "Your girl turned up on our doorstep."
@@ -160,6 +168,14 @@
  "34": [
   {
    "en": "Intersex babies account for roughly one per cent of all births."
+  }
+ ],
+ "36": [
+  {
+   "en": "There are three ages living in her house."
+  },
+  {
+   "en": "It’s been an age since we last saw you."
   }
  ],
  "37": [
@@ -264,6 +280,19 @@
    "en": "A healthy diet and exercise can help to maintain proper weight."
   }
  ],
+ "57": [
+  {
+   "en": "We have to cure the sick."
+  },
+  {
+   "en": "He lay there in a pool of his own sick."
+  }
+ ],
+ "58": [
+  {
+   "en": "The clumsy filing system has been a huge headache."
+  }
+ ],
  "59": [
   {
    "en": "\"I have a fever. I think I've the flu.\""
@@ -360,6 +389,11 @@
    "en": "He's got a beef with everyone in the room."
   }
  ],
+ "81": [
+  {
+   "en": "Why do you refuse to fight? Huh, I guess you're just too chicken."
+  }
+ ],
  "82": [
   {
    "en": "I also determine the minimal amount of egg required to make good mayonnaise."
@@ -411,6 +445,14 @@
    "en": "Fruits preserved in sugar candy after a time."
   }
  ],
+ "100": [
+  {
+   "en": "Chocolate is a very popular treat."
+  },
+  {
+   "en": "He bought her some chocolates as a gift. She ate one chocolate and threw the rest away."
+  }
+ ],
  "101": [
   {
    "en": "He usually has his coffee white with one sugar."
@@ -458,6 +500,11 @@
    "en": "The irony is delicious!"
   }
  ],
+ "108": [
+  {
+   "en": "My kids go to bed hungry every night because I haven't got any money."
+  }
+ ],
  "109": [
   {
    "en": "The jugs were full to the point of overflowing."
@@ -479,6 +526,14 @@
    "en": "When the player has fought the boss for one minute, two adds will arrive from the back and must be dealt with."
   }
  ],
+ "112": [
+  {
+   "en": "I'm going to have a quick wash before coming to bed."
+  },
+  {
+   "en": "There's a lot in that wash: maybe you should split it into two piles."
+  }
+ ],
  "115": [
   {
    "en": "Pour the tea into the cup."
@@ -490,6 +545,11 @@
  "116": [
   {
    "en": "A popular myth is that window glass is actually an extremely viscous liquid."
+  }
+ ],
+ "119": [
+  {
+   "en": "Waiter! There's a fly in my soup."
   }
  ],
  "121": [
@@ -511,6 +571,11 @@
   },
   {
    "en": "The waiter seated us and asked what we would like to drink."
+  }
+ ],
+ "124": [
+  {
+   "en": "It's small, but it's a good starter house."
   }
  ],
  "126": [
@@ -589,6 +654,14 @@
    "en": "Many sunken ships rest on the ocean floor."
   }
  ],
+ "139": [
+  {
+   "en": "Learning is the door to wisdom."
+  },
+  {
+   "en": "Keep a door on your anger."
+  }
+ ],
  "140": [
   {
    "en": "To separate out the chaff, early cultures tossed baskets of grain into the air and let the wind blow away the lighter chaff."
@@ -640,6 +713,11 @@
  "150": [
   {
    "en": "He got out of the shower and toweled himself dry."
+  }
+ ],
+ "151": [
+  {
+   "en": "Most Americans don't know 'WC' and many Brits mock 'bathroom' but almost everyone understands 'toilet' or 'lavatory'."
   }
  ],
  "152": [
@@ -713,9 +791,33 @@
    "en": "The frying pan was coated with a layer of non-stick material, making it easier to wash."
   }
  ],
+ "162": [
+  {
+   "en": "The plain was skirted by rows of trees."
+  },
+  {
+   "en": "He skirted the issue of which parties to attend by staying at home instead."
+  }
+ ],
  "163": [
   {
    "en": "The trousers need to be shortened."
+  }
+ ],
+ "164": [
+  {
+   "en": "The film was a load [or pile] of pants."
+  },
+  {
+   "en": "Your mobile is pants — why don’t you get one like mine?"
+  }
+ ],
+ "166": [
+  {
+   "en": "Get your shoes on now, or you'll be late for school."
+  },
+  {
+   "en": "Throw the shoe from behind the line, and try to get it to land circling (a ringer) or touching the far stake."
   }
  ],
  "168": [
@@ -740,6 +842,14 @@
   },
   {
    "en": "The fighters provide a defensive air umbrella over the battle group."
+  }
+ ],
+ "171": [
+  {
+   "en": "A popular myth is that window glass is actually an extremely viscous liquid."
+  },
+  {
+   "en": "Fill my glass with milk, please."
   }
  ],
  "173": [
@@ -972,6 +1082,14 @@
    "en": "We crossed a busy street."
   }
  ],
+ "213": [
+  {
+   "en": "Get out of bed, you lazy lout!"
+  },
+  {
+   "en": "I love staying inside and reading on a lazy Sunday."
+  }
+ ],
  "214": [
   {
    "en": "Airplanes did not always exist as a form of transportation."
@@ -1009,6 +1127,14 @@
  "221": [
   {
    "en": "I went to the supermarket to buy some food."
+  }
+ ],
+ "223": [
+  {
+   "en": "Tweezers are great for manipulating small items."
+  },
+  {
+   "en": "In response to the first item, we deny all wrongdoing."
   }
  ],
  "224": [
@@ -1083,6 +1209,11 @@
   },
   {
    "en": "Can I get change for this $100 bill please?"
+  }
+ ],
+ "235": [
+  {
+   "en": "The scene was a rich one."
   }
  ],
  "236": [
@@ -1199,6 +1330,11 @@
    "en": "I'll be in Yonkers, then I'm driving into town to see the Knicks at the Garden tonight."
   }
  ],
+ "262": [
+  {
+   "en": "The shopping center was a zoo the week before Christmas."
+  }
+ ],
  "263": [
   {
    "en": "His grandfather was in the Pacific theater during the war."
@@ -1226,6 +1362,11 @@
   },
   {
    "en": "These worshippers make up the Church of Christ."
+  }
+ ],
+ "268": [
+  {
+   "en": "My body is my temple."
   }
  ],
  "271": [
@@ -1347,9 +1488,27 @@
    "en": "A rain of mortar fire fell on our trenches."
   }
  ],
+ "295": [
+  {
+   "en": "If the Bruins ice the puck, the faceoff will be in their own zone."
+  }
+ ],
+ "296": [
+  {
+   "en": "Whilst it may be sunny today, the weather forecast is predicting rain."
+  },
+  {
+   "en": "I would describe Spain as sunny, but it's nothing in comparison to the Sahara."
+  }
+ ],
  "298": [
   {
    "en": "Due to the rainy weather, we decided not to play in the park."
+  }
+ ],
+ "299": [
+  {
+   "en": "He was still foggy with sleep."
   }
  ],
  "301": [
@@ -1461,6 +1620,19 @@
    "en": "She’s a real dog."
   }
  ],
+ "319": [
+  {
+   "en": "The man kept a pen with two pigs that he fed from carrots to cabbage."
+  },
+  {
+   "en": "Some religions prohibit their adherents from eating pig."
+  }
+ ],
+ "322": [
+  {
+   "en": "Captain Higgins moused the hook with a bit of marline to prevent the block beckets from falling out under slack."
+  }
+ ],
  "323": [
   {
    "en": "What a rat, leaving us stranded here!"
@@ -1480,6 +1652,30 @@
  "326": [
   {
    "en": "Tigers and lions share a common ancestor from a few million years ago."
+  }
+ ],
+ "329": [
+  {
+   "en": "The path snaked through the forest."
+  },
+  {
+   "en": "He snaked my DVD!"
+  }
+ ],
+ "331": [
+  {
+   "en": "I get terrible butterflies before an exam."
+  },
+  {
+   "en": "Butterfly the chicken before you grill it."
+  }
+ ],
+ "333": [
+  {
+   "en": "I'm going for a swim."
+  },
+  {
+   "en": "For exercise, we like to swim laps around the pool."
   }
  ],
  "334": [
@@ -1713,6 +1909,11 @@
    "en": "What’s your twenty, good buddy?"
   }
  ],
+ "387": [
+  {
+   "en": "Do you want small bills or are fifties OK?"
+  }
+ ],
  "388": [
   {
    "en": "Quarter the horses in the third stable."
@@ -1885,6 +2086,11 @@
    "en": "This FTP client spawns a separate worker for each file to be uploaded."
   }
  ],
+ "426": [
+  {
+   "en": "The reporters of important security bugs may be paid a bounty by the software developer."
+  }
+ ],
  "427": [
   {
    "en": "Has your girlfriend written you another letter already? She’s quite a writer!"
@@ -1949,6 +2155,14 @@
   },
   {
    "en": "Did you hear/read/see the latest news?"
+  }
+ ],
+ "445": [
+  {
+   "en": "She newspapered one end of the room before painting the bookcase."
+  },
+  {
+   "en": "He newspapered his way through the South on the sports beat, avoiding dry towns."
   }
  ],
  "447": [
@@ -3789,6 +4003,14 @@
    "en": "Cream the vegetables with the olive oil, flour, salt and water mixture."
   }
  ],
+ "799": [
+  {
+   "en": "Some mushrooms are edible and taste good, while others are poisonous and taste foul."
+  },
+  {
+   "en": "The town’s population mushroomed from 10,000 to 110,000 in five years."
+  }
+ ],
  "800": [
   {
    "en": "He didn’t realise until he’d paid for it that the car was a lemon."
@@ -3813,6 +4035,14 @@
    "en": "Man, there are some fine honeys here tonight!"
   }
  ],
+ "805": [
+  {
+   "en": "We transplanted the flowers to a larger pot."
+  },
+  {
+   "en": "The dogwoods are in flower this week."
+  }
+ ],
  "806": [
   {
    "en": "The brine begins to salt."
@@ -3824,6 +4054,14 @@
   },
   {
    "en": "After the hailstorm, the beach was peppered with holes."
+  }
+ ],
+ "809": [
+  {
+   "en": "Maybe you should lay off the sauce."
+  },
+  {
+   "en": "The accused refused to reveal the source of the illegal drugs she was selling."
   }
  ],
  "811": [
@@ -3874,6 +4112,22 @@
    "en": "The cake baked at 350°F."
   }
  ],
+ "822": [
+  {
+   "en": "The bartender's inexpert pour left me with a pint of beer that was half foam."
+  },
+  {
+   "en": "the rain poured down."
+  }
+ ],
+ "823": [
+  {
+   "en": "The lake froze solid."
+  },
+  {
+   "en": "Don't freeze meat twice."
+  }
+ ],
  "824": [
   {
    "en": "This furnace puts out 5000 BTUs of heat. That engine is really throwing off some heat. Removal of heat from the liquid caused it to turn into a solid."
@@ -3901,6 +4155,14 @@
   },
   {
    "en": "We prepared a fish for dinner."
+  }
+ ],
+ "832": [
+  {
+   "en": "West Fork White River and East Fork White River join together to form the White River of Indiana."
+  },
+  {
+   "en": "LibreOffice is a fork of OpenOffice."
   }
  ],
  "833": [
@@ -3969,6 +4231,14 @@
    "en": "At the reception, there were many toasts from the well-wishers."
   }
  ],
+ "850": [
+  {
+   "en": "We cooked our food on the barbecue."
+  },
+  {
+   "en": "We're having a barbecue on Saturday, and you're invited."
+  }
+ ],
  "851": [
   {
    "en": "The missile was able to home in on the target."
@@ -3995,6 +4265,14 @@
    "en": "Let's go up to the roof."
   }
  ],
+ "859": [
+  {
+   "en": "The gate in front of the railroad crossing went up after the train had passed."
+  },
+  {
+   "en": "Singh was bowled through the gate, a very disappointing way for a world-class batsman to get out."
+  }
+ ],
  "863": [
   {
    "en": "Her entrance attracted no attention whatsoever."
@@ -4003,6 +4281,19 @@
  "864": [
   {
    "en": "A chair is furniture. Sofas are also furniture."
+  }
+ ],
+ "865": [
+  {
+   "en": "These days I'm an armchair detective."
+  },
+  {
+   "en": "After the American football game, the armchair quarterbacks talked about what they would have done differently to win, if they had been star athletes instead of out-of-shape old men."
+  }
+ ],
+ "866": [
+  {
+   "en": "Put the cups back into the cupboard."
   }
  ],
  "868": [
@@ -4037,12 +4328,36 @@
    "en": "Be sure to soap yourself well before rinsing."
   }
  ],
+ "876": [
+  {
+   "en": "I’m going to give the carpet a shampoo."
+  },
+  {
+   "en": "My neat-freak of a friend has been compulsively shampooing for every bath he has taken."
+  }
+ ],
+ "878": [
+  {
+   "en": "Today there will be frequent showers and some sunny spells."
+  },
+  {
+   "en": "I′m going to have a shower."
+  }
+ ],
  "879": [
   {
    "en": "Jones has a two-seamer with heavy sink."
   },
   {
    "en": "I have sunk thousands of pounds into this project."
+  }
+ ],
+ "880": [
+  {
+   "en": "If you put the brakes on too hard, the wheels will lock."
+  },
+  {
+   "en": "Remember to lock the door when you leave."
   }
  ],
  "881": [
@@ -4069,6 +4384,14 @@
    "en": "He made another move towards becoming a naturalized citizen."
   }
  ],
+ "884": [
+  {
+   "en": "I took the car to the workshop for repair."
+  },
+  {
+   "en": "If you look closely you can see the repair in the paintwork."
+  }
+ ],
  "885": [
   {
    "en": "That plumber's fix is much better than the first one's."
@@ -4091,6 +4414,11 @@
   },
   {
    "en": "They crowded through the archway and into the park."
+  }
+ ],
+ "888": [
+  {
+   "en": "the noisy crowd."
   }
  ],
  "889": [
@@ -4123,6 +4451,14 @@
   },
   {
    "en": "Jones smashes a grounder between third and short."
+  }
+ ],
+ "898": [
+  {
+   "en": "I wore gloves to keep my hands warm."
+  },
+  {
+   "en": "Frederico had a great glove, but he couldn't hit a curveball, so he never broke into the pros."
   }
  ],
  "899": [
@@ -4185,12 +4521,25 @@
    "en": "Danish furniture design is world-famous."
   }
  ],
+ "913": [
+  {
+   "en": "Balls were first made of grass or leaves held together by strings, and later of pieces of animal skin sewn together and stuffed with feathers or hay."
+  }
+ ],
  "914": [
   {
    "en": "Why don't you put on your jacket. It's cold."
   },
   {
    "en": "She's putting on that she's sicker than she really is."
+  }
+ ],
+ "915": [
+  {
+   "en": "He took off his shoes."
+  },
+  {
+   "en": "The plane has been cleared to take off from runway 3."
   }
  ],
  "917": [
@@ -4207,6 +4556,22 @@
   },
   {
    "en": "He knew he had met his match."
+  }
+ ],
+ "919": [
+  {
+   "en": "Everyone dressed up for the graduation ball."
+  },
+  {
+   "en": "We're having a party on Saturday, but you must dress up as a famous historical figure."
+  }
+ ],
+ "921": [
+  {
+   "en": "This wheelbarrow has a loose wheel."
+  },
+  {
+   "en": "'You can buy apples in a pack, but they are cheaper loose."
   }
  ],
  "923": [
@@ -4247,6 +4612,14 @@
   },
   {
    "en": "Fry the onions until they brown."
+  }
+ ],
+ "934": [
+  {
+   "en": "These trousers are too big around the waist. They won't stay up."
+  },
+  {
+   "en": "My plane leaves at 6:00 in the morning, so I plan to stay up until then and sleep on the plane."
   }
  ],
  "937": [
@@ -4381,6 +4754,11 @@
    "en": "He was once the most handsome man around."
   }
  ],
+ "962": [
+  {
+   "en": "After the accident, he took a day off."
+  }
+ ],
  "963": [
   {
    "en": "The femur has a clean break and so should heal easily."
@@ -4471,6 +4849,14 @@
    "en": "Do you want a one-way or a return?"
   }
  ],
+ "980": [
+  {
+   "en": "A basket of fake fruit adorned the table."
+  },
+  {
+   "en": "The point guard drove toward the basket."
+  }
+ ],
  "981": [
   {
    "en": "It will cost you a lot of money to take a trip around the world."
@@ -4534,6 +4920,11 @@
    "en": "He has a lot of interest in vintage cars."
   }
  ],
+ "994": [
+  {
+   "en": "Insurance is expensive, but don't be so cheap that you risk losing your home because of a fire."
+  }
+ ],
  "995": [
   {
    "en": "The traffic is slow during rush hour."
@@ -4555,6 +4946,11 @@
    "en": "You can't train a pig to write poetry."
   }
  ],
+ "1000": [
+  {
+   "en": "Somebody in a team who does not do their fair share of the work."
+  }
+ ],
  "1001": [
   {
    "en": "We would like to run a pilot in your facility before rolling out the program citywide."
@@ -4574,6 +4970,14 @@
  "1003": [
   {
    "en": "We travelled to the seaside by road."
+  }
+ ],
+ "1008": [
+  {
+   "en": "In order to enter the building, I need to show my license."
+  },
+  {
+   "en": "It was decided to license Wikipedia under the GFDL."
   }
  ],
  "1010": [
@@ -4635,6 +5039,14 @@
   },
   {
    "en": "There are 50 acres of land in this estate."
+  }
+ ],
+ "1020": [
+  {
+   "en": "We got to the hotel last night and checked in at the front desk."
+  },
+  {
+   "en": "The clerk checked us in at the front desk."
   }
  ],
  "1021": [
@@ -4704,6 +5116,11 @@
  "1029": [
   {
    "en": "The horses carried the packs across the plain."
+  }
+ ],
+ "1032": [
+  {
+   "en": "Sightseeing is a frequent reason to visit San Francisco."
   }
  ],
  "1033": [
@@ -4836,6 +5253,14 @@
    "en": "There may be tough times ahead."
   }
  ],
+ "1067": [
+  {
+   "en": "Don't fight in front of the children!"
+  },
+  {
+   "en": "I'll take the one in front of the black one."
+  }
+ ],
  "1068": [
   {
    "en": "\"Up\" is the opposite of \"down\"."
@@ -4884,6 +5309,11 @@
   },
   {
    "en": "I'm in the TWU, too. Local 6."
+  }
+ ],
+ "1080": [
+  {
+   "en": "I refuse to go along with another of his dangerous schemes."
   }
  ],
  "1082": [
@@ -4947,6 +5377,14 @@
  "1090": [
   {
    "en": "The proposed reforms have led to a political storm."
+  }
+ ],
+ "1091": [
+  {
+   "en": "He did so many drugs, he was still in a fog three months after going through detox."
+  },
+  {
+   "en": "The mirror fogged every time he showered."
   }
  ],
  "1092": [
@@ -5015,6 +5453,14 @@
   },
   {
    "en": "She sighed when the plane's wheels finally touched earth."
+  }
+ ],
+ "1103": [
+  {
+   "en": "The cleaning lady needs a stool to dust the cupboard."
+  },
+  {
+   "en": "Dusting always makes me cough."
   }
  ],
  "1104": [
@@ -5112,6 +5558,11 @@
  "1121": [
   {
    "en": "Don't cry, hen. Everything will be all right."
+  }
+ ],
+ "1122": [
+  {
+   "en": "There is a flock of geese on the pond."
   }
  ],
  "1123": [
@@ -5455,6 +5906,11 @@
    "en": "Climbing the mountain tested our stamina."
   }
  ],
+ "1180": [
+  {
+   "en": "We came second in the pub quiz."
+  }
+ ],
  "1182": [
   {
    "en": "A report by the telecommunications ministry on the phone network revealed a severe capacity problem."
@@ -5493,6 +5949,11 @@
   },
   {
    "en": "His Italian pronunciation is terrible."
+  }
+ ],
+ "1188": [
+  {
+   "en": "You can't hit it directly, but maybe if you give it some english."
   }
  ],
  "1189": [
@@ -5537,6 +5998,14 @@
    "en": "The man graduated in 1967."
   }
  ],
+ "1196": [
+  {
+   "en": "The project was full of fail."
+  },
+  {
+   "en": "Throughout my life, I have always failed."
+  }
+ ],
  "1197": [
   {
    "en": "Buying more servers would improve performance."
@@ -5559,6 +6028,11 @@
   },
   {
    "en": "My position on this issue is unchanged."
+  }
+ ],
+ "1202": [
+  {
+   "en": "Since Jim was new to the game, he had to post $4 in order to receive a hand."
   }
  ],
  "1203": [
@@ -5663,12 +6137,28 @@
    "en": "Bringing up a child is a full-time activity."
   }
  ],
+ "1226": [
+  {
+   "en": "At the retire, the cavalry fell back."
+  },
+  {
+   "en": "Having made a large fortune, he retired."
+  }
+ ],
  "1227": [
   {
    "en": "We sat about the fire singing songs and telling tales."
   },
   {
    "en": "During hot and dry summers many fires in forests are caused by regardlessly discarded cigarette butts."
+  }
+ ],
+ "1228": [
+  {
+   "en": "I recently applied to the tavern for a job as a bartender."
+  },
+  {
+   "en": "That rule only applies to foreigners."
   }
  ],
  "1229": [
@@ -5840,6 +6330,14 @@
    "en": "My computer won't turn on."
   }
  ],
+ "1261": [
+  {
+   "en": "Turn off the machine and unplug it when you leave."
+  },
+  {
+   "en": "Remember to turn the tap off once you've finished so you don't waste water."
+  }
+ ],
  "1262": [
   {
    "en": "After weeks of hard work, I invented a new way to alphabetize matchbooks."
@@ -5918,6 +6416,11 @@
    "en": "Better performance means more work accomplished in shorter time and/or using fewer resources."
   }
  ],
+ "1275": [
+  {
+   "en": "The first violin often plays the lead melody lines in a string quartet."
+  }
+ ],
  "1276": [
   {
    "en": "The violinist was a master of her instrument."
@@ -5963,6 +6466,14 @@
  "1284": [
   {
    "en": "There was an art exhibition on in the town hall."
+  }
+ ],
+ "1287": [
+  {
+   "en": "The president was a joke."
+  },
+  {
+   "en": "I didn’t mean what I said — I was only joking."
   }
  ],
  "1288": [
@@ -6074,6 +6585,11 @@
    "en": "He knew he had met his match."
   }
  ],
+ "1312": [
+  {
+   "en": "His championship of civil rights eventually bore fruit."
+  }
+ ],
  "1313": [
   {
    "en": "The competition for this job is strong."
@@ -6106,6 +6622,11 @@
   },
   {
    "en": "We have no record of you making this payment to us."
+  }
+ ],
+ "1320": [
+  {
+   "en": "He medalled twice at the Olympics."
   }
  ],
  "1324": [
@@ -6159,6 +6680,14 @@
  "1330": [
   {
    "en": "The land shoots into a promontory."
+  }
+ ],
+ "1331": [
+  {
+   "en": "He came inside to warm up."
+  },
+  {
+   "en": "I couldn't be bothered to cook another meal so I just warmed up yesterday's leftovers."
   }
  ],
  "1332": [
@@ -6217,6 +6746,14 @@
   },
   {
    "en": "Imagine my surprise on learning I owed twice as much as I thought I did."
+  }
+ ],
+ "1341": [
+  {
+   "en": "Her presentation pleased the executives."
+  },
+  {
+   "en": "Just do as you please."
   }
  ],
  "1342": [
@@ -6434,9 +6971,25 @@
    "en": "He always puts a smile on my face."
   }
  ],
+ "1381": [
+  {
+   "en": "I only smoke slims."
+  },
+  {
+   "en": "I'm afraid your chances are quite slim."
+  }
+ ],
  "1382": [
   {
    "en": "I saw Daniel crack a fat."
+  }
+ ],
+ "1383": [
+  {
+   "en": "Apple common stock is one of our overweights."
+  },
+  {
+   "en": "Our portfolio is very overweight (in) Asian technology stocks."
   }
  ],
  "1384": [
@@ -6549,6 +7102,14 @@
    "en": "I have requested that the furniture be moved back to its original position."
   }
  ],
+ "1403": [
+  {
+   "en": "I have no complaints about the quality of his work, but I don't enjoy his company."
+  },
+  {
+   "en": "Don't come too close; I've got this nasty complaint."
+  }
+ ],
  "1404": [
   {
    "en": "She shows great promise as an actress."
@@ -6560,6 +7121,14 @@
   },
   {
    "en": "The secret to a long-lasting marriage is compromise."
+  }
+ ],
+ "1406": [
+  {
+   "en": "There's a rumor going round that he's going to get married."
+  },
+  {
+   "en": "They say he used to be a thief, but that's just rumor."
   }
  ],
  "1407": [
@@ -6916,6 +7485,14 @@
    "en": "Why do you always wear a tie? Don't be such a square!"
   }
  ],
+ "1460": [
+  {
+   "en": "Can I smooth your cat?"
+  },
+  {
+   "en": "We hope for a smooth transition to the new system."
+  }
+ ],
  "1461": [
   {
    "en": "My head sank easily into the soft pillow."
@@ -7138,6 +7715,14 @@
    "en": "He seems to be ill. Her eyes seem blue. It seems like it is going to rain later. How did she seem to you?"
   }
  ],
+ "1496": [
+  {
+   "en": "A great writer appeared at that time."
+  },
+  {
+   "en": "He appeared quite happy with the result."
+  }
+ ],
  "1497": [
   {
    "en": "There was no food in the house, so I had to remain hungry."
@@ -7202,6 +7787,14 @@
  "1506": [
   {
    "en": "Don't pick at that scab."
+  }
+ ],
+ "1507": [
+  {
+   "en": "When you pick up the bag, make sure to support the bottom."
+  },
+  {
+   "en": "Can you pick up a pint of milk on your way home?"
   }
  ],
  "1508": [
@@ -7331,6 +7924,14 @@
  "1528": [
   {
    "en": "He spoke loudly so that his brother could hear him from across the street."
+  }
+ ],
+ "1531": [
+  {
+   "en": "“Only when we climb up can we see it,” he said sadly."
+  },
+  {
+   "en": "If you think you’re getting out of this place alive, you are sadly mistaken, my friend."
   }
  ],
  "1532": [
@@ -7489,6 +8090,11 @@
   },
   {
    "en": "Apparently you are quite a good dancer."
+  }
+ ],
+ "1560": [
+  {
+   "en": "Fortunately, Sam's pet hamster was not dead."
   }
  ],
  "1561": [
@@ -7670,6 +8276,11 @@
    "en": "He is among the few who completely understand the subject."
   }
  ],
+ "1598": [
+  {
+   "en": "Leave here within three days."
+  }
+ ],
  "1599": [
   {
    "en": "She had no reason for the conviction beyond the very inadequate one that she had seen him around London."
@@ -7725,12 +8336,22 @@
    "en": "Everyone must do it themselves."
   }
  ],
+ "1611": [
+  {
+   "en": "Jack and Robert loved each other."
+  }
+ ],
  "1612": [
   {
    "en": "\"The ribbon was that thin.\" \"I disagree, I say it was not that thin, it was thicker... or maybe thinner...\""
   },
   {
    "en": "I did the run last year, and it wasn't that difficult."
+  }
+ ],
+ "1613": [
+  {
+   "en": "To whom it may concern, all business of John Smith Ltd. has now been transferred to Floggitt & Runne."
   }
  ],
  "1614": [
@@ -7912,6 +8533,11 @@
    "en": "She was dishonorably discharged from all military duties."
   }
  ],
+ "1649": [
+  {
+   "en": "Moving a pawn backward is an illegal move in chess."
+  }
+ ],
  "1650": [
   {
    "en": "When will we learn to distinguish between the fair and the foul?"
@@ -7955,6 +8581,14 @@
   },
   {
    "en": "With a simple remote, he could control the toy truck."
+  }
+ ],
+ "1657": [
+  {
+   "en": "They claimed the censorship of the article was an attack on free speech."
+  },
+  {
+   "en": "The army timed their attack to coincide with the local celebrations."
   }
  ],
  "1658": [
@@ -8020,6 +8654,14 @@
    "en": "I missed the target."
   }
  ],
+ "1671": [
+  {
+   "en": "Three irreplaceable paintings were stolen from the gallery."
+  },
+  {
+   "en": "They stole my idea for a biodegradable, disposable garbage de-odorizer."
+  }
+ ],
  "1672": [
   {
    "en": "My insurance went up after the second accident in three months."
@@ -8047,6 +8689,14 @@
   },
   {
    "en": "Three irreplaceable paintings were stolen from the gallery."
+  }
+ ],
+ "1677": [
+  {
+   "en": "He robbed three banks before he was caught."
+  },
+  {
+   "en": "The best way to rob a bank is to own one."
   }
  ],
  "1678": [
@@ -8159,6 +8809,14 @@
    "en": "The lights from the stadium polluted the night sky, and we couldn't see the stars."
   }
  ],
+ "1705": [
+  {
+   "en": "Both paper and plastic can be recycled."
+  },
+  {
+   "en": "Sulfur recycles in the sulfur cycle."
+  }
+ ],
  "1708": [
   {
    "en": "I'm headed to the lab to make sure my cell culture hasn't died."
@@ -8183,6 +8841,14 @@
   },
   {
    "en": "I'll come tomorrow, if you wish it."
+  }
+ ],
+ "1715": [
+  {
+   "en": "She read my fortune. Apparently I will have a good love life this week, but I will have a bad week for money."
+  },
+  {
+   "en": "Fortune favors the brave."
   }
  ],
  "1716": [
@@ -8222,6 +8888,22 @@
    "en": "His ball kissed the black into the corner pocket."
   }
  ],
+ "1723": [
+  {
+   "en": "It broke up when it hit the ground."
+  },
+  {
+   "en": "She broke up with her boyfriend last week."
+  }
+ ],
+ "1724": [
+  {
+   "en": "I fell in love with him the moment I first saw him."
+  },
+  {
+   "en": "They met, fell in love, got married, and lived happily ever after."
+  }
+ ],
  "1725": [
   {
    "en": "I wish the kids would get along better."
@@ -8230,9 +8912,25 @@
    "en": "She didn’t have a lot of money, but she had enough to get along."
   }
  ],
+ "1726": [
+  {
+   "en": "He hasn't made friends easily at his new school."
+  },
+  {
+   "en": "He made friends with his new neighbour."
+  }
+ ],
  "1728": [
   {
    "en": "Can we count on you to help out?"
+  }
+ ],
+ "1729": [
+  {
+   "en": "We had a fall out, couldn't come to terms and haven't talked since."
+  },
+  {
+   "en": "I opened the cupboard and a can fell out onto my foot."
   }
  ],
  "1731": [
@@ -8786,6 +9484,14 @@
    "en": "Yes, I can do that for you - it's no bother."
   }
  ],
+ "1822": [
+  {
+   "en": "Population tends to concentrate in cities."
+  },
+  {
+   "en": "Let me concentrate!"
+  }
+ ],
  "1824": [
   {
    "en": "A school of fish disturbed the water."
@@ -8847,6 +9553,11 @@
    "en": "She is a good judge of wine."
   }
  ],
+ "1832": [
+  {
+   "en": "If we all lend a hand, the work will go quickly."
+  }
+ ],
  "1834": [
   {
    "en": "He took no notice of the changes, and went on as though nothing had happened."
@@ -8894,6 +9605,11 @@
    "en": "It's two outs in the bottom of the ninth, tie score."
   }
  ],
+ "1844": [
+  {
+   "en": "A writer wanders from his subject."
+  }
+ ],
  "1845": [
   {
    "en": "As long as the plant is alive, he will continue to water it."
@@ -8928,6 +9644,14 @@
  "1852": [
   {
    "en": "He was four years her senior."
+  }
+ ],
+ "1853": [
+  {
+   "en": "He's got this mad idea that he's irresistible to women."
+  },
+  {
+   "en": "Are you mad at me?"
   }
  ],
  "1854": [
@@ -8975,6 +9699,14 @@
  "1861": [
   {
    "en": "Coventry twinned with Dresden as an act of peace and reconciliation, both cities having been heavily bombed during the war."
+  }
+ ],
+ "1863": [
+  {
+   "en": "You should enter marriage for love."
+  },
+  {
+   "en": "You are cordially invited to the marriage of James Smith and Jane Doe."
   }
  ],
  "1864": [
@@ -9095,6 +9827,14 @@
    "en": "Slander is an injury to the character."
   }
  ],
+ "1886": [
+  {
+   "en": "If her nose bleeds, try to use ice."
+  },
+  {
+   "en": "The company was bleeding talent."
+  }
+ ],
  "1887": [
   {
    "en": "He still has nightmares resulting from the treatment he received from his captors."
@@ -9161,6 +9901,11 @@
    "en": "The organ music swelled."
   }
  ],
+ "1900": [
+  {
+   "en": "The cafeteria serves pork on Tuesdays."
+  }
+ ],
  "1901": [
   {
    "en": "The shepherd was up all night, lambing her young ewes."
@@ -9203,6 +9948,14 @@
    "en": "These items will make an attractive and tasty display."
   }
  ],
+ "1916": [
+  {
+   "en": "He prepared a spicy casserole."
+  },
+  {
+   "en": "This curry is too spicy for me. I can't eat it."
+  }
+ ],
  "1917": [
   {
    "en": "Too much lemon juice will sour the recipe."
@@ -9222,6 +9975,14 @@
  "1920": [
   {
    "en": "I put some peppers and mushrooms on the grill to go with dinner."
+  }
+ ],
+ "1921": [
+  {
+   "en": "Dark roast means that the coffee bean has been roasted to a higher temperature and for a longer period of time than in light roast."
+  },
+  {
+   "en": "Coffee beans need roasting before use."
   }
  ],
  "1922": [
@@ -9303,6 +10064,14 @@
    "en": "The shape of the nozzle prevents the use of aftermarket eartips."
   }
  ],
+ "1939": [
+  {
+   "en": "If you're hungry, there's a takeaway just around the corner."
+  },
+  {
+   "en": "I fancy an Indian takeaway tonight."
+  }
+ ],
  "1940": [
   {
    "en": "The delivery was completed by four."
@@ -9372,6 +10141,14 @@
    "en": "Don't freeze meat twice."
   }
  ],
+ "1951": [
+  {
+   "en": "They canned air to sell as a novelty to tourists."
+  },
+  {
+   "en": "They spent August canning fruit and vegetables."
+  }
+ ],
  "1952": [
   {
    "en": "The runner overcooked it on the first lap, and ended up finishing last."
@@ -9380,6 +10157,11 @@
  "1953": [
   {
    "en": "She liked to walk in her flats more than in her high heels."
+  }
+ ],
+ "1954": [
+  {
+   "en": "We went up to the attic to look for the boxes containing our childhood keepsakes."
   }
  ],
  "1956": [
@@ -9408,6 +10190,22 @@
    "en": "Popcorn and candy wrappers carpeted the floor of the cinema."
   }
  ],
+ "1962": [
+  {
+   "en": "Turn on the heater; I'm cold."
+  },
+  {
+   "en": "The thug pumped two rounds from his heater into her."
+  }
+ ],
+ "1964": [
+  {
+   "en": "He appeared easygoing, but inside he was pure iron."
+  },
+  {
+   "en": "He lifts iron on the weekends."
+  }
+ ],
  "1968": [
   {
    "en": "Use the /b switch to specify black-and-white printing."
@@ -9426,14 +10224,35 @@
    "en": "The cabin offers a lovely spacious view of the mountain meadows."
   }
  ],
+ "1974": [
+  {
+   "en": "Many bands make more money from T-shirt sales than from sale of tickets."
+  }
+ ],
  "1976": [
   {
    "en": "I booted the ball toward my teammate."
   }
  ],
+ "1978": [
+  {
+   "en": "Get out of bed, put on your slippers, and come downstairs."
+  },
+  {
+   "en": "O! trustless state of earthly things, and slipper hope / Of mortal men. — Spenser."
+  }
+ ],
  "1979": [
   {
    "en": "He drove the heel of his hand into the man's nose."
+  }
+ ],
+ "1985": [
+  {
+   "en": "A nylon collar kept the bolt from damaging the surface underneath."
+  },
+  {
+   "en": "Collar and leash aggressive dogs."
   }
  ],
  "1987": [
@@ -9444,6 +10263,14 @@
  "1988": [
   {
    "en": "There is a trend, these days, for people in films not to smoke."
+  }
+ ],
+ "1989": [
+  {
+   "en": "The first generation knitted to order; the second still knits for its own use; the next leaves knitting to industrial manufacturers."
+  },
+  {
+   "en": "The fight for survival knitted the men closely together."
   }
  ],
  "1990": [
@@ -9460,6 +10287,14 @@
   },
   {
    "en": "If you fold the sheets, they'll fit more easily in the drawer."
+  }
+ ],
+ "1992": [
+  {
+   "en": "He appeared easygoing, but inside he was pure iron."
+  },
+  {
+   "en": "He lifts iron on the weekends."
   }
  ],
  "1993": [
@@ -9517,6 +10352,14 @@
  "2009": [
   {
    "en": "Rarely do you ever find an eagle this far up the river."
+  }
+ ],
+ "2014": [
+  {
+   "en": "Every person who steps through the door is a potential buyer, so acknowledge their presence."
+  },
+  {
+   "en": "The supermarket's new buyer decided to stock a larger range of vegetarian foods."
   }
  ],
  "2015": [
@@ -9671,6 +10514,11 @@
    "en": "Let's park that until next week's meeting."
   }
  ],
+ "2048": [
+  {
+   "en": "His books were fuel for the revolution."
+  }
+ ],
  "2049": [
   {
    "en": "Vessels are often built by one firm and engined by another."
@@ -9742,6 +10590,14 @@
  "2068": [
   {
    "en": "There is a monument on the town green to the soldiers who died in World War I."
+  }
+ ],
+ "2069": [
+  {
+   "en": "On Wednesdays I hike; on Fridays I gym."
+  },
+  {
+   "en": "Gymnastics was a significant part of the physical education curriculum."
   }
  ],
  "2070": [
@@ -9882,6 +10738,19 @@
    "en": "The tax increase legislation included a sunset clause requiring renewal to prevent the tax increase from expiring."
   }
  ],
+ "2107": [
+  {
+   "en": "I bought a wonderful parrot at the pet store."
+  },
+  {
+   "en": "What kind of a parrot are you? He just said that."
+  }
+ ],
+ "2109": [
+  {
+   "en": "Are you having a giraffe?!"
+  }
+ ],
  "2114": [
   {
    "en": "The online dictionary is regularly spidered by search engines."
@@ -9895,6 +10764,14 @@
  "2118": [
   {
    "en": "Tom's a 4 on the Enneagram, with a 3 wing."
+  }
+ ],
+ "2120": [
+  {
+   "en": "The shot was after the horn and therefore did not count."
+  },
+  {
+   "en": "Get him on the horn so that we can have a discussion about this."
   }
  ],
  "2121": [
@@ -9967,6 +10844,14 @@
   },
   {
    "en": "The countries are now locked in a permanent state of conflict."
+  }
+ ],
+ "2138": [
+  {
+   "en": "Saddam Hussein was rumored to have many doubles."
+  },
+  {
+   "en": "On second thought, make that a double."
   }
  ],
  "2140": [
@@ -10186,6 +11071,11 @@
    "en": "I'll have to give myself a promotion!"
   }
  ],
+ "2193": [
+  {
+   "en": "The unemployed are a growing portion of the population."
+  }
+ ],
  "2194": [
   {
    "en": "The sign offered pedalos on hire."
@@ -10223,6 +11113,19 @@
  "2201": [
   {
    "en": "Keyboarding is the part of this job I hate the most."
+  }
+ ],
+ "2202": [
+  {
+   "en": "Put the batteries in the charger overnight so we can use them tomorrow."
+  },
+  {
+   "en": "The knight rode a white charger."
+  }
+ ],
+ "2204": [
+  {
+   "en": "Be sure to check out my web page on the Internet when you get home."
   }
  ],
  "2206": [
@@ -10265,6 +11168,11 @@
    "en": "A ship should be documented according to the directions of law."
   }
  ],
+ "2213": [
+  {
+   "en": "I have such an attachment towards my fiancé!"
+  }
+ ],
  "2216": [
   {
    "en": "This blog was originally posted on my personal site but is reproduced on the forums for greater visibility."
@@ -10294,6 +11202,11 @@
   },
   {
    "en": "If your wireless stops working, try restarting the router."
+  }
+ ],
+ "2223": [
+  {
+   "en": "He caught a virus and had to stay home from school."
   }
  ],
  "2225": [
@@ -10395,6 +11308,11 @@
    "en": "classical dance."
   }
  ],
+ "2246": [
+  {
+   "en": "That 'Swan Lake' choreography is poetry in motion, fitting the musical poetry of Tchaikovski's divine score well beyond the literary inspiration."
+  }
+ ],
  "2249": [
   {
    "en": "There are many biographies of Benjamin Franklin."
@@ -10439,6 +11357,19 @@
    "en": "She dove right in and started making improvements."
   }
  ],
+ "2257": [
+  {
+   "en": "Leave this place before I box you!"
+  }
+ ],
+ "2259": [
+  {
+   "en": "Gymnastics was a significant part of the physical education curriculum."
+  },
+  {
+   "en": "His mental gymnastics are legendary."
+  }
+ ],
  "2260": [
   {
    "en": "I love to garden — this year I'm going to plant some daffodils."
@@ -10447,9 +11378,25 @@
    "en": "His hobby was gardening."
   }
  ],
+ "2261": [
+  {
+   "en": "The first generation knitted to order; the second still knits for its own use; the next leaves knitting to industrial manufacturers."
+  },
+  {
+   "en": "The fight for survival knitted the men closely together."
+  }
+ ],
  "2263": [
   {
    "en": "The race around the park was won by Johnny, who ran faster than the others."
+  }
+ ],
+ "2264": [
+  {
+   "en": "My favorite sports organizations are the National Football League and the American League in baseball."
+  },
+  {
+   "en": "Forget about dating him; he's out of your league."
   }
  ],
  "2267": [
@@ -10500,6 +11447,16 @@
  "2282": [
   {
    "en": "I have a lot of affection for my little sister."
+  }
+ ],
+ "2283": [
+  {
+   "en": "She has experienced many sadnesses in her forty years."
+  }
+ ],
+ "2284": [
+  {
+   "en": "Parting is such sweet sorrow."
   }
  ],
  "2285": [
@@ -10699,6 +11656,14 @@
    "en": "Who is responsible for this mess?"
   }
  ],
+ "2334": [
+  {
+   "en": "It was a surprise to see the captain, who had always seemed so serious, laugh so heartily."
+  },
+  {
+   "en": "This is a serious problem. We'll need our best experts."
+  }
+ ],
  "2336": [
   {
    "en": "His stupid knows no bounds."
@@ -10730,6 +11695,14 @@
    "en": "She is wearing a lot of makeup."
   }
  ],
+ "2344": [
+  {
+   "en": "All the contest judges agreed that Brigitt was absolutely gorgeous."
+  },
+  {
+   "en": "Hummus is absolutely gorgeous."
+  }
+ ],
  "2345": [
   {
    "en": "The bald cypress is a tree that loses its leaves in winter."
@@ -10759,6 +11732,14 @@
  "2351": [
   {
    "en": "We need to print off fifty invitations for the party."
+  }
+ ],
+ "2352": [
+  {
+   "en": "The CEO made a public apology for the scandal, and promised full cooperation with the authorities."
+  },
+  {
+   "en": "The Apology of Socrates."
   }
  ],
  "2354": [
@@ -10800,6 +11781,14 @@
    "en": "I wouldn't have or do something, unless I'm convinced that it's good."
   }
  ],
+ "2361": [
+  {
+   "en": "I insist that my secretary dresses nicely."
+  },
+  {
+   "en": "I insist that my secretary dress nicely."
+  }
+ ],
  "2362": [
   {
    "en": "I wanted to go to the party, but I was denied."
@@ -10811,6 +11800,14 @@
  "2364": [
   {
    "en": "Forgive others, not because they deserve forgiveness, but because you deserve peace."
+  }
+ ],
+ "2365": [
+  {
+   "en": "Don't let me catch you running in the corridor again, I warn you."
+  },
+  {
+   "en": "A sign warns trespassers off/away from the site."
   }
  ],
  "2366": [
@@ -10865,6 +11862,19 @@
    "en": "The retail giant is set to acquire two more struggling high-street chains."
   }
  ],
+ "2377": [
+  {
+   "en": "The Republicans won by a narrow majority."
+  }
+ ],
+ "2379": [
+  {
+   "en": "Russell is a safe pair of hands in the deep."
+  },
+  {
+   "en": "She has a very deep contralto voice."
+  }
+ ],
  "2380": [
   {
    "en": "The ship ran aground in an unexpected shallow."
@@ -10884,6 +11894,14 @@
   },
   {
    "en": "Everybody please gather around."
+  }
+ ],
+ "2383": [
+  {
+   "en": "The teacher will curve the test."
+  },
+  {
+   "en": "I was once curved three times by the same woman."
   }
  ],
  "2384": [
@@ -11051,6 +12069,14 @@
    "en": "A group contains a unique inverse for each of its elements."
   }
  ],
+ "2411": [
+  {
+   "en": "A snake wraps itself around its prey."
+  },
+  {
+   "en": "I wrapped the text so that I wouldn't need to scroll to the right to read it."
+  }
+ ],
  "2412": [
   {
    "en": "I will prove that my method is more effective than yours."
@@ -11102,6 +12128,14 @@
   },
   {
    "en": "Her outside was stern, but inside was a heart of gold."
+  }
+ ],
+ "2420": [
+  {
+   "en": "They went on a cruise to nowhere."
+  },
+  {
+   "en": "Nowhere did the rules say anything about popcorn."
   }
  ],
  "2421": [
@@ -11208,6 +12242,11 @@
    "en": "Rising unemployment due to the economic downturn is spreading."
   }
  ],
+ "2442": [
+  {
+   "en": "Amy was given a scholarship thanks to her excellent grades."
+  }
+ ],
  "2443": [
   {
    "en": "I felt none the worse for my recent illness."
@@ -11232,6 +12271,14 @@
    "en": "State your intentions."
   }
  ],
+ "2446": [
+  {
+   "en": "He made a career out of politics."
+  },
+  {
+   "en": "Their politics are clear from the bumper stickers on their cars."
+  }
+ ],
  "2447": [
   {
    "en": "Politicians should serve the country's interest."
@@ -11251,6 +12298,14 @@
  "2452": [
   {
    "en": "The Communist Party has a policy of returning power to the workers."
+  }
+ ],
+ "2455": [
+  {
+   "en": "The United States is a republic; the United Kingdom of Great Britain and Northern Ireland is a constitutional monarchy."
+  },
+  {
+   "en": "The Republic of Udmurtia is west of the Permian Oblast."
   }
  ],
  "2456": [
@@ -11340,6 +12395,11 @@
    "en": "Legal wants this in writing."
   }
  ],
+ "2473": [
+  {
+   "en": "Whenever I pass the park, I see the homeless people sleeping on the benches."
+  }
+ ],
  "2475": [
   {
    "en": "Prices usually go up when demand exceeds supply."
@@ -11424,6 +12484,14 @@
    "en": "After the lightning came the crash of thunder."
   }
  ],
+ "2499": [
+  {
+   "en": "The dog was a rescue with some behavior issues."
+  },
+  {
+   "en": "The well-trained team rescued everyone after the avalanche."
+  }
+ ],
  "2501": [
   {
    "en": "People would suffer disasters when society's morality degenerates."
@@ -11448,6 +12516,19 @@
   },
   {
    "en": "Pickett did not die leading his famous charge."
+  }
+ ],
+ "2510": [
+  {
+   "en": "If a prince violates the law, then he must be punished like an ordinary person."
+  }
+ ],
+ "2511": [
+  {
+   "en": "The dog was a rescue with some behavior issues."
+  },
+  {
+   "en": "The well-trained team rescued everyone after the avalanche."
   }
  ],
  "2512": [
@@ -11527,6 +12608,11 @@
    "en": "I prefer solids over paisleys."
   }
  ],
+ "2537": [
+  {
+   "en": "Hydrogen chloride is a diatomic molecule, consisting of a hydrogen atom and a chlorine atom."
+  }
+ ],
  "2538": [
   {
    "en": "Gregor Mendel must have spent a good amount of time outside of his cell."
@@ -11551,6 +12637,14 @@
   },
   {
    "en": "I think that the universe was created by a life force rather than a deity."
+  }
+ ],
+ "2542": [
+  {
+   "en": "A spent upper stage is a derelict satellite."
+  },
+  {
+   "en": "Many telecommunication satellites orbit at 36000km above the equator."
   }
  ],
  "2543": [
@@ -11622,6 +12716,14 @@
    "en": "Based on this data, it is our belief that X does not occur."
   }
  ],
+ "2553": [
+  {
+   "en": "My brother tends to value religion, but my sister not as much."
+  },
+  {
+   "en": "Eckankar is a new religion but Zoroastrianism is an old religion."
+  }
+ ],
  "2554": [
   {
    "en": "A wandering spirit haunts the island."
@@ -11630,9 +12732,38 @@
    "en": "School spirit is at an all-time high."
   }
  ],
+ "2558": [
+  {
+   "en": "A brilliant dawn greeted her eyes as she looked out of the window."
+  },
+  {
+   "en": "It's polite to begin a letter with a greeting, but this practice is less common in email."
+  }
+ ],
+ "2559": [
+  {
+   "en": "We will not proceed without the executive director's blessing."
+  },
+  {
+   "en": "After two weeks of sun, last night's rainfall was a blessing."
+  }
+ ],
  "2560": [
   {
    "en": "Young folk, old folk, everybody come, / To our little Sunday School and have a lot of fun."
+  }
+ ],
+ "2561": [
+  {
+   "en": "Scientists debunk the myth that gum stays in the human stomach for seven years."
+  }
+ ],
+ "2562": [
+  {
+   "en": "I used to love reading fairy tales when I was a child."
+  },
+  {
+   "en": "He's telling us another fairy tale about how great the software will be."
   }
  ],
  "2564": [
@@ -11659,6 +12790,19 @@
    "en": "I have a good working relationship with my boss."
   }
  ],
+ "2569": [
+  {
+   "en": "I know of the man; but have no acquaintance with him."
+  }
+ ],
+ "2570": [
+  {
+   "en": "His dog has been his trusted companion for the last five years."
+  },
+  {
+   "en": "The companion guide gives an in-depth analysis of this particular translation."
+  }
+ ],
  "2571": [
   {
    "en": "I've had a huge crush on her since we met many years ago."
@@ -11675,6 +12819,14 @@
   },
   {
    "en": "I wanted to attend the meeting but there's a conflict in my schedule that day."
+  }
+ ],
+ "2574": [
+  {
+   "en": "Remind me to congratulate Dave and Lisa on their wedding."
+  },
+  {
+   "en": "I congratulated myself on the success of my plan."
   }
  ],
  "2576": [
@@ -11696,6 +12848,11 @@
   },
   {
    "en": "Ever since our argument, she has been totally distant toward me."
+  }
+ ],
+ "2582": [
+  {
+   "en": "I had a very supportive coach who helped me."
   }
  ],
  "2583": [
@@ -11839,6 +12996,27 @@
    "en": "I'm not able to exercise influence over him."
   }
  ],
+ "2608": [
+  {
+   "en": "When I'm nervous I bite my nails."
+  }
+ ],
+ "2610": [
+  {
+   "en": "The seamstress threaded the needle to sew on a button."
+  },
+  {
+   "en": "The needle on the fuel gauge pointed to empty."
+  }
+ ],
+ "2611": [
+  {
+   "en": "The horse gave two quick stamps and rose up on its hind legs."
+  },
+  {
+   "en": "My passport has quite a collection of stamps."
+  }
+ ],
  "2612": [
   {
    "en": "I saw a brown paper parcel on my doorstep."
@@ -11861,6 +13039,14 @@
   },
   {
    "en": "His starved flesh hung loosely on his once imposing frame."
+  }
+ ],
+ "2617": [
+  {
+   "en": "Huck Finn poled that raft southward down the Mississippi because going northward against the current was too much work."
+  },
+  {
+   "en": "He poled off the serial of the Gulfstream to confirm its identity."
   }
  ],
  "2619": [
@@ -11981,12 +13167,22 @@
    "en": "After playing so well, the team really deserved their win."
   }
  ],
+ "2642": [
+  {
+   "en": "Wang said such changes to the Baishui glacier provide the chance to educate visitors about global warming."
+  }
+ ],
  "2643": [
   {
    "en": "You can expand this compact umbrella to cover a large table."
   },
   {
    "en": "A flower expands its leaves."
+  }
+ ],
+ "2644": [
+  {
+   "en": "Can you fasten these boards together with some nails?"
   }
  ],
  "2645": [
@@ -12213,6 +13409,19 @@
    "en": "Hold the ladder steady while I go up."
   }
  ],
+ "2690": [
+  {
+   "en": "Her desk is covered with yellow stickies."
+  },
+  {
+   "en": "Is this tape sticky enough to stay on that surface?"
+  }
+ ],
+ "2691": [
+  {
+   "en": "He is the most thorough worker I have ever seen."
+  }
+ ],
  "2692": [
   {
    "en": "Among the moths, typicals were more common than melanics."
@@ -12233,6 +13442,11 @@
    "en": "When the sun rises, the world becomes visible."
   }
  ],
+ "2698": [
+  {
+   "en": "People should treat their spouses with respect."
+  }
+ ],
  "2703": [
   {
    "en": "The tiger lily is a resident of Asia."
@@ -12241,12 +13455,44 @@
    "en": "She's a resident in neurosurgery at Mass General."
   }
  ],
+ "2706": [
+  {
+   "en": "Richard obtained a divorce from his wife some years ago, but hasn't returned to the dating scene."
+  },
+  {
+   "en": "The Civil War split between Virginia and West Virginia was a divorce based along cultural and economic as well as geographic lines."
+  }
+ ],
+ "2708": [
+  {
+   "en": "Your descendants will inherit the earth."
+  },
+  {
+   "en": "After Grandad died, I inherited the house."
+  }
+ ],
+ "2710": [
+  {
+   "en": "The wild pitch bounced and hit the catcher in the throat."
+  },
+  {
+   "en": "As I swallowed I felt something strange in my throat."
+  }
+ ],
  "2712": [
   {
    "en": "This rod is free to swing at the joint with the platform."
   },
   {
    "en": "The water is leaking out of the joint between the two pipes."
+  }
+ ],
+ "2714": [
+  {
+   "en": "Behind me, I heard a distinct, dry cough."
+  },
+  {
+   "en": "Sorry, I can't come to work today – I've got a nasty cough."
   }
  ],
  "2720": [
@@ -12265,12 +13511,80 @@
    "en": "Some people put the stress on the first syllable of “controversy”; others put it on the second."
   }
  ],
+ "2723": [
+  {
+   "en": "She suffered another faint."
+  },
+  {
+   "en": "I felt faint after my fifth gin and tonic."
+  }
+ ],
+ "2724": [
+  {
+   "en": "She slurped a long noodle up out of her soup."
+  },
+  {
+   "en": "\"Noodle that thought around for a while\" said Dr. Johnson to his Biblical Interpretations class."
+  }
+ ],
+ "2725": [
+  {
+   "en": "Although crabs themselves are an easily treated inconvenience, the patient and his partner(s) clearly run major STD risks."
+  }
+ ],
+ "2730": [
+  {
+   "en": "There are many sort of nuts: peanuts, cashews, pistachios, Brazil nuts and more."
+  },
+  {
+   "en": "He was driving his car like a nut."
+  }
+ ],
+ "2732": [
+  {
+   "en": "If any medicinal herbs used by witches were supposedly evil, then how come people from at least the past benefited from the healing properties of such herbs?"
+  }
+ ],
+ "2739": [
+  {
+   "en": "You'll get a better flavour from the chicken if you marinate it first."
+  }
+ ],
+ "2740": [
+  {
+   "en": "The kettle was kept on the simmer."
+  },
+  {
+   "en": "The soup simmered on the stove."
+  }
+ ],
  "2741": [
   {
    "en": "His new approach is definitely a recipe for success."
   },
   {
    "en": "Stepper recipes."
+  }
+ ],
+ "2749": [
+  {
+   "en": "Today it is $2 for a coffee, with free refills throughout the day."
+  },
+  {
+   "en": "We're cutting back. No new printers or pens, just refills."
+  }
+ ],
+ "2750": [
+  {
+   "en": "It's a leftover from yesterday, but it's still perfectly good."
+  },
+  {
+   "en": "Not leftovers again!"
+  }
+ ],
+ "2753": [
+  {
+   "en": "Most cottages in the area were larger and more elaborate than my home."
   }
  ],
  "2761": [
@@ -12281,6 +13595,97 @@
  "2765": [
   {
    "en": "He spent all day cosying up to the new boss, hoping for a plum assignment."
+  }
+ ],
+ "2767": [
+  {
+   "en": "She wore a fashionable outfit with matching purse and shoes."
+  },
+  {
+   "en": "Should we buy it here, or do you think the outfit across town will have a better deal?"
+  }
+ ],
+ "2769": [
+  {
+   "en": "You can buy hoodies on the cheap in summer."
+  },
+  {
+   "en": "The wolf was accused of attacking a young girl, but it pleaded that it was simply motivated by the Prime Minister's speech to hug a hoodie."
+  }
+ ],
+ "2770": [
+  {
+   "en": "The power of life and death is vested in the king, or in the courts."
+  },
+  {
+   "en": "Upon the death of the Sovereign the Crown automatically vests in the next heir without the need of coronation or other formality."
+  }
+ ],
+ "2774": [
+  {
+   "en": "He zippered his sweater against the cold."
+  },
+  {
+   "en": "These fall jackets are zippered."
+  }
+ ],
+ "2775": [
+  {
+   "en": "The Internet is a fabric of computers connected by routers."
+  }
+ ],
+ "2777": [
+  {
+   "en": "He works as a tailor on Swanston Street."
+  },
+  {
+   "en": "We can tailor that jacket for you if you like."
+  }
+ ],
+ "2778": [
+  {
+   "en": "This skirt has a nice hang."
+  },
+  {
+   "en": "He got the hang of it after only two demonstrations."
+  }
+ ],
+ "2781": [
+  {
+   "en": "A pair of matrices share the same set of eigenvectors if and only if they commute."
+  }
+ ],
+ "2782": [
+  {
+   "en": "Washing dishes is a chore, but we cannot just stop eating."
+  }
+ ],
+ "2783": [
+  {
+   "en": "You've left your dirty laundry all over the house."
+  }
+ ],
+ "2785": [
+  {
+   "en": "They seldom come here now."
+  }
+ ],
+ "2787": [
+  {
+   "en": "The band at that bar really butchered \"Hotel California\"."
+  }
+ ],
+ "2790": [
+  {
+   "en": "The shipping' is included in the quoted price."
+  }
+ ],
+ "2792": [
+  {
+   "en": "They offer a free hamburger with the purchase of a drink."
+  },
+  {
+   "en": "He was pleased with his latest purchase."
   }
  ],
  "2795": [
@@ -12294,6 +13699,11 @@
  "2796": [
   {
    "en": "They put a deposit on the apartment."
+  }
+ ],
+ "2798": [
+  {
+   "en": "The title to land is transferred by deed."
   }
  ],
  "2799": [
@@ -12317,12 +13727,203 @@
    "en": "The local transport received a big boost as part of the mayor's infrastructural plans."
   }
  ],
+ "2808": [
+  {
+   "en": "We flew over the city in a helicopter."
+  }
+ ],
+ "2809": [
+  {
+   "en": "We motorbiked all over the US that summer."
+  }
+ ],
+ "2814": [
+  {
+   "en": "Take in sail: a storm is coming."
+  },
+  {
+   "en": "Let's go for a sail."
+  }
+ ],
+ "2823": [
+  {
+   "en": "They say it's going to hail tomorrow."
+  },
+  {
+   "en": "The cloud would hail down furiously within a few minutes."
+  }
+ ],
+ "2824": [
+  {
+   "en": "Many electoral promises are rainbows, vanishing soon after poll day."
+  }
+ ],
+ "2839": [
+  {
+   "en": "Check out my pet. He's a wolf."
+  },
+  {
+   "en": "The soft violin solo was marred by persistent wolves."
+  }
+ ],
+ "2848": [
+  {
+   "en": "Don't try to run away, you little worm!"
+  },
+  {
+   "en": "We wormed our way through the underbrush."
+  }
+ ],
+ "2851": [
+  {
+   "en": "That nightclub is a nest of strange people!"
+  },
+  {
+   "en": "I am aspiring to leave the nest."
+  }
+ ],
+ "2852": [
+  {
+   "en": "People who were taught classical Greek and Latin at school are a dying breed."
+  },
+  {
+   "en": "She wanted to breed her cow to the neighbor's registered bull."
+  }
+ ],
+ "2855": [
+  {
+   "en": "The northern slopes were covered mainly in pine."
+  }
+ ],
+ "2856": [
+  {
+   "en": "He tamed the wild horse."
+  },
+  {
+   "en": "They have a tame wildcat."
+  }
+ ],
+ "2858": [
+  {
+   "en": "There were billions of people at the concert."
+  }
+ ],
+ "2859": [
+  {
+   "en": "If you subtract the $100 for gas from the total cost, it was a fairly inexpensive trip."
+  }
+ ],
+ "2860": [
+  {
+   "en": "He had been multiplying, but it occurred to him he needed to resolve the exponents, first."
+  }
+ ],
+ "2865": [
+  {
+   "en": "He passed the difficult class with help from his tutor."
+  },
+  {
+   "en": "To help pay her tuition, the college student began to tutor high school students in calculus and physics."
+  }
+ ],
+ "2867": [
+  {
+   "en": "The film is certificate 15."
+  }
+ ],
+ "2868": [
+  {
+   "en": "Projects like Pruitt-Igoe were considered irreparably dangerous and demolished."
+  },
+  {
+   "en": "The CEO is projecting the completion of the acquisition by April 2007."
+  }
+ ],
+ "2871": [
+  {
+   "en": "They were eager to enroll new recruits."
+  },
+  {
+   "en": "Have you enrolled in classes yet for this term?"
+  }
+ ],
+ "2872": [
+  {
+   "en": "My brother flunked biology because he cheated on his mid-term."
+  },
+  {
+   "en": "After he found out his wife cheated, he left her."
+  }
+ ],
+ "2873": [
+  {
+   "en": "She will skip from one end of the sidewalk to the other."
+  },
+  {
+   "en": "The rock will skip across the pond."
+  }
+ ],
+ "2875": [
+  {
+   "en": "One way to encourage your employees to work harder is by giving them incentives."
+  }
+ ],
+ "2877": [
+  {
+   "en": "The US government interned thousands of Japanese-Americans during World War II."
+  }
+ ],
+ "2885": [
+  {
+   "en": "Reading such an enlightening book on the subject was of much profit to his studies."
+  }
+ ],
+ "2886": [
+  {
+   "en": "Marriage is a contract."
+  },
+  {
+   "en": "The mafia boss put a contract out on the man who betrayed him."
+  }
+ ],
+ "2888": [
+  {
+   "en": "Qualification for this organization is extraordinarily difficult."
+  },
+  {
+   "en": "What are your qualifications for this job?"
+  }
+ ],
  "2889": [
   {
    "en": "Workers are usually paid extra for working overtime."
   },
   {
    "en": "That last-second shot ties the game 99-99 and sends it to overtime!"
+  }
+ ],
+ "2891": [
+  {
+   "en": "He resigned the crown to follow his heart."
+  },
+  {
+   "en": "After fighting for so long, she finally resigned to her death."
+  }
+ ],
+ "2893": [
+  {
+   "en": "They will not submit to the destruction of their rights."
+  },
+  {
+   "en": "I submit these plans for your approval."
+  }
+ ],
+ "2895": [
+  {
+   "en": "Laptops are often more expensive than desktops."
+  },
+  {
+   "en": "I installed a new application and it added its icon to my desktop."
   }
  ],
  "2896": [
@@ -12335,6 +13936,14 @@
    "en": "I tried to watch the movie last night but my cable was out."
   }
  ],
+ "2904": [
+  {
+   "en": "I have a database of all my contacts in my personal organizer."
+  },
+  {
+   "en": "The \"books\" database will have three tables, and the \"customers\" database will have two tables."
+  }
+ ],
  "2905": [
   {
    "en": "His fingers traced the profile of the handle."
@@ -12343,9 +13952,22 @@
    "en": "The brooch showed the profile of a Victorian woman."
   }
  ],
+ "2906": [
+  {
+   "en": "The early 21st century saw a huge increase in social media thanks to the widespread availability of the Internet."
+  }
+ ],
  "2908": [
   {
    "en": "I have over 50 followers on Twitter, but all my tweets only get 10 likes."
+  }
+ ],
+ "2910": [
+  {
+   "en": "I ordered a glass of lemonade and a coffee scroll."
+  },
+  {
+   "en": "She scrolled the offending image out of view."
   }
  ],
  "2911": [
@@ -12356,12 +13978,22 @@
    "en": "I just made an update to the Wikipedia article on guerillas."
   }
  ],
+ "2913": [
+  {
+   "en": "The DJ was feeling nervous before his first national broadcast."
+  }
+ ],
  "2915": [
   {
    "en": "The assassination of Lincoln was part of a larger plot."
   },
   {
    "en": "They had plotted a robbery."
+  }
+ ],
+ "2916": [
+  {
+   "en": "Let's discuss how to play if you are the chip leader (that is, if you have more chips than all the villains)."
   }
  ],
  "2917": [
@@ -12382,9 +14014,38 @@
    "en": "I don’t subscribe to that theory."
   }
  ],
+ "2921": [
+  {
+   "en": "I watch these movies because they amuse me."
+  },
+  {
+   "en": "His jokes rarely fail to amuse."
+  }
+ ],
+ "2922": [
+  {
+   "en": "Chatting is a pleasant pastime."
+  }
+ ],
+ "2925": [
+  {
+   "en": "He had a cleaning marathon the night before his girlfriend came over."
+  },
+  {
+   "en": "We're going to marathon Star Trek next weekend."
+  }
+ ],
  "2926": [
   {
    "en": "During the crackdown, many opponents of the regime were arrested."
+  }
+ ],
+ "2927": [
+  {
+   "en": "The penalty for his crime was to do hard labor."
+  },
+  {
+   "en": "A penalty was called when he tripped up his opponent."
   }
  ],
  "2928": [
@@ -12413,6 +14074,19 @@
    "en": "As soon as she heard that her father had died, she went into a rage and beat the wall with her fists until her knuckles bled."
   }
  ],
+ "2932": [
+  {
+   "en": "The contest is only open to amateurs."
+  },
+  {
+   "en": "The entire thing was built by some amateurs with screwdrivers and plywood."
+  }
+ ],
+ "2934": [
+  {
+   "en": "She was worn out from so much grief."
+  }
+ ],
  "2936": [
   {
    "en": "Ben was thrilled to lead the game."
@@ -12426,9 +14100,25 @@
    "en": "He silently sighed for his lost youth."
   }
  ],
+ "2943": [
+  {
+   "en": "He wasn't used to this much attention, so he blushed as he saw dozens of pairs of eyes watching him."
+  },
+  {
+   "en": "I wasn't surprised, but it was embarrassing enough that I blushed a little pink."
+  }
+ ],
  "2944": [
   {
    "en": "It is obvious to everyone that Gerry adores Heather."
+  }
+ ],
+ "2946": [
+  {
+   "en": "This match is merely a friendly, so don't worry too much about it."
+  },
+  {
+   "en": "Your cat seems very friendly."
   }
  ],
  "2949": [
@@ -12437,6 +14127,11 @@
   },
   {
    "en": "Is there any outgoing post?"
+  }
+ ],
+ "2950": [
+  {
+   "en": "He's normally pretty quiet, but he gets much more sociable around women."
   }
  ],
  "2954": [
@@ -12452,9 +14147,35 @@
    "en": "Religion is often a sensitive topic of discussion and should be avoided when dealing with foreign business associates."
   }
  ],
+ "2957": [
+  {
+   "en": "She is quite mature for her age."
+  },
+  {
+   "en": "The headmaster decided to expel the boy after a mature consideration."
+  }
+ ],
  "2958": [
   {
    "en": "Your childish temper tantrums are not going to change my decision on this matter."
+  }
+ ],
+ "2960": [
+  {
+   "en": "Steve has brown hair, blue eyes, and freckles on his cheeks and nose."
+  }
+ ],
+ "2961": [
+  {
+   "en": "Spending time out in the sun may cause you to develop wrinkles sooner."
+  },
+  {
+   "en": "Three months later, we're still discovering new wrinkles."
+  }
+ ],
+ "2963": [
+  {
+   "en": "She called to get the skinny on the latest goings-on in the club."
   }
  ],
  "2964": [
@@ -12470,6 +14191,14 @@
    "en": "You're looking very tanned."
   }
  ],
+ "2969": [
+  {
+   "en": "My room is neat because I tidied it this morning. She has very neat hair."
+  },
+  {
+   "en": "I like my whisky neat."
+  }
+ ],
  "2970": [
   {
    "en": "A scruffy little dog came scampering down the road."
@@ -12483,12 +14212,33 @@
    "en": "According to the latest gossip, their relationship is on the rocks."
   }
  ],
+ "2973": [
+  {
+   "en": "Be sure to praise Bobby for his excellent work at school this week."
+  }
+ ],
+ "2974": [
+  {
+   "en": "There are whispers of rebellion all around."
+  },
+  {
+   "en": "The soup had just a whisper of basil."
+  }
+ ],
  "2975": [
   {
    "en": "All I could hear was a mumble from the next room."
   },
   {
    "en": "Please try not to mumble so I can hear you better."
+  }
+ ],
+ "2976": [
+  {
+   "en": "It's probable that it will rain tomorrow."
+  },
+  {
+   "en": "With all the support we have, success is looking probable."
   }
  ],
  "2977": [
@@ -12499,9 +14249,25 @@
    "en": "The piece was difficult to read after it had been transposed, since in the new key many notes were sharps."
   }
  ],
+ "2978": [
+  {
+   "en": "I couldn't find the particular model you asked for, but I hope this one will do."
+  },
+  {
+   "en": "I don't appreciate your particular brand of cynicism."
+  }
+ ],
  "2979": [
   {
    "en": "The actual government expenses dramatically exceed the budget."
+  }
+ ],
+ "2980": [
+  {
+   "en": "All the fans were willing their team to win the game."
+  },
+  {
+   "en": "He willed his stamp collection to the local museum."
   }
  ],
  "2981": [
@@ -12544,9 +14310,22 @@
    "en": "I've tried on both shirts, but neither fits properly."
   }
  ],
+ "2987": [
+  {
+   "en": "The minister said a prayer on behalf of the entire congregation."
+  },
+  {
+   "en": "He was newly appointed to be Minister of the Interior."
+  }
+ ],
  "2988": [
   {
    "en": "This is a list of all prime ministers since Churchill."
+  }
+ ],
+ "2989": [
+  {
+   "en": "Following the general election, Jane Doe took her oath of office as a member of the nation's fifth parliament."
   }
  ],
  "2991": [
@@ -12570,6 +14349,14 @@
    "en": "A major reform is needed to improve the efficiency in the factory."
   }
  ],
+ "2999": [
+  {
+   "en": "Oil is the main export of Saudi Arabia."
+  },
+  {
+   "en": "The export of fish is forbidden in this country."
+  }
+ ],
  "3000": [
   {
    "en": "It was a matter of great import."
@@ -12581,6 +14368,14 @@
  "3001": [
   {
    "en": "The inflation of the balloon took five hours."
+  }
+ ],
+ "3003": [
+  {
+   "en": "Many old people depend on their pension to pay the bills."
+  },
+  {
+   "en": "A pension had somewhat less to offer than a hotel; it was always smaller, and never elegant; it sometimes offered breakfast, and sometimes not (John Irving)."
   }
  ],
  "3004": [
@@ -12623,6 +14418,19 @@
    "en": "Printing such asinine opinions is criminal!"
   }
  ],
+ "3015": [
+  {
+   "en": "That marketing scheme looks like a scam to me."
+  },
+  {
+   "en": "That car was a scam."
+  }
+ ],
+ "3019": [
+  {
+   "en": "I suspect him of being the thief."
+  }
+ ],
  "3020": [
   {
    "en": "She can bear witness, since she was there at the time."
@@ -12660,9 +14468,29 @@
    "en": "The rocks threatened the ship's survival."
   }
  ],
+ "3032": [
+  {
+   "en": "She was accused of trying to bribe the jury into making false statements."
+  }
+ ],
+ "3034": [
+  {
+   "en": "His remarks convicted him of a lack of sensitivity."
+  }
+ ],
+ "3037": [
+  {
+   "en": "Accessing unauthorized files violates security protocol."
+  }
+ ],
  "3038": [
   {
    "en": "That program uses the Microsoft Windows environment."
+  }
+ ],
+ "3039": [
+  {
+   "en": "By tossing the bottle out the window, he was littering."
   }
  ],
  "3042": [
@@ -12671,6 +14499,11 @@
   },
   {
    "en": "When I send it, I'll carbon Julia so she's aware."
+  }
+ ],
+ "3044": [
+  {
+   "en": "If the car is more than five years old, you'll have to have it smogged before you can register it."
   }
  ],
  "3051": [
@@ -12709,6 +14542,14 @@
    "en": "I have faith in the healing power of crystals."
   }
  ],
+ "3065": [
+  {
+   "en": "Dawn believes in God, but Willow believes in multiple gods and goddesses."
+  },
+  {
+   "en": "The most frequently used name for the Islamic god is Allah."
+  }
+ ],
  "3066": [
   {
    "en": "They carried out the ritual carefully."
@@ -12730,12 +14571,38 @@
    "en": "According to the legend on the map, that building is a school."
   }
  ],
+ "3074": [
+  {
+   "en": "Home computers in the 1980s had many incompatible dialects of BASIC."
+  }
+ ],
  "3078": [
   {
    "en": "After the film, do you want to go hang out?"
   },
   {
    "en": "The juryman hangs out against an agreement."
+  }
+ ],
+ "3079": [
+  {
+   "en": "We worship at the church down the road."
+  }
+ ],
+ "3081": [
+  {
+   "en": "Take time with the aim of your gun."
+  },
+  {
+   "en": "My number one aim in life is to make money to make my parents, siblings and kids happy."
+  }
+ ],
+ "3082": [
+  {
+   "en": "Testing for the new antidote is currently in progress."
+  },
+  {
+   "en": "Science has made extraordinary progress in the last fifty years."
   }
  ],
  "3084": [
@@ -12759,12 +14626,41 @@
    "en": "I think I can thread my way through here, but it’s going to be tight."
   }
  ],
+ "3087": [
+  {
+   "en": "I need to glue the chair-leg back into place."
+  },
+  {
+   "en": "His eyes were glued to the screen."
+  }
+ ],
+ "3088": [
+  {
+   "en": "Although the label priced this poster at three pounds, I got it for two."
+  },
+  {
+   "en": "Ever since he started going to the rock club, he's been given the label \"waster\"."
+  }
+ ],
  "3089": [
   {
    "en": "The American sack of salt is 215 pounds; the sack of wheat, two bushels. — McElrath."
   },
   {
    "en": "The sack of Rome."
+  }
+ ],
+ "3090": [
+  {
+   "en": "Sealing wax is available as a cylindrical or rectangular stick."
+  }
+ ],
+ "3093": [
+  {
+   "en": "A large crack had formed in the roadway."
+  },
+  {
+   "en": "Open the door a crack."
   }
  ],
  "3096": [
@@ -12781,6 +14677,24 @@
   },
   {
    "en": "The urn containing his ashes was eventually removed to a closet."
+  }
+ ],
+ "3098": [
+  {
+   "en": "Sid echoed his father's point of view."
+  }
+ ],
+ "3099": [
+  {
+   "en": "They made their good-byes."
+  }
+ ],
+ "3100": [
+  {
+   "en": "Take time with the aim of your gun."
+  },
+  {
+   "en": "My number one aim in life is to make money to make my parents, siblings and kids happy."
   }
  ],
  "3101": [
@@ -12809,6 +14723,14 @@
    "en": "He said he'd slept with hundreds of girls, but I know he's exaggerating. The real number is about ten."
   }
  ],
+ "3106": [
+  {
+   "en": "This software can print compact disc inserts if you have the right size of paper."
+  },
+  {
+   "en": "In order to withdraw money from a cash machine, you have to insert your debit card."
+  }
+ ],
  "3107": [
   {
    "en": "He didn't make a donation until some of his customers leaned on him."
@@ -12822,9 +14744,38 @@
    "en": "The dryer shrank my sweater."
   }
  ],
+ "3110": [
+  {
+   "en": "During the centuries, the people of Ireland struggled constantly to assert their right to govern themselves."
+  },
+  {
+   "en": "She struggled to escape from her assailant's grasp."
+  }
+ ],
  "3111": [
   {
    "en": "A supply of good drinking water is essential."
+  }
+ ],
+ "3112": [
+  {
+   "en": "I do wonder why keeping my little breasts bare can be lewd even as none tells my brother anything for being bare-chested."
+  },
+  {
+   "en": "The cupboard was bare."
+  }
+ ],
+ "3113": [
+  {
+   "en": "A fierce storm battered the coast."
+  },
+  {
+   "en": "We made a fierce attempt to escape."
+  }
+ ],
+ "3114": [
+  {
+   "en": "This was a principle more flexible to their purpose. -Rogers."
   }
  ],
  "3116": [
@@ -12849,6 +14800,19 @@
   },
   {
    "en": "The tent, made of tough canvas, held up to many abuses."
+  }
+ ],
+ "3121": [
+  {
+   "en": "The brain is a vital organ."
+  },
+  {
+   "en": "The transition to farming was vital for the creation of civilisation."
+  }
+ ],
+ "3122": [
+  {
+   "en": "If a man accidentally kills another by lopping a tree, it is not voluntary manslaughter."
   }
  ]
 }
