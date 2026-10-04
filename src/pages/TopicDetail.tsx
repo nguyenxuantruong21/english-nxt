@@ -1,11 +1,14 @@
 import { Link, useParams } from 'react-router-dom';
-import { getIndex, getWordsByTopic } from '../lib/vocab';
+import { getFrames, getIndex, getWordsByTopic } from '../lib/vocab';
+import { useProgress } from '../store/progress';
+import WordRow from '../components/WordRow';
 
 export default function TopicDetail() {
   const { topicId } = useParams();
 
   const idx = getIndex();
   const topic = idx.topics.find((t) => t.id === topicId);
+  const completed = useProgress((s) => s.data.completed);
 
   if (!topic) {
     return (
@@ -22,6 +25,8 @@ export default function TopicDetail() {
   }
 
   const words = getWordsByTopic(topic.id);
+  const frames = getFrames(topic.id);
+  const learned = topic.wordIds.filter((id) => completed[id] !== undefined).length;
 
   return (
     <div className="space-y-4">
@@ -33,28 +38,52 @@ export default function TopicDetail() {
           ← {topic.level}
         </Link>
         <h1 className="mt-1 text-2xl font-bold">
-          {topic.nameEn} {topic.nameVi ? `( ${topic.nameVi} )` : ''}
+          {topic.nameVi || topic.nameEn}
         </h1>
+        <p className="text-sm text-slate-500">
+          {topic.nameEn} · {`${learned}/${topic.wordCount} từ đã học`}
+        </p>
       </div>
-      <p className="text-sm text-slate-500">Cấp độ: {topic.level}</p>
-      <p className="text-sm text-slate-500">{topic.wordCount} từ</p>
+
+      <div className="flex gap-3">
+        <Link
+          to={`/learn/${topic.id}`}
+          className="flex-1 rounded-xl bg-indigo-600 py-2.5 text-center font-medium text-white hover:bg-indigo-700"
+        >
+          Học chủ đề này
+        </Link>
+        <Link
+          to={`/practice?topic=${topic.id}`}
+          className="flex-1 rounded-xl border border-indigo-600 py-2.5 text-center font-medium text-indigo-600 hover:bg-indigo-50"
+        >
+          Luyện chủ đề
+        </Link>
+      </div>
+
       {words.length === 0 ? (
         <p className="text-slate-500">Chưa có từ</p>
       ) : (
-        <div className="grid grid-cols-2 gap-4">
+        <section className="rounded-2xl border border-slate-200 bg-white">
           {words.map((w) => (
-            <Link
-              key={w.id}
-              to={`/words/${w.id}`}
-              className="rounded-2xl border border-slate-200 bg-white p-4 hover:border-indigo-300 transition-colors"
-            >
-              <h2 className="text-lg font-bold">{w.word}</h2>
-              <p className="text-xs text-slate-500">{w.ipa}</p>
-              <p className="text-xs text-slate-500">{w.pos}</p>
-              <p className="text-xs text-slate-500">{w.meaningVi}</p>
-            </Link>
+            <WordRow key={w.id} word={w} />
           ))}
-        </div>
+        </section>
+      )}
+
+      {frames.length > 0 && (
+        <details className="rounded-2xl border border-slate-200 bg-white p-4">
+          <summary className="cursor-pointer font-semibold">
+            Khung mẫu câu ({frames.length})
+          </summary>
+          <ul className="mt-3 space-y-3">
+            {frames.map((f, i) => (
+              <li key={i}>
+                <p className="font-medium">{f.template}</p>
+                <p className="text-sm text-slate-500">→ {f.example}</p>
+              </li>
+            ))}
+          </ul>
+        </details>
       )}
     </div>
   );

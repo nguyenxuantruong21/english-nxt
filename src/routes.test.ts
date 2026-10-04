@@ -126,4 +126,42 @@ describe('error/edge states theo route', () => {
     expect(html).toContain('Trước');
   });
 
+  it('/topics/:id → nút học/luyện + khung mẫu câu + danh sách từ có link', () => {
+    const html = renderAt('/topics/a1-family-people');
+    expect(html).toContain('Học chủ đề này');
+    expect(html).toContain('href="/learn/a1-family-people"');
+    expect(html).toContain('Luyện chủ đề');
+    expect(html).toContain('href="/practice?topic=a1-family-people"');
+    expect(html).toContain('Khung mẫu câu');
+    expect(html).toContain('0/39 từ đã học');
+    expect(html).toContain('href="/words/1"');
+  });
+
+  it('/words/1 → ví dụ + khung mẫu + nút đánh dấu + link luyện tập, không hiện ID thô', () => {
+    const html = renderAt('/words/1');
+    expect(html).toContain('Đánh dấu đã học');
+    expect(html).toContain('href="/practice/mcq?word=1"');
+    expect(html).toContain('Ví dụ');
+    expect(html).toContain('Khung mẫu câu');
+    expect(html).toContain('Gia đình và con người');
+    expect(html).not.toContain('>ID<');
+  });
+
+  it('/words/1 khi đã học + đến hạn → "Đã học ✓" + chip "Đến hạn ôn"', () => {
+    useProgress.getInitialState().data = {
+      ...defaultProgress(),
+      completed: { 1: '2026-01-01' },
+      review: { 1: { due: '2000-01-01', interval: 1 } },
+    };
+    const html = renderAt('/words/1');
+    expect(html).toContain('Đã học ✓');
+    expect(html).toContain('Đến hạn ôn');
+    expect(html).not.toContain('Đánh dấu đã học');
+  });
+
+  it('/levels/A1 → mỗi card có learned/wordCount + ProgressBar', () => {
+    const html = renderAt('/levels/A1');
+    expect(html).toContain('0/39 từ');
+    expect(html).toContain('bg-indigo-500');
+  });
 });

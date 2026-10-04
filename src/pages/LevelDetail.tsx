@@ -1,10 +1,13 @@
 import { Link, useParams } from 'react-router-dom';
 import { getIndex } from '../lib/vocab';
+import { useProgress } from '../store/progress';
+import ProgressBar from '../components/ProgressBar';
 
 export default function LevelDetail() {
   const { level } = useParams();
   const idx = getIndex();
   const lv = idx.levels.find((l) => l.id === level);
+  const completed = useProgress((s) => s.data.completed);
 
   if (!lv) {
     return (
@@ -39,17 +42,23 @@ export default function LevelDetail() {
         <p className="text-slate-500">Chưa có chủ đề cho cấp độ này</p>
       ) : (
         <div className="grid grid-cols-2 gap-4">
-          {topics.map((t) => (
-            <Link
-              key={t.id}
-              to={`/topics/${t.id}`}
-              className="rounded-2xl border border-slate-200 bg-white p-4 hover:border-indigo-300 transition-colors"
-            >
-              <h2 className="text-lg font-bold text-indigo-600">{t.nameEn}</h2>
-              <p className="text-sm text-slate-500">{t.nameVi}</p>
-              <p className="text-xs mt-1">{t.wordCount} từ</p>
-            </Link>
-          ))}
+          {topics.map((t) => {
+            const learned = t.wordIds.filter((id) => completed[id] !== undefined).length;
+            return (
+              <Link
+                key={t.id}
+                to={`/topics/${t.id}`}
+                className="rounded-2xl border border-slate-200 bg-white p-4 hover:border-indigo-300 transition-colors"
+              >
+                <h2 className="text-lg font-bold text-indigo-600">{t.nameEn}</h2>
+                <p className="text-sm text-slate-500">{t.nameVi}</p>
+                <p className="mt-2 text-xs">{`${learned}/${t.wordCount} từ`}</p>
+                <div className="mt-1">
+                  <ProgressBar value={learned} max={t.wordCount} />
+                </div>
+              </Link>
+            );
+          })}
         </div>
       )}
     </div>

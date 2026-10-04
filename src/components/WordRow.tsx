@@ -1,24 +1,36 @@
-import { Word } from '../types';
+import { Link } from 'react-router-dom';
+import { speak } from '../lib/speech';
 import { useProgress } from '../store/progress';
+import type { Word } from '../types';
+import AudioButton from './AudioButton';
 
 export interface WordRowProps {
   word: Word;
 }
 
 export default function WordRow({ word }: WordRowProps) {
-  const store = useProgress();
-  const completed = Object.keys(store.data.completed).map(Number);
+  const learned = useProgress((s) => s.data.completed[word.id] !== undefined);
 
   return (
-    <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-100 last:border-0">
-      <span className="text-2xl font-bold">{word.word}</span>
-      <div className="text-xs text-slate-500">
-        <span title={word.ipa}>{word.ipa}</span>
-        <span title={word.pos}>{word.pos}</span>
-      </div>
-      <span className="text-sm font-medium text-slate-700">{word.meaningVi}</span>
-      {completed.includes(word.id) && (
-        <span className="text-xs text-green-500 ml-2">đã học</span>
+    <div className="flex items-center gap-3 border-b border-slate-100 px-4 py-3 last:border-0">
+      <AudioButton onPlay={() => speak(word.word)} />
+      <Link
+        to={`/words/${word.id}`}
+        className="flex min-w-0 flex-1 flex-wrap items-baseline gap-x-2 gap-y-0.5 hover:text-indigo-700"
+      >
+        <span className="text-lg font-bold">{word.word}</span>
+        <span className="text-xs text-slate-500" title={word.ipa}>
+          {word.ipa}
+        </span>
+        <span className="text-xs text-slate-500" title={word.pos}>
+          {word.pos}
+        </span>
+        <span className="text-sm text-slate-700">{word.meaningVi}</span>
+      </Link>
+      {learned && (
+        <span className="text-xs text-emerald-600" title="Đã học">
+          ✓
+        </span>
       )}
     </div>
   );

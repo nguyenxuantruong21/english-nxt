@@ -18,11 +18,12 @@ export default function AudioButton({ word, onPlay }: AudioButtonProps) {
     setTimeout(() => setIsPlaying(false), 1000);
   };
 
+  if (!supported) return null;
+
   return (
     <button
       onClick={handlePlay}
-      disabled={!supported}
-      className={`inline-flex items-center gap-1 rounded-md border border-slate-300 px-3 py-1.5 text-sm font-medium ${isPlaying ? 'bg-slate-100' : 'bg-transparent'} text-slate-600 hover:text-slate-900 ${!supported ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
+      className={`inline-flex items-center gap-1 rounded-md border border-slate-300 px-3 py-1.5 text-sm font-medium ${isPlaying ? 'bg-slate-100' : 'bg-transparent'} text-slate-600 hover:text-slate-900 cursor-pointer`}
       aria-label={word ? `Nghe phát âm: ${word.word}` : 'Phát âm'}
     >
       {word?.word ? (
