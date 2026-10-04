@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
-import { buildFlashcard, makeRound, shuffle } from '../lib/exercises';
+import { buildFlashcard, hasOptions, makeRound, shuffle } from '../lib/exercises';
 import type { Exercise } from '../lib/exercises';
 import {
   getExamples,
@@ -12,6 +12,8 @@ import {
 import { useProgress } from '../store/progress';
 import McqExercise from '../components/exercises/McqExercise';
 import ListenExercise from '../components/exercises/ListenExercise';
+import ClozeExercise from '../components/exercises/ClozeExercise';
+import DictationExercise from '../components/exercises/DictationExercise';
 import Flashcard from '../components/Flashcard';
 import SessionSummary from '../components/SessionSummary';
 
@@ -49,6 +51,8 @@ export default function PracticeRound() {
     }
     if (kind === 'mcq') return makeRound(undefined, pool, undefined, [], 'mcq');
     if (kind === 'listen') return makeRound(undefined, pool, undefined, [], 'listen');
+    if (kind === 'cloze') return makeRound(undefined, pool, undefined, [], 'cloze');
+    if (kind === 'dictation') return makeRound(undefined, pool, undefined, [], 'dictation');
     return makeRound(undefined, pool);
   }, [kind, pool, target]);
 
@@ -56,6 +60,7 @@ export default function PracticeRound() {
     const byText = new Map(pool.map((w) => [w.word.toLowerCase(), w.id]));
     return (ex: Exercise): number | undefined => {
       if (ex.kind === 'flashcard') return ex.word.id;
+      if (ex.kind === 'dictation') return ex.wordId;
       const text =
         ex.kind === 'mcq'
           ? ex.question
@@ -86,8 +91,6 @@ export default function PracticeRound() {
     setPos((p) => p + 1);
   };
 
-  const skip = () => setPos((p) => p + 1);
-
   if (round.length === 0) {
     return <p className="p-4 text-slate-500">Không có dữ liệu luyện tập.</p>;
   }
@@ -117,6 +120,7 @@ export default function PracticeRound() {
   }
 
   const ex = round[pos];
+  const dictationWord = ex.kind === 'dictation' ? getWord(ex.wordId) : undefined;
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between text-sm text-slate-500">
@@ -153,19 +157,17 @@ export default function PracticeRound() {
       {ex.kind === 'listen' && (
         <ListenExercise key={pos} exercise={ex} onAnswer={handleAnswer} />
       )}
-      {(ex.kind === 'cloze' || ex.kind === 'dictation') && (
-        <div className="space-y-3 rounded-2xl border border-slate-200 bg-white p-6 text-center">
-          <p className="text-slate-500">
-            Chế độ {ex.kind === 'cloze' ? 'điền mẫu câu' : 'chép chính tả'} đang được hoàn thiện.
-          </p>
-          <button
-            type="button"
-            onClick={skip}
-            className="rounded-xl border border-slate-200 px-4 py-2 font-medium hover:border-indigo-300"
-          >
-            Bỏ qua
-          </button>
-        </div>
+      {ex.kind === 'cloze' && hasOptions(ex) && (
+        <ClozeExercise key={pos} exercise={ex} onAnswer={handleAnswer} />
+      )}
+      {ex.kind === 'cloze' && !hasOptions(ex) && (
+        <p className="text-center text-slate-500">Bỏ qua câu này...</p>
+      )}
+      {ex.kind === 'dictation' && dictationWord && (
+        <DictationExercise key={pos} word={dictationWord} onAnswer={handleAnswer} />
+      )}
+      {ex.kind === 'dictation' && !dictationWord && (
+        <p className="text-center text-slate-500">Bỏ qua câu này...</p>
       )}
     </div>
   );

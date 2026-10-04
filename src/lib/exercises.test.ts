@@ -88,8 +88,9 @@ describe('buildCloze', () => {
 });
 
 describe('buildDictation', () => {
-  it('answer là từ', () => {
+  it('answer là từ, wordId là id của từ', () => {
     expect(buildDictation(family).answer).toBe('family');
+    expect(buildDictation(family).wordId).toBe(family.id);
   });
 });
 
@@ -156,6 +157,48 @@ describe('makeRound', () => {
   it('pool rỗng → round rỗng (không crash)', () => {
     expect(makeRound(undefined, [])).toEqual([]);
     expect(makeRound(undefined, [], undefined, [], 'mcq')).toEqual([]);
+  });
+
+  it('onlyKind=cloze → 10 câu toàn cloze, mỗi câu 4 options hợp lệ', () => {
+    const round = makeRound(undefined, pool, undefined, [], 'cloze');
+    expect(round.length).toBe(10);
+    for (const ex of round) {
+      expect(ex.kind).toBe('cloze');
+      if (ex.kind !== 'cloze') continue;
+      expect(ex.options?.length).toBe(4);
+      expect(new Set(ex.options).size).toBe(4);
+      expect(ex.options?.[ex.answerIndex ?? -1]).toBe(ex.answer);
+      expect(pool.some((p) => p.word === ex.answer)).toBe(true);
+    }
+  });
+
+  it('onlyKind=dictation → 10 câu toàn dictation, có wordId trong pool', () => {
+    const round = makeRound(undefined, pool, undefined, [], 'dictation');
+    expect(round.length).toBe(10);
+    for (const ex of round) {
+      expect(ex.kind).toBe('dictation');
+      if (ex.kind !== 'dictation') continue;
+      expect(ex.wordId).toBeTypeOf('number');
+      const owner = pool.find((p) => p.id === ex.wordId);
+      expect(owner).toBeDefined();
+      expect(ex.answer).toBe(owner!.word);
+    }
+  });
+
+  it('target round → cloze có options, dictation có wordId của target', () => {
+    const round = makeRound(family, pool, { template: 'I love my ___.', example: '' }, []);
+    const cloze = round.find((r) => r.kind === 'cloze');
+    expect(cloze).toBeDefined();
+    if (cloze && cloze.kind === 'cloze') {
+      expect(cloze.options?.length).toBe(4);
+      expect(new Set(cloze.options).size).toBe(4);
+      expect(cloze.options?.[cloze.answerIndex ?? -1]).toBe('family');
+    }
+    const dictations = round.filter((r) => r.kind === 'dictation');
+    expect(dictations.length).toBeGreaterThanOrEqual(1);
+    for (const d of dictations) {
+      if (d.kind === 'dictation') expect(d.wordId).toBe(family.id);
+    }
   });
 });
 

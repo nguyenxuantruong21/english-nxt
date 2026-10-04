@@ -1,5 +1,5 @@
 import type { ExerciseKind, Frame, Word } from '../types';
-import { getFrames } from './vocab';
+import { getExamples, getFrames } from './vocab';
 
 export interface McqExercise {
   kind: 'mcq';
@@ -19,11 +19,14 @@ export interface ClozeExercise {
   sentence: string;
   blanks: number[];
   answer: string;
+  options?: string[];
+  answerIndex?: number;
 }
 
 export interface DictationExercise {
   kind: 'dictation';
   answer: string;
+  wordId: number;
 }
 
 export interface FlashcardExercise {
@@ -41,6 +44,10 @@ export type Exercise =
 export interface ClozeWithOptions extends ClozeExercise {
   options: string[];
   answerIndex: number;
+}
+
+export function hasOptions(ex: ClozeExercise): ex is ClozeWithOptions {
+  return Array.isArray(ex.options) && ex.answerIndex !== undefined;
 }
 
 export interface McqWithOptions extends McqExercise {}
@@ -143,7 +150,7 @@ export function buildCloze(
 }
 
 export function buildDictation(word: Word): DictationExercise {
-  return { kind: 'dictation', answer: word.word };
+  return { kind: 'dictation', answer: word.word, wordId: word.id };
 }
 
 export function buildFlashcard(word: Word): FlashcardExercise {
@@ -180,7 +187,12 @@ function buildFor(
     case 'dictation':
       return buildDictation(word);
     case 'cloze':
-      return buildCloze(word, frame ?? getFrames(word.topicId)[0], examples ?? []);
+      return buildClozeWithOptions(
+        word,
+        frame ?? getFrames(word.topicId)[0],
+        examples && examples.length > 0 ? examples : getExamples(word.id),
+        pool,
+      );
   }
 }
 
@@ -218,7 +230,7 @@ export function makeRound(
       buildListen(target, source),
       buildDictation(target),
     ];
-    const cloze = buildCloze(target, frameForCloze, examples ?? []);
+    const cloze = buildClozeWithOptions(target, frameForCloze, examples ?? [], source);
     if (cloze) exercises.push(cloze);
     else exercises.push(buildDictation(target));
     return shuffle(exercises);
