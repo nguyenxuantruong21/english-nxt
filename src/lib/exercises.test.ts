@@ -94,8 +94,8 @@ describe('buildDictation', () => {
 });
 
 describe('makeRound', () => {
-  it('target word → đúng 5 câu, mỗi chế độ 1, tất cả cùng từ', () => {
-    const round = makeRound(family, pool);
+  it('target word + frame → đúng 5 câu, mỗi chế độ 1, tất cả cùng từ', () => {
+    const round = makeRound(family, pool, { template: 'I love my ___.', example: '' }, []);
     expect(round.length).toBe(5);
     const kinds = round.map((r) => r.kind).sort();
     expect(kinds).toEqual(['cloze', 'dictation', 'flashcard', 'listen', 'mcq']);
@@ -128,6 +128,34 @@ describe('makeRound', () => {
     expect(round.length).toBe(5);
     expect(round.filter((r) => r.kind === 'cloze').length).toBe(0);
     expect(round.filter((r) => r.kind === 'dictation').length).toBeGreaterThanOrEqual(1);
+  });
+
+  it('onlyKind=mcq → 10 câu toàn mcq, mỗi câu 4 options hợp lệ', () => {
+    const round = makeRound(undefined, pool, undefined, [], 'mcq');
+    expect(round.length).toBe(10);
+    for (const ex of round) {
+      expect(ex.kind).toBe('mcq');
+      if (ex.kind !== 'mcq') continue;
+      expect(ex.options.length).toBe(4);
+      expect(new Set(ex.options).size).toBe(4);
+      expect(pool.some((p) => p.meaningVi === ex.options[ex.answerIndex])).toBe(true);
+    }
+  });
+
+  it('onlyKind=listen → 10 câu toàn listen, đáp án là từ trong pool', () => {
+    const round = makeRound(undefined, pool, undefined, [], 'listen');
+    expect(round.length).toBe(10);
+    for (const ex of round) {
+      expect(ex.kind).toBe('listen');
+      if (ex.kind !== 'listen') continue;
+      expect(ex.options.length).toBe(4);
+      expect(pool.some((p) => p.word === ex.options[ex.answerIndex])).toBe(true);
+    }
+  });
+
+  it('pool rỗng → round rỗng (không crash)', () => {
+    expect(makeRound(undefined, [])).toEqual([]);
+    expect(makeRound(undefined, [], undefined, [], 'mcq')).toEqual([]);
   });
 });
 

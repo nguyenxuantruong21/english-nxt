@@ -163,16 +163,41 @@ export function buildClozeWithOptions(
   return { ...base, options, answerIndex };
 }
 
+function buildFor(
+  kind: ExerciseKind,
+  word: Word,
+  pool: Word[],
+  frame?: Frame | undefined,
+  examples?: { en: string }[],
+): Exercise | null {
+  switch (kind) {
+    case 'flashcard':
+      return buildFlashcard(word);
+    case 'mcq':
+      return buildMcq(word, pool);
+    case 'listen':
+      return buildListen(word, pool);
+    case 'dictation':
+      return buildDictation(word);
+    case 'cloze':
+      return buildCloze(word, frame ?? getFrames(word.topicId)[0], examples ?? []);
+  }
+}
+
 export function makeRound(
   targetWord: Word,
   pool: Word[],
   frame?: Frame | undefined,
   examples?: { en: string }[],
+  onlyKind?: ExerciseKind,
 ): Exercise[];
 
 export function makeRound(
-  _target: undefined,
+  target: undefined,
   pool: Word[],
+  frame?: Frame | undefined,
+  examples?: { en: string }[],
+  onlyKind?: ExerciseKind,
 ): Exercise[];
 
 export function makeRound(
@@ -180,8 +205,10 @@ export function makeRound(
   pool: Word[],
   frame?: Frame | undefined,
   examples?: { en: string }[],
+  onlyKind?: ExerciseKind,
 ): Exercise[] {
-  const source = pool.length >= 4 ? pool : pool;
+  if (pool.length === 0) return [];
+  const source = pool;
   const frameForCloze = frame ?? (target ? getFrames(target.topicId)[0] : undefined);
 
   if (target) {
@@ -197,31 +224,25 @@ export function makeRound(
     return shuffle(exercises);
   }
 
+  if (onlyKind) {
+    const words = shuffle(source);
+    const round: Exercise[] = [];
+    let i = 0;
+    while (round.length < 10 && i < words.length * 10) {
+      const ex = buildFor(onlyKind, words[i % words.length], source, frame, examples);
+      i++;
+      if (ex) round.push(ex);
+    }
+    return round;
+  }
+
   const kinds: ExerciseKind[] = ['flashcard', 'mcq', 'listen', 'cloze', 'dictation'];
   const round: Exercise[] = [];
   for (let i = 0; i < 10; i++) {
     const kind = kinds[i % kinds.length];
-    const word = target ?? source[Math.floor(Math.random() * source.length)];
-    switch (kind) {
-      case 'flashcard':
-        round.push(buildFlashcard(word));
-        break;
-      case 'mcq':
-        round.push(buildMcq(word, source));
-        break;
-      case 'listen':
-        round.push(buildListen(word, source));
-        break;
-      case 'cloze': {
-        const c = buildCloze(word, undefined, []);
-        if (c) round.push(c);
-        else round.push(buildMcq(word, source));
-        break;
-      }
-      case 'dictation':
-        round.push(buildDictation(word));
-        break;
-    }
+    const word = source[Math.floor(Math.random() * source.length)];
+    const ex = buildFor(kind, word, source, frame, examples);
+    round.push(ex ?? buildMcq(word, source));
   }
   return round.slice(0, 10);
 }
