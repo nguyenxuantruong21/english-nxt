@@ -111,6 +111,7 @@ export function useProgress() {
             completed: state.data.completed,
             review: state.data.review,
             sessions: state.data.sessions,
+            stats: state.data.stats,
           },
         }),
       },

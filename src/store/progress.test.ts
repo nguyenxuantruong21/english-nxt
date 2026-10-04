@@ -101,3 +101,16 @@ describe('useProgress', () => {
     expect(s.data.completed[1]).toBe('english_nxt_v1');
   });
 });
+describe('rehydration across store instances', () => {
+  it('restores stats when a new store instance hydrates from localStorage', () => {
+    const a = useProgress();
+    a.getState().learnWord(1);
+    a.getState().logExercise('flashcard' as const);
+    const b = useProgress();
+    const s = b.getState();
+    expect(s.data.stats).toBeDefined();
+    expect(s.data.stats.totalLearned).toBe(1);
+    expect(s.data.completed[1]).toBe('english_nxt_v1');
+    expect(Object.keys(s.data.sessions).length).toBeGreaterThan(0);
+  });
+});
