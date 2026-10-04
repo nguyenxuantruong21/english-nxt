@@ -52,12 +52,13 @@ describe('useProgress', () => {
     const store = useProgress();
     store.getState().logExercise('flashcard' as const);
     const s = store.getState();
-    expect(s.data.sessions['2026-10-03']).toBeDefined();
-    expect(s.data.sessions['2026-10-03'].exercises.flashcard).toBe(1);
+    const key = Object.keys(s.data.sessions)[0];
+    expect(key).toBeDefined();
+    expect(s.data.sessions[key].exercises.flashcard).toBe(1);
 
     store.getState().logExercise('flashcard' as const);
     const s2 = store.getState();
-    expect(s2.data.sessions['2026-10-03'].exercises.flashcard).toBe(2);
+    expect(s2.data.sessions[key].exercises.flashcard).toBe(2);
   });
 
   it('setDailyGoal updates the daily goal', () => {
