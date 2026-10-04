@@ -78,25 +78,52 @@ describe('error/edge states theo route', () => {
     expect(html).toContain('href="/learn"');
   });
 
-  it('/learn khi topic đã học hết → "Không có từ nào cần học"', () => {
+  it('/learn/:topicId đã học hết chủ đề → gợi ý cấp tiếp theo, KHÔNG báo hoàn thành', () => {
     const ids = getWordsByTopic('a1-family-people').map((w) => w.id);
     expect(ids.length).toBeGreaterThan(0);
     markAllLearned(ids);
     const html = renderAt('/learn/a1-family-people');
-    expect(html).toContain('Không có từ nào cần học');
+    expect(html).not.toContain('hoàn thành');
+    expect(html).toContain('Cấp A1 sắp tới còn');
+    expect(html).toContain('href="/learn?level=A1"');
   });
 
-  it('/learn (không param) khi đã học hết A1 → "Không có từ nào cần học"', () => {
+  it('/learn khi đã học hết A1 → phiên học chạy tiếp sang A2 (không dead-end)', () => {
     const ids = getWordsByLevel('A1').map((w) => w.id);
     expect(ids.length).toBeGreaterThan(0);
     markAllLearned(ids);
     const html = renderAt('/learn');
-    expect(html).toContain('Không có từ nào cần học');
+    expect(html).not.toContain('hoàn thành');
+    expect(html).toContain('Xem nghĩa');
+    expect(html).toContain('Từ mới');
   });
 
-  it('/learn còn từ chưa học → vẫn render flashcard', () => {
-    const html = renderAt('/learn');
-    expect(html).not.toContain('Không có từ nào cần học');
-    expect(html).toContain('Học từ');
+  it('/learn?level=A1 khi A1 đã học hết → "Cấp A2 sắp tới còn N từ" + link học tiếp', () => {
+    markAllLearned(getWordsByLevel('A1').map((w) => w.id));
+    const html = renderAt('/learn?level=A1');
+    expect(html).toContain('Cấp A2 sắp tới còn');
+    expect(html).toContain('href="/learn?level=A2"');
+    expect(html).toContain('Học tiếp →');
   });
+
+  it('/learn khi đã học hết toàn bộ → mới báo hoàn thành', () => {
+    const all = (['A1', 'A2', 'B1', 'B2'] as const).flatMap((l) =>
+      getWordsByLevel(l).map((w) => w.id),
+    );
+    expect(all.length).toBe(3122);
+    markAllLearned(all);
+    const html = renderAt('/learn');
+    expect(html).toContain('hoàn thành tất cả');
+    expect(html).not.toContain('Cấp');
+  });
+
+  it('/learn còn từ chưa học → render đúng MỘT thẻ mỗi lúc', () => {
+    const html = renderAt('/learn');
+    expect(html).not.toContain('hoàn thành');
+    expect(html).toContain('Xem nghĩa');
+    const cards = html.match(/rounded-3xl border border-slate-200 bg-white p-8/g) ?? [];
+    expect(cards).toHaveLength(1);
+    expect(html).toContain('Trước');
+  });
+
 });
