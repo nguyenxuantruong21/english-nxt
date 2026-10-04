@@ -69,24 +69,26 @@ export default function WordDetail() {
           </div>
         )}
 
-        {isLearned ? (
-          <p className="mt-4 text-sm font-medium text-emerald-600">Đã học ✓</p>
-        ) : (
-          <button
-            type="button"
-            onClick={() => store.learnWord(numId)}
-            className="mt-4 rounded-xl bg-indigo-600 px-6 py-2 font-medium text-white hover:bg-indigo-700"
-          >
-            Đánh dấu đã học
-          </button>
-        )}
+        <div className="mt-4 flex item-center justify-center gap-4">
+          {isLearned ? (
+            <p className="text-sm font-medium text-emerald-600">Đã học ✓</p>
+          ) : (
+            <button
+              type="button"
+              onClick={() => store.learnWord(numId)}
+              className="rounded-xl bg-indigo-600 px-6 py-2 font-medium text-white hover:bg-indigo-700"
+            >
+              Đánh dấu đã học
+            </button>
+          )}
 
-        <Link
-          to={`/practice/mcq?word=${numId}`}
-          className="mt-3 inline-block text-sm font-medium text-indigo-600 hover:text-indigo-800"
-        >
-          Luyện tập từ này →
-        </Link>
+          <Link
+            to={`/practice/mcq?word=${numId}`}
+            className="text-sm font-medium text-indigo-600 hover:text-indigo-800 flex items-center justify-center"
+          >
+            Luyện tập từ này →
+          </Link>
+        </div>
       </div>
 
       {examples.length > 0 && (

@@ -97,7 +97,7 @@ describe("error/edge states theo route", () => {
     markAllLearned(ids);
     const html = renderAt("/learn");
     expect(html).not.toContain("hoàn thành");
-    expect(html).toContain("Xem nghĩa");
+    expect(html).toContain("Nhớ rồi");
     expect(html).toContain("Từ mới");
   });
 
@@ -123,7 +123,7 @@ describe("error/edge states theo route", () => {
   it("/learn còn từ chưa học → render đúng MỘT thẻ mỗi lúc", () => {
     const html = renderAt("/learn");
     expect(html).not.toContain("hoàn thành");
-    expect(html).toContain("Xem nghĩa");
+    expect(html).toContain("Nhớ rồi");
     const cards =
       html.match(/rounded-3xl border border-slate-200 bg-white p-8/g) ?? [];
     expect(cards).toHaveLength(1);
@@ -185,12 +185,12 @@ describe("error/edge states theo route", () => {
 });
 
 describe("đánh dấu đã biết + trang từ chưa biết", () => {
-  it("/learn → nút bỏ qua trên mặt trước thẻ, chưa hiện nút trả lời", () => {
+  it("/learn → hiển thị nghĩa ngay, có nút Nhớ rồi/Chưa nhớ/Đã biết rồi", () => {
     const html = renderAt("/learn");
     expect(html).toContain("Đã biết rồi");
-    expect(html).toContain("Xem nghĩa");
-    expect(html).not.toContain("Nhớ rồi");
-    expect(html).not.toContain("Chưa nhớ");
+    expect(html).toContain("Nhớ rồi");
+    expect(html).toContain("Chưa nhớ");
+    expect(html).not.toContain("Xem nghĩa");
   });
 
   it("/unknown → bộ lọc + dòng từ + nút Đã biết + link chi tiết", () => {
