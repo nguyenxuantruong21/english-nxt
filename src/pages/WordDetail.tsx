@@ -3,6 +3,7 @@ import { getWord } from '../lib/vocab';
 import { useProgress } from '../store/progress';
 
 export default function WordDetail() {
+  const store = useProgress();
   const location = useLocation();
   const searchParams = new URLSearchParams(
     new URL(' ' + location.pathname + location.search, 'https://example.com')
@@ -15,8 +16,7 @@ export default function WordDetail() {
     return <div className="p-8 text-center">Không tìm thấy từ</div>;
   }
 
-  const store = useProgress();
-  const completed = Object.keys(store.getState().data.completed).map(Number);
+  const completed = Object.keys(store.data.completed).map(Number);
 
   return (
     <div className="space-y-4">

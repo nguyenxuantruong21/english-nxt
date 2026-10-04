@@ -13,7 +13,7 @@ const kinds: { kind: ExerciseKind | 'flash'; title: string; desc: string; to: st
 
 export default function Practice() {
   const store = useProgress();
-  const session = store.getState().data.sessions[todayStr()];
+  const session = store.data.sessions[todayStr()];
   const [params] = useSearchParams();
   const topic = params.get('topic');
 

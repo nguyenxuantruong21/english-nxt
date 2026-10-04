@@ -84,9 +84,9 @@ export default function PracticeRound() {
     const ex = round[pos];
     if (ok) setCorrect((c) => c + 1);
     if (ex) {
-      store.getState().logExercise(ex.kind);
+      store.logExercise(ex.kind);
       const wordId = wordIdOf(ex);
-      if (wordId !== undefined) store.getState().answerWord(wordId, ok);
+      if (wordId !== undefined) store.answerWord(wordId, ok);
     }
     setPos((p) => p + 1);
   };

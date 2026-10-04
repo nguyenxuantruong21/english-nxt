@@ -1,8 +1,14 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import type { ProgressData } from '../types';
+import type { DaySession, ProgressData } from '../types';
 import { defaultProgress, STORAGE_KEY } from '../lib/storage';
-import { computeStreak } from '../lib/review';
+import {
+  INTERVALS,
+  computeStreak,
+  nextInterval,
+  restartIfStale,
+  todayStr,
+} from '../lib/review';
 import type { ExerciseKind } from '../types';
 
 export interface ProgressStore {
@@ -14,120 +20,117 @@ export interface ProgressStore {
   resetProgress: () => void;
 }
 
-export function useProgress() {
-  return create<ProgressStore>()(
-    persist(
-      (set, get) => ({
-        data: defaultProgress(),
+const ZERO_EXERCISES: Record<ExerciseKind, number> = {
+  flashcard: 0,
+  mcq: 0,
+  listen: 0,
+  cloze: 0,
+  dictation: 0,
+};
 
-        learnWord: (id: number) => {
-          set(() => {
-            const completed = { ...get().data.completed, [id]: STORAGE_KEY };
-            return {
-              data: {
-                ...get().data,
-                completed,
-                stats: {
-                  ...get().data.stats,
-                  totalLearned: Math.max(
-                    get().data.stats.totalLearned,
-                    Object.keys(completed).length,
-                  ),
-                },
-              },
-            };
-          });
-        },
+function normalizeSession(session?: DaySession): DaySession {
+  return {
+    learned: session?.learned ?? 0,
+    reviewed: session?.reviewed ?? 0,
+    exercises: { ...ZERO_EXERCISES, ...session?.exercises },
+  };
+}
 
-        answerWord: (id: number, ok: boolean) => {
-          set(() => {
-            const review = get().data.review[id];
-            const interval = ok
-              ? Math.min((review?.interval ?? 0) + 1, 30)
-              : 1;
-            const due = ok
-              ? new Date(
-                Date.now() + interval * 86_400_000,
-              ).toISOString().split('T')[0]
-              : new Date(Date.now() + 86_400_000).toISOString().split('T')[0];
+function addDays(date: string, days: number): string {
+  const d = new Date(`${date}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}
 
-            return {
-              data: {
-                ...get().data,
-                review: { ...get().data.review, [id]: { due, interval } },
-              },
-            };
-          });
-        },
+export const useProgress = create<ProgressStore>()(
+  persist(
+    (set, get) => ({
+      data: defaultProgress(),
 
-        logExercise: (kind: ExerciseKind) => {
-          set(() => {
-            const sessionKey = todayStr(new Date());
-            const session = get().data.sessions[sessionKey];
-            const exercises = session
-              ? { ...session.exercises, [kind]: (session.exercises[kind] ?? 0) + 1 }
-              : { [kind]: 1 };
+      learnWord: (id: number) => {
+        const data = get().data;
+        if (data.completed[id] !== undefined) return;
+        const today = todayStr();
+        const session = normalizeSession(data.sessions[today]);
+        const review = data.review[id] ?? {
+          due: addDays(today, INTERVALS[0]),
+          interval: 1,
+        };
+        const completed = { ...data.completed, [id]: today };
+        set({
+          data: {
+            ...data,
+            completed,
+            review: { ...data.review, [id]: review },
+            sessions: {
+              ...data.sessions,
+              [today]: { ...session, learned: session.learned + 1 },
+            },
+            stats: { ...data.stats, totalLearned: Object.keys(completed).length },
+          },
+        });
+      },
 
-            const newSession = {
-              ...session,
-              exercises,
-              learned:
-                kind === 'dictation' || kind === 'cloze' ? (session?.learned ?? 0) + 1
-                  : session?.learned ?? 0,
-            } as DaySession;
+      answerWord: (id: number, ok: boolean) => {
+        const data = get().data;
+        const today = todayStr();
+        const entry = data.review[id];
+        const currentTier = entry ? restartIfStale(entry, today) : 0;
+        const tier = nextInterval(currentTier, ok);
+        const session = normalizeSession(data.sessions[today]);
+        set({
+          data: {
+            ...data,
+            review: {
+              ...data.review,
+              [id]: { due: addDays(today, INTERVALS[tier - 1]), interval: tier },
+            },
+            sessions: {
+              ...data.sessions,
+              [today]: { ...session, reviewed: session.reviewed + 1 },
+            },
+          },
+        });
+      },
 
-            const newSessions = {
-              ...get().data.sessions,
-              [sessionKey]: newSession,
-            };
+      logExercise: (kind: ExerciseKind) => {
+        const data = get().data;
+        const today = todayStr();
+        const session = normalizeSession(data.sessions[today]);
+        const newSession: DaySession = {
+          ...session,
+          exercises: { ...session.exercises, [kind]: session.exercises[kind] + 1 },
+        };
+        const newSessions = { ...data.sessions, [today]: newSession };
+        set({
+          data: {
+            ...data,
+            sessions: newSessions,
+            stats: { ...data.stats, streak: computeStreak(newSessions, today) },
+          },
+        });
+      },
 
-            return {
-              data: {
-                ...get().data,
-                sessions: newSessions,
-                stats: {
-                  ...get().data.stats,
-                  streak: computeStreak(newSessions, sessionKey),
-                },
-              },
-            };
-          });
-        },
+      setDailyGoal: (n: number) => {
+        set({ data: { ...get().data, settings: { ...get().data.settings, dailyGoal: n } } });
+      },
 
-        setDailyGoal: (n: number) => {
-          set({ data: { ...get().data, settings: { ...get().data.settings, dailyGoal: n } } });
-        },
-
-        resetProgress: () => {
-          set({ data: defaultProgress() });
+      resetProgress: () => {
+        set({ data: defaultProgress() });
+      },
+    }),
+    {
+      name: STORAGE_KEY,
+      storage: createJSONStorage(() => localStorage),
+      partialize: (state) => ({
+        data: {
+          settings: state.data.settings,
+          completed: state.data.completed,
+          review: state.data.review,
+          sessions: state.data.sessions,
+          stats: state.data.stats,
         },
       }),
-      {
-        name: STORAGE_KEY,
-        storage: createJSONStorage(() => localStorage),
-        partialize: (state) => ({
-          data: {
-            settings: state.data.settings,
-            completed: state.data.completed,
-            review: state.data.review,
-            sessions: state.data.sessions,
-            stats: state.data.stats,
-          },
-        }),
-      },
-    ),
-  );
-}
-
-interface DaySession {
-  learned: number;
-  reviewed: number;
-  exercises: Record<ExerciseKind, number>;
-}
-
-function todayStr(d: Date = new Date()): string {
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  return `${y}-${m}-${day}`;
-}
+    },
+  ),
+);

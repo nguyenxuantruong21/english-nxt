@@ -6,7 +6,7 @@ import ProgressBar from '../components/ProgressBar';
 
 export default function Dashboard() {
   const store = useProgress();
-  const data = store.getState().data;
+  const data = store.data;
   const today = todayStr();
   const stats = dailyStats(data, today);
   const streak = computeStreak(data.sessions, today);

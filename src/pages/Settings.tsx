@@ -5,7 +5,7 @@ import { getIndex } from '../lib/vocab';
 
 export default function Settings() {
   const store = useProgress();
-  const data = store.getState().data;
+  const data = store.data;
   const [confirming, setConfirming] = useState(false);
   const streak = computeStreak(data.sessions, todayStr());
   const idx = getIndex();
@@ -15,7 +15,7 @@ export default function Settings() {
     const n = Number(raw);
     if (!Number.isFinite(n)) return;
     const clamped = Math.min(100, Math.max(5, Math.round(n)));
-    store.getState().setDailyGoal(clamped);
+    store.setDailyGoal(clamped);
   };
 
   return (
@@ -71,7 +71,7 @@ export default function Settings() {
               <button
                 type="button"
                 onClick={() => {
-                  store.getState().resetProgress();
+                  store.resetProgress();
                   setConfirming(false);
                 }}
                 className="flex-1 rounded-xl bg-rose-600 py-2 text-sm font-medium text-white hover:bg-rose-700"

@@ -8,7 +8,7 @@ export interface SessionSummaryProps {
 
 export default function SessionSummary({ today: todayStr }: SessionSummaryProps = {}) {
   const store = useProgress();
-  const data: ProgressData = store.getState().data;
+  const data: ProgressData = store.data;
   const stats = dailyStats(data, todayStr ?? new Date().toISOString().split('T')[0]);
 
   return (

@@ -7,10 +7,10 @@ export interface FlashcardProps {
 
 export default function Flashcard({ word }: FlashcardProps) {
   const store = useProgress();
-  const completed = Object.keys(store.getState().data.completed).map(Number);
+  const completed = Object.keys(store.data.completed).map(Number);
 
   const handleLearn = () => {
-    store.getState().data.completed[word.id] = 'learned';
+    store.learnWord(word.id);
   };
 
   return (
